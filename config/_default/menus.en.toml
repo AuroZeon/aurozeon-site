@@ -12,8 +12,8 @@ url = "#downloads-section"
 weight = 2
 
 [[main]]
-name = "Publications"
-url = "/publications"
+name = "Products"
+url = "/Products"
 weight = 3
 
 [[main]]
