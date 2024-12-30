@@ -1,0 +1,43 @@
+// Add your own custom styles here
+.typewriter {
+  font-family: 'Courier New', monospace;
+  font-size: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+
+  .cursor {
+    display: inline-block;
+    background-color: black;
+    margin-left: -3px;
+    @keyframes blink {
+      to { visibility: hidden; }
+    }
+    animation: blink 1s steps(5, start) infinite;
+  }
+}
+/* Aurozeon */
+
+.geoweaver-landing-text {
+  background: linear-gradient(90deg, #303B4C 0%, rgba(0, 102, 255, 0.7) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'SF Mono';
+  font-style: normal;
+}
+
+.getting-started {
+  background: rgb(51,122,193);
+  background: linear-gradient(230deg, rgba(51,122,193,1) 55%, rgba(161,226,252,1) 100%);
+}
+
+.pygeoweaver-learn-more {
+  background: rgb(216,108,19);
+  background: linear-gradient(230deg, rgba(216,108,19,1) 55%, rgba(255,184,90,1) 100%);
+}
+
+.view-on-github {
+  color: white;
+  background-color: black;
+
+}

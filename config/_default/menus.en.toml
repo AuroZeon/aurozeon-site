@@ -1,0 +1,22 @@
+############# English navigation ##############
+
+# main menu
+[[main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[main]]
+name = "Download"
+url = "#downloads-section"
+weight = 2
+
+[[main]]
+name = "Publications"
+url = "/publications"
+weight = 3
+
+[[main]]
+name = "Blog"
+url = "blog/"
+weight = 4

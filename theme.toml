@@ -1,0 +1,35 @@
+name = "Geoweaver"
+license = "MIT"
+licenselink = "https://github.com/ESIPFed/Geoweaver/blob/master/LICENSE"
+description = "A web system to allow users to automatically record history and manage complicated scientific workflows in web browsers involving the online spatial data facilities, high-performance computation platforms, and open-source libraries."
+homepage = "https://github.com/ESIPFed/Geoweaver"
+demosite = "https://geobrain.csiss.gmu.edu/Geoweaver"
+min_version = "0.118.2"
+
+tags = [
+  "blog",
+  "responsive",
+  "minimal",
+  "personal",
+  "light",
+  "dark",
+  "multilingual",
+  "landing",
+  "contact",
+  "dark mode",
+  "tailwindcss",
+]
+
+features = [
+  "Multi-Authors",
+  "Search",
+]
+
+[author]
+name = "Ziheng Sun"
+homepage = "https://zihengsun.github.io/"
+
+[original]
+name = "Ziheng Sun"
+homepage = "https://zihengsun.github.io/"
+repo = "https://github.com/zihengsun"
