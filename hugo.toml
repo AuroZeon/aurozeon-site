@@ -1,6 +1,6 @@
 ######################## default configuration ####################
 # The base URL of your site (required). This will be prepended to all relative URLs.
-baseURL = "https://aurozeon.com"
+baseURL = "http://aurozeon.com"
 # Title of your website (required).
 title = "Aurozeon"
 # Your theme name
