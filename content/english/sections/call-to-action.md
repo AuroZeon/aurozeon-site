@@ -1,8 +1,8 @@
 ---
 enable: true
-title: "Ready to build your next project with Geoweaver?"
+title: "Ready to build your next AI product with Aurozeon?"
 image: "/images/call-to-action.png"
-description: "An open-source, in-browser tool for simplifying data processing workflows with high-performance server support, featuring code history and workflow orchestration."
+description: "An AI/BI company."
 button:
   enable: true
   label: "Get Started Now"

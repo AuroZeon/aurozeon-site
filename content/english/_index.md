@@ -2,7 +2,7 @@
 # Banner
 banner:
   title: "Aurozeon"
-  content: "An open-source, in-browser tool for simplifying data processing workflows with high-performance server support, featuring code history and workflow orchestration."
+  content: "An AI/BI solution company"
   image: "/images/landing-page/geoweaver-landing-image.png"
   zeroToProdImage: "/images/Stills/zero-to-prod.png"
   githubIcon: "/images/landing-page/FiGithub.png"
@@ -58,8 +58,5 @@ banner:
 features:
   - title: "What is Aurozeon?"
     image: "/images/service-1.png"
-    content: "Aurozeon is an open-source, in-browser software designed for simplifying the composition and execution of data processing workflows. It efficiently leverages high-performance servers for workflow execution and includes features such as code history and workflow orchestration, easing the creation and maintenance of workflows."
-  - title: "PyGeoweaver"
-    image: "/images/service-2.png"
-    content: "PyGeoweaver is a Python wrapper of Geoweaver workflow management system. It enables users to interact with Geoweaver workflows programmatically, offering full Geoweaver functionality, including workflow orchestration, code history/versioning, and server management."
+    content: "Aurozeon is an AI/BI company."
 ---
