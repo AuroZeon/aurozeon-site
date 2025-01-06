@@ -1026,7 +1026,7 @@
   to {
     visibility: hidden; } }
 
-/* Aurozeon */
+/* AuroZeon */
 .geoweaver-landing-text {
   background: linear-gradient(90deg, #303B4C 0%, rgba(0, 102, 255, 0.7) 100%);
   -webkit-background-clip: text;

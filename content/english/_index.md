@@ -1,7 +1,7 @@
 ---
 # Banner
 banner:
-  title: "Aurozeon"
+  title: "AuroZeon"
   content: "An AI/BI solution company"
   image: "/images/landing-page/geoweaver-landing-image.png"
   zeroToProdImage: "/images/Stills/zero-to-prod.png"
@@ -56,7 +56,7 @@ banner:
 
 # Features
 features:
-  - title: "What is Aurozeon?"
+  - title: "What is AuroZeon?"
     image: "/images/service-1.png"
-    content: "Aurozeon is an AI/BI company."
+    content: "AuroZeon is an AI/BI company."
 ---

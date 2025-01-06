@@ -1,6 +1,6 @@
 ---
 enable: true
-title: "Ready to build your next AI product with Aurozeon?"
+title: "Ready to build your next AI product with AuroZeon?"
 image: "/images/call-to-action.png"
 description: "An AI/BI company."
 button:
