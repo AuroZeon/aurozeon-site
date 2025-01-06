@@ -1,107 +1,89 @@
 {{ define "main" }}
-<!-- Banner -->
+<!-- Banner Section -->
 {{ with .Params.banner }}
-
 <section class="overflow-hidden bg-[#140736] section pt-14 flex justify-between max-w-full h-[28rem]">
   <div class="max-sm:w-full max-md:w-full w-5/6 relative">
-    <p class="capitalize pt-5 font-archivo-black text-white text-3xl text-center">Build <span class="text-[#FFB85A]">AI</span> that <span class="underline decoration-wavy decoration-4 underline-offset-8 decoration-[#FFB85A]">works</span></p>
+    <p class="capitalize pt-5 font-archivo-black text-white text-3xl text-center">
+      Build <span class="text-[#FFB85A]">AI</span> that <span class="underline decoration-wavy decoration-4 underline-offset-8 decoration-[#FFB85A]">works</span>
+    </p>
     <div>
-      <p class="lg:flex max-sm:hidden justify-center text-white text-center align-middle pt-8 p-0"> <br>
-        An AI/BI company <br></p>
-      <p class="hidden max-md:flex text-white text-center align-middle pt-8 p-0">Your data, your AI</p>
-
-
-<div class="pt-10 text-center">
-  <div class="flex flex-row justify-center items-center space-x-4">
-    <a href="https://github.com/ESIPFed/Geoweaver" class="flex justify-center mb-4">
-      <div class="bg-white p-2 rounded cursor-pointer">
-        <button class="text-black flex items-center">
-          <i class="fa-brands fa-github mr-2"></i>
-          Github
-        </button>
-      </div>
-    </a>
-
-    <a href="/guide" class="flex justify-center mb-4">
-      <div class="bg-[#009AC4] p-2 rounded cursor-pointer">
-        <button class="text-white flex items-center">
-          <i class="fa-solid fa-video mr-2"></i>
-          Guide
-        </button>
-      </div>
-    </a>
-
-    <a href="https://geobrain.csiss.gmu.edu/Geoweaver" class="flex justify-center mb-4">
-      <div class="bg-white p-2 rounded cursor-pointer">
-        <button class="text-black flex items-center">
-          <i class="fa-solid fa-desktop mr-2"></i>
-          Demo
-        </button>
-      </div>
-    </a>
-  </div>
-</div>
-
-
-    </div>
-  </div>
-
-  <div class="max-sm:hidden max-md:hidden  absolute top-0 right-0 w-[477px] h-[440px] mt-[91px]">
-    {{ partial "image" (dict "Src" .landingpageSideImage "Alt" "geoweaver brand logo" "Loading" "eager" "Class" "w-full h-full object-cover overflow-hidde max-sm:hidden max-md:hidden") }}
-  </div>
-
-</section>
-
-
-
-<section class="z-10 bg-[#a1e2fc] bg-cover">
-
-  <div class="max-sm:block max-md:block grid max-w-full grid-cols-[2fr,2fr] grid-flow-cols">
-      <div style="width: 100%" class='align-middle mt-16'>
-        {{ partial "image" (dict "Src" .zeroToProdImage "Alt" "zero to production image" "Loading" "eager" "Class" "large-image absoulte right-0" ) }}
-      </div>
-      <div class="bg-[#a1e2fc]">
-        <h3 class='max-sm:text-center max-md:text-center max-sm:w-full max-md:w-full max-sm:pl-0 max-md:pl-0 mt-16 pl-10 font-archivo-black'>Go From Zero To Production 🏁</h3>
-        <div class="max-w-xl max-sm:pl-0 max-md:pl-0 max-sm:text-center max-md:text-center pl-16 mt-6">
-          <p class="font-archivo max-sm:text-center max-md:text-center">
-            effortless AI/BI
-          </p>
-          <p class='max-sm:text-center max-md:text-center max-sm:pl-0 max-md:pl-0 font-bold pl-10 pt-10 font-archivo-black'>Learn more about Aurozeon</p>
-          <a href="https://esipfed.github.io/Geoweaver/docs/install.html">
-            <button class='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 getting-started text-white p-2 rounded w-36 mt-8 mb-10 max-sm:ml-0 max-md:ml-0   ml-32 max-w-full'>
-              Get Started
-            </button>
+      <p class="lg:flex max-sm:hidden justify-center text-white text-center align-middle pt-8 p-0">
+        <br>An AI/BI company<br>
+      </p>
+      <p class="hidden max-md:flex text-white text-center align-middle pt-8 p-0">
+        Your data, your AI
+      </p>
+      <div class="pt-10 text-center">
+        <div class="flex flex-row justify-center items-center space-x-4">
+          <a href="https://github.com/ESIPFed/Geoweaver" class="flex justify-center mb-4">
+            <div class="bg-white p-2 rounded cursor-pointer">
+              <button class="text-black flex items-center">
+                <i class="fa-brands fa-github mr-2"></i>Github
+              </button>
+            </div>
+          </a>
+          <a href="/guide" class="flex justify-center mb-4">
+            <div class="bg-[#009AC4] p-2 rounded cursor-pointer">
+              <button class="text-white flex items-center">
+                <i class="fa-solid fa-video mr-2"></i>Guide
+              </button>
+            </div>
+          </a>
+          <a href="https://geobrain.csiss.gmu.edu/Geoweaver" class="flex justify-center mb-4">
+            <div class="bg-white p-2 rounded cursor-pointer">
+              <button class="text-black flex items-center">
+                <i class="fa-solid fa-desktop mr-2"></i>Demo
+              </button>
+            </div>
           </a>
         </div>
       </div>
     </div>
   </div>
+  <div class="max-sm:hidden max-md:hidden absolute top-0 right-0 w-[477px] h-[440px] mt-[91px]">
+    {{ partial "image" (dict "Src" .landingpageSideImage "Alt" "geoweaver brand logo" "Loading" "eager" "Class" "w-full h-full object-cover overflow-hidden max-sm:hidden max-md:hidden") }}
+  </div>
 </section>
 
-<section>
-  <div class='mt-10'>
-    <h3 class='font-archivo font-bold tracking-wider text-center'>Why choose <span class="underline underline-offset-8 decoration-wavy decoration-[#337ac1]"> Aurozeon? <span> </h3>
-    <div class='md:pl-48 max-sm:pl-8  mt-20 grid grid-cols-1 md:grid-cols-3 grid-flow-row gap-4'>
-      
+<!-- Zero to Production Section -->
+<section class="z-10 bg-[#a1e2fc] bg-cover">
+  <div class="max-sm:block max-md:block grid max-w-full grid-cols-[2fr,2fr] grid-flow-cols">
+    <div style="width: 100%" class="align-middle mt-16">
+      {{ partial "image" (dict "Src" .zeroToProdImage "Alt" "zero to production image" "Loading" "eager" "Class" "large-image absoulte right-0") }}
+    </div>
+    <div class="bg-[#a1e2fc]">
+      <h3 class="max-sm:text-center max-md:text-center max-sm:w-full max-md:w-full max-sm:pl-0 max-md:pl-0 mt-16 pl-10 font-archivo-black">
+        Go From Zero To Production 🏁
+      </h3>
+      <div class="max-w-xl max-sm:pl-0 max-md:pl-0 max-sm:text-center max-md:text-center pl-16 mt-6">
+        <p class="font-archivo max-sm:text-center max-md:text-center">Effortless AI/BI</p>
+        <p class="max-sm:text-center max-md:text-center max-sm:pl-0 max-md:pl-0 font-bold pl-10 pt-10 font-archivo-black">
+          Learn more about Aurozeon
+        </p>
+        <a href="https://esipfed.github.io/Geoweaver/docs/install.html">
+          <button class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 getting-started text-white p-2 rounded w-36 mt-8 mb-10 max-sm:ml-0 max-md:ml-0 ml-32 max-w-full">
+            Get Started
+          </button>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
-
-<section class='bg-[#A1E2FC] mt-14'>
+<!-- Projects Section -->
+<section class="bg-[#A1E2FC] mt-14">
   <div class="grid max-w-full grid-cols-1 md:grid-cols-2 grid-flow-cols">
     <div>
-      {{ partial "image" (dict "Src" .projectsSectionImage "Alt" "zero to production image" "Loading" "eager" "Class" "w-full max-h-fit" ) }}
+      {{ partial "image" (dict "Src" .projectsSectionImage "Alt" "projects section image" "Loading" "eager" "Class" "w-full max-h-fit") }}
     </div>
-
     <div class="flex flex-col py-5 md:py-0">
       <div class="px-5 md:px-10 pt-4">
-        <h1 class='font-archivo-black text-2xl md:text-3xl tracking-wide text-left'>Projects</h1>
-        <p class='tracking-wide font-archivo text-left'>that already use <span class='font-bold'>Aurozeon</span></p>
+        <h1 class="font-archivo-black text-2xl md:text-3xl tracking-wide text-left">Projects</h1>
+        <p class="tracking-wide font-archivo text-left">
+          That already use <span class="font-bold">Aurozeon</span>
+        </p>
       </div>
-
-      <hr class="my-4"/>
-
+      <hr class="my-4" />
       <div class="px-5 md:px-10">
         <div class="flex hover:underline hover:cursor-pointer">
           <a href="https://github.com/geo-smart/SnowCast" target="_blank" class="flex">
@@ -111,7 +93,6 @@
         </div>
         <p class="font-archivo">Drinking water estimation</p>
       </div>
-
       <div class="px-5 md:mr-10 md:pt-5 text-right mt-10">
         <div class="flex hover:underline hover:cursor-pointer justify-end">
           <a href="https://geobrain.csiss.gmu.edu/cmaq_site/" target="_blank" class="flex">
@@ -119,44 +100,39 @@
             <i class="fa-solid fa-arrow-up-right-from-square ml-4 mt-1"></i>
           </a>
         </div>
-        <p class="font-archivo">Utilizing ground observations from the EPA and AirNow network, alongside remote sensing data, to calibrate CMAQ model for ozone prediction. </p>
+        <p class="font-archivo">
+          Utilizing ground observations from the EPA and AirNow network, alongside remote sensing data, to calibrate CMAQ model for ozone prediction.
+        </p>
       </div>
     </div>
   </div>
 </section>
 
-<section class='mt-10 pb-10 flex flex-col items-center justify-center' id="downloads-section">
-    <div class="text-center">
-      <p class='text-4xl font-archivo font-bold tracking-wide'>Free, Opensource &</p>
-      <h1 class='text-5xl font-archivo-black font-bold tracking-wide'>Works where you WORK</h1>
-      <p class='text-2xl pt-4 pb-4 font-archivo tracking-widest'>Download the <span class='font-bold'>APP</span></p>
-    </div>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 w-full md:max-w-2xl justify-center items-center">
-
-      <a onClick="trackDownload('exe', 'windows')" href="https://github.com/ESIPFed/Geoweaver/releases/download/latest/GeoweaverInstaller.exe" class="flex flex-col items-center justify-center">
-        <i style="font-size: 60px;" class="fa-brands fa-windows"></i>
-        <p class="pt-1 font-bold font-archivo">Windows</p>
-      </a>
-
-      <a onClick="trackDownload('dmg', 'MacOS')" href="https://github.com/ESIPFed/Geoweaver/releases/download/latest/Geoweaver.dmg" class="flex flex-col items-center justify-center">
-        <i style="font-size: 66px;" class="fa-brands fa-apple"></i>
-        <p class="pt-1 font-bold font-archivo">MacOS</p>
-      </a>
-
-      <a onClick="trackDownload('deb', 'linux')" href="https://github.com/ESIPFed/Geoweaver/releases/download/latest/geoweaver.deb" class="flex flex-col items-center justify-center">
-        <i style="font-size: 66px;" class="fa-brands fa-linux"></i>
-        <p class="pt-1 font-bold font-archivo">Linux</p>
-      </a>
-
-      <a onClick="trackDownload('jar', 'Java')" href="https://github.com/ESIPFed/Geoweaver/releases/download/latest/geoweaver.jar" class="flex flex-col items-center justify-center">
-        <i style="font-size: 66px;" class="fa-brands fa-java"></i>
-        <p class="pt-1 font-bold font-archivo">JAR</p>
-      </a>
-
-    </div>
+<!-- Downloads Section -->
+<section class="mt-10 pb-10 flex flex-col items-center justify-center" id="downloads-section">
+  <div class="text-center">
+    <p class="text-4xl font-archivo font-bold tracking-wide">Free, Opensource &</p>
+    <h1 class="text-5xl font-archivo-black font-bold tracking-wide">Works where you WORK</h1>
+    <p class="text-2xl pt-4 pb-4 font-archivo tracking-widest">Download the <span class="font-bold">APP</span></p>
+  </div>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 w-full md:max-w-2xl justify-center items-center">
+    <a onClick="trackDownload('exe', 'windows')" href="https://github.com/ESIPFed/Geoweaver/releases/download/latest/GeoweaverInstaller.exe" class="flex flex-col items-center justify-center">
+      <i style="font-size: 60px;" class="fa-brands fa-windows"></i>
+      <p class="pt-1 font-bold font-archivo">Windows</p>
+    </a>
+    <a onClick="trackDownload('dmg', 'MacOS')" href="https://github.com/ESIPFed/Geoweaver/releases/download/latest/Geoweaver.dmg" class="flex flex-col items-center justify-center">
+      <i style="font-size: 66px;" class="fa-brands fa-apple"></i>
+      <p class="pt-1 font-bold font-archivo">MacOS</p>
+    </a>
+    <a onClick="trackDownload('deb', 'linux')" href="https://github.com/ESIPFed/Geoweaver/releases/download/latest/geoweaver.deb" class="flex flex-col items-center justify-center">
+      <i style="font-size: 66px;" class="fa-brands fa-linux"></i>
+      <p class="pt-1 font-bold font-archivo">Linux</p>
+    </a>
+    <a onClick="trackDownload('jar', 'Java')" href="https://github.com/ESIPFed/Geoweaver/releases/download/latest/geoweaver.jar" class="flex flex-col items-center justify-center">
+      <i style="font-size: 66px;" class="fa-brands fa-java"></i>
+      <p class="pt-1 font-bold font-archivo">JAR</p>
+    </a>
+  </div>
 </section>
-
-
 {{ end }}
-<!-- /Banner -->
 {{ end }}
