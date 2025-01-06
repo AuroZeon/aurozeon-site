@@ -17,8 +17,8 @@
   <p class="mb-4">
     {{ .Summary }}
   </p>
-  <ul class="social-icons">
-    {{ range .Params.social }}
+  <!-- <ul class="social-icons">
+    {{ range .Site.Params.Social }}
       <li>
         <a href="{{ .link | safeURL }}" target="_blank" rel="noopener nofollow">
           <span class="sr-only">{{ .title }}</span>
@@ -26,5 +26,5 @@
         </a>
       </li>
     {{ end }}
-  </ul>
+  </ul> -->
 </div>
