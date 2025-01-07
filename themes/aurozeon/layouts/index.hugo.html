@@ -1,0 +1,18 @@
+{{ define "main" }}
+<main>
+    <!-- Hero Section -->
+    {{ partial "hero.html" . }}
+
+    <!-- Solutions Section -->
+    {{ partial "partials/solution-list.html" . }}
+    
+
+    <!-- Motivation Section -->
+    <section class="motivation">
+        <div class="container">
+            <h2>Our Motivation</h2>
+            <p>{{ .Site.Params.motivation }}</p>
+        </div>
+    </section>
+</main>
+{{ end }}
