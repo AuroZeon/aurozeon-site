@@ -1,50 +1,14 @@
-<!doctype html>
-<html
-  itemscope
-  class="{{- if not site.Params.theme_switcher -}}
-    {{- site.Params.theme_default -}}
-  {{- end -}}"
-  lang="{{ site.LanguageCode | default `en-US` }}"
-  itemtype="http://schema.org/WebPage">
-  <head>
-    <!-- head (don't cache it) -->
-    {{ partial "essentials/head.html" . }}
-
-
-    <!-- style (always cache it) -->
-    {{ partialCached "essentials/style.html" . }}
-  </head>
-
-  <body>
-    <!-- cache partial only in production -->
-    {{ if hugo.IsProduction }}
-      {{ partialCached "preloader.html" . }}
-      {{ partialCached "gtm-noscript.html" . }}
-    {{ else }}
-      {{ partial "preloader.html" . }}
-
-
-      <!-- tailwind size indicator -->
-      {{ partial "components/tw-size-indicator.html" . }}
-    {{ end }}
-
-
-    <!-- header (don't cache it) -->
-    {{ partial "essentials/header.html" . }}
-    {{ partial "search-modal.html" (dict "Context" . ) }}
-
-
-    <main>
-      {{ block "main" . }}{{ end }}
-    </main>
-
-    <!-- cache partial only in production -->
-    {{ if hugo.IsProduction }}
-      {{ partialCached "essentials/footer.html" . }}
-      {{ partialCached "essentials/script.html" . }}
-    {{ else }}
-      {{ partial "essentials/footer.html" . }}
-      {{ partial "essentials/script.html" . }}
-    {{ end }}
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <link rel="stylesheet" href="{{ "assets/css/style.css" | relURL }}">
+</head>
+<body>
+    {{ partial "header.html" . }}
+    {{ block "main" . }}{{ end }}
+    {{ partial "footer.html" . }}
+</body>
 </html>
