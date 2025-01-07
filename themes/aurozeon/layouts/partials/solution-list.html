@@ -5,11 +5,11 @@
             {{ range .Site.Data.solutions }}
             <div class="solution-card">
                 <a href="{{ .link }}">
-                    {{ with resources.Get .image }}
+                    <!-- {{ with resources.Get .image }}
                         <img class="solution-image" src="{{ .RelPermalink }}" alt="{{ .title }}">
                     {{ else }}
                         <img class="solution-image" src="/assets/images/default-solution.jpg" alt="Default Solution">
-                    {{ end }}
+                    {{ end }} -->
                     <div class="solution-content">
                         <h3 class="solution-title">{{ .title }}</h3>
                         <p class="solution-description">{{ .description }}</p>
