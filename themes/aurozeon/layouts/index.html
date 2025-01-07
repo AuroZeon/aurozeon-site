@@ -1,21 +1,18 @@
 {{ define "main" }}
 <main>
+    <!-- Hero Section -->
     {{ partial "hero.html" . }}
-    <section class="solutions">
-        <h2>Our Solutions</h2>
-        <div class="solutions-list">
-            {{ range .Site.Data.solutions }}
-            <div class="solution-item">
-                <img src="{{ .image }}" alt="{{ .title }}">
-                <h3>{{ .title }}</h3>
-                <p>{{ .description }}</p>
-            </div>
-            {{ end }}
-        </div>
-    </section>
+
+    <!-- Solutions Section -->
+    {{ partial "partials/solution-list.html" . }}
+    
+
+    <!-- Motivation Section -->
     <section class="motivation">
-        <h2>Our Motivation</h2>
-        <p>{{ .Site.Params.motivation }}</p>
+        <div class="container">
+            <h2>Our Motivation</h2>
+            <p>{{ .Site.Params.motivation }}</p>
+        </div>
     </section>
 </main>
 {{ end }}

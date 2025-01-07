@@ -1,0 +1,13 @@
+<div class="logo">
+    <a href="{{ .Site.BaseURL }}">
+      {{ with resources.Get .Site.Params.logo }}
+        <img src="{{ .RelPermalink }}" 
+            alt="{{ .Site.Params.logo_text }}" 
+            width="{{ .Site.Params.logo_width }}" 
+            height="{{ .Site.Params.logo_height }}"
+        >
+      {{ else }}
+        {{ .Site.Params.logo_text }}
+      {{ end }}
+    </a>
+</div>

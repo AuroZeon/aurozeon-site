@@ -1,0 +1,14 @@
+- title: "End-to-End AI Data Pipeline Automation"
+  image: "assets/images/solution-pipeline.png"
+  description: "Automate your organization's data processing with AI-driven, scalable pipelines."
+  link: "/solutions/data-pipeline/"
+
+- title: "Custom AI Solutions for Business Intelligence"
+  image: "assets/images/solution-bi.png"
+  description: "Tailored AI solutions designed to extract actionable insights from complex datasets."
+  link: "/solutions/ai-business-intelligence/"
+
+- title: "AI-Enhanced Decision Intelligence"
+  image: "assets/images/solution-decision.png"
+  description: "Revolutionize decision-making with AI-enhanced optimization algorithms."
+  link: "/solutions/decision-intelligence/"

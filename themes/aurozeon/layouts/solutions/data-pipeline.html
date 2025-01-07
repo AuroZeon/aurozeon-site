@@ -1,0 +1,98 @@
+{{ define "main" }}
+<head>
+    <link rel="stylesheet" href="{{- with resources.Get "css/data-pipeline.css" | relURL }}">
+</head>
+
+<main class="solution-page">
+    
+    <!-- Hero Section with Background Image and Overlay -->
+    <section class="solution-hero" style="background-image: url('{{ .Params.image }}');">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>{{ .Title }}</h1>
+                <p>{{ .Params.description }}</p>
+                <a href="#solution-details" class="cta-button">Learn More At Here</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Details Section -->
+    <section id="solution-details" class="solution-details">
+        <div class="container">
+            <h2 class="section-title">Solution Overview</h2>
+            <p>{{ .Content }}</p>
+
+            <!-- Animated Key Features Section with Icons -->
+            <div class="key-features">
+                <h3>Key Features</h3>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <img src="/images/icons/data-collection.svg" alt="Data Collection" class="feature-icon">
+                        <h4>Data Collection</h4>
+                        <p>Seamlessly ingest data from multiple sources in real-time.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="/images/icons/data-cleaning.svg" alt="Data Cleaning" class="feature-icon">
+                        <h4>Data Cleaning</h4>
+                        <p>Transform raw data into actionable insights with automated cleaning.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="/images/icons/ai-analysis.svg" alt="AI-Powered Analysis" class="feature-icon">
+                        <h4>AI-Powered Analysis</h4>
+                        <p>Leverage AI models to gain deep insights and predictions from your data.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="/images/icons/scalability.svg" alt="Scalability" class="feature-icon">
+                        <h4>Scalability</h4>
+                        <p>Scale effortlessly to accommodate growing datasets with zero downtime.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="/images/icons/monitoring.svg" alt="Monitoring" class="feature-icon">
+                        <h4>Continuous Monitoring</h4>
+                        <p>Ensure smooth operations with real-time monitoring and automated troubleshooting.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Animated Timeline of Pipeline Stages -->
+            <div class="timeline">
+                <h3>Pipeline Stages</h3>
+                <div class="timeline-item">
+                    <div class="timeline-icon">🔄</div>
+                    <div class="timeline-content">
+                        <h4>Data Collection</h4>
+                        <p>Gather data from multiple sources such as APIs, IoT, and databases.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">🧹</div>
+                    <div class="timeline-content">
+                        <h4>Data Cleaning</h4>
+                        <p>Cleanse and structure data to ensure quality and consistency.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">🤖</div>
+                    <div class="timeline-content">
+                        <h4>AI-Driven Analysis</h4>
+                        <p>Apply AI and machine learning to identify patterns and insights.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">⚡</div>
+                    <div class="timeline-content">
+                        <h4>Real-Time Execution</h4>
+                        <p>Deploy the solution and monitor it continuously for real-time insights.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="cta-container">
+                <a href="/contact/" class="cta-button">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+</main>
+{{ end }}

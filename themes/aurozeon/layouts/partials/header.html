@@ -1,13 +1,3 @@
-<header class="header">
-    <div class="logo">
-        <a href="{{ .Site.BaseURL }}">{{ .Site.Params.logo }}</a>
-    </div>
-    <nav class="navigation">
-        <ul>
-            <li><a href="{{ .Site.BaseURL }}">Home</a></li>
-            <li><a href="{{ .Site.BaseURL }}solutions/">Solutions</a></li>
-            <li><a href="{{ .Site.BaseURL }}motivation/">Motivation</a></li>
-            <li><a href="{{ .Site.BaseURL }}contact/">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+<!-- <h1>{{ site.Title }}</h1> -->
+{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+

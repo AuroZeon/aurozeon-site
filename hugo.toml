@@ -1,28 +1,6 @@
-# Site configuration
-baseURL = "https://www.aurozeon.com/"
-title = "AuroZeon"
-theme = "aurozeon"
-languageCode = "en-us"
+baseURL = 'https://www.aurozeon.com/'
+languageCode = 'en-us'
+title = 'AuroZeon'
 
-# Permalinks configuration (optional)
-[permalinks]
-  post = "/:year/:month/:day/:slug/"
+theme = 'aurozeon'
 
-# Build settings
-[build]
-  writeStats = true               # Enable statistics on builds (useful for debugging)
-  verbose = true                   # Show verbose build output
-  minify = true                    # Enable minification (for faster delivery)
-  publishDir = "public"            # Folder where the final output is saved
-  resourcesDir = "assets"          # Folder for assets like CSS/JS images
-  staticDir = "static"             # Folder for static files like images, fonts, etc.
-
-# Single params section with custom settings
-[params]
-  customCSS = "css/style.css"  # If using a custom CSS file in the 'static' folder
-  googleAnalyticsTrackingID = "UA-XXXXX-X"  # Replace with your actual Google Analytics tracking ID
-  customThemeSetting = "value"  # Optional: Any custom theme-related parameters
-
-# Google Analytics (optional)
-[params.googleAnalytics]
-  trackingID = "UA-XXXXX-X"        # Replace with your Google Analytics tracking ID
