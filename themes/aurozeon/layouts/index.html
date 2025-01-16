@@ -46,20 +46,36 @@
         }
 
         .hero {
+            position: relative;
             text-align: center;
-            padding: 100px 20px;
-            background: linear-gradient(135deg, #ff9800, #e65100);
             color: #fff;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .hero video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
         }
 
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 20px;
+            z-index: 1;
+            position: relative;
         }
 
         .hero p {
             font-size: 1.5rem;
             margin-bottom: 40px;
+            z-index: 1;
+            position: relative;
         }
 
         .hero a {
@@ -72,6 +88,8 @@
             background: #fff;
             border-radius: 30px;
             transition: background 0.3s, color 0.3s;
+            z-index: 1;
+            position: relative;
         }
 
         .hero a:hover {
@@ -81,8 +99,9 @@
 
         section {
             padding: 50px;
-            background: #1e1e1e;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
         section h2 {
@@ -94,6 +113,53 @@
         section p {
             font-size: 1.2rem;
             margin-bottom: 40px;
+        }
+
+        #about {
+            position: relative;
+            color: #fff;
+        }
+
+        #about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.example.com/futuristic-background.jpg') center/cover no-repeat;
+            filter: blur(5px) brightness(0.6);
+            z-index: -1;
+        }
+
+        #about h2 {
+            animation: fadeInDown 1.5s ease-out;
+        }
+
+        #about p {
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .features, .solutions {
@@ -136,6 +202,231 @@
         footer p a:hover {
             text-decoration: underline;
         }
+
+        #about {
+            position: relative;
+            text-align: center;
+            color: #fff;
+            padding: 50px 20px;
+            overflow: hidden;
+        }
+        
+        #about-video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        
+        .about-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.5); /* Overlay for readability */
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .about-content h2 {
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            color: #ffd700; /* Friendly, inviting accent color */
+        }
+        
+        .about-content p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #eaeaea;
+        }
+        
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        
+        /* General styling for the section */
+        #solutions {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f5f5f5;
+        }
+
+        #solutions h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        /* Solutions layout */
+        .solutions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .solution {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .solution:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Video styling */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .background-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Content styling */
+        .content {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #1a73e8;
+        }
+
+        .content p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        #motivation {
+            position: relative;
+            text-align: center;
+            color: #fff;
+            padding: 50px 20px;
+            overflow: hidden;
+        }
+        
+        #motivation .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        
+        #motivation .motivation-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.6); /* Slight overlay to improve readability */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        #contact {
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        
+        .contact-content {
+            max-width: 600px;
+            margin: auto;
+        }
+        
+        #contact h2 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        #contact p {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        #contact a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        #contact a:hover {
+            text-decoration: underline;
+        }
+        
+        #contact-form {
+            margin-top: 20px;
+            text-align: left;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+        
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        
+
     </style>
 </head>
 <body>
@@ -150,50 +441,125 @@
     </header>
 
     <div class="hero">
+        <video autoplay muted loop>
+            <source src="https://videos.pexels.com/video-files/3129957/3129957-uhd_2560_1440_25fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <h1>Welcome to AuroZeon</h1>
         <p>Empowering AI innovation for a brighter tomorrow.</p>
         <a href="#solutions">Explore Our Solutions</a>
     </div>
 
     <section id="about">
-        <h2>About Us</h2>
-        <p>AuroZeon is dedicated to providing cutting-edge AI solutions to empower businesses and foster innovation worldwide.</p>
+        <video autoplay muted loop playsinline id="about-video-bg">
+            <source src="https://videos.pexels.com/video-files/6420489/6420489-hd_1920_1080_24fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>
+                At <strong>AuroZeon</strong>, we’re passionate about making AI simple, useful, and accessible to everyone. Our mission is to help businesses like yours use the power of artificial intelligence to solve everyday challenges and grow confidently in a fast-changing world.
+            </p>
+            <p>
+                We specialize in creating AI solutions that make sense for your business. Whether you’re looking to better understand your data, automate repetitive tasks, or build something unique, we’re here to make it happen. Every solution we design is tailored to your goals, so you can focus on what you do best.
+            </p>
+            <p>
+                Our team is built on a foundation of trust, collaboration, and a shared commitment to your success. We value honesty in our work and respect your privacy—it’s the cornerstone of our relationship with every customer. Your trust means everything to us, and we’re here to support you every step of the way.
+            </p>
+            <p>
+                Let’s start a conversation about how we can help your business thrive with AI. We’re excited to hear from you!
+            </p>
+        </div>
     </section>
+    
 
     <section id="solutions">
         <h2>Our Solutions</h2>
         <div class="solutions">
             <div class="solution">
-                <h3>Advanced Analytics</h3>
-                <p>Leverage AI-driven insights to make data-backed decisions with confidence.</p>
+                <div class="video-wrapper">
+                    <video autoplay muted loop class="background-video">
+                        <source src="https://videos.pexels.com/video-files/3130182/3130182-uhd_2560_1440_30fps.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="content">
+                    <h3>Advanced Analytics</h3>
+                    <p>Unleash the potential of your data with our advanced analytics services. By integrating AI-powered predictive models, we help you uncover hidden patterns, trends, and opportunities in your business operations. From customer behavior analysis to market forecasting, our solutions empower you to make data-backed decisions with unparalleled precision.</p>
+                </div>
             </div>
             <div class="solution">
-                <h3>Automation Tools</h3>
-                <p>Streamline your operations with scalable AI automation.</p>
+                <div class="video-wrapper">
+                    <video autoplay muted loop class="background-video">
+                        <source src="https://videos.pexels.com/video-files/25935016/11922051_1440_2560_24fps.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="content">
+                    <h3>Automation Tools</h3>
+                    <p>Boost efficiency and reduce operational overhead with our cutting-edge automation tools. Our AI-powered systems streamline repetitive tasks, optimize workflows, and ensure scalability. Whether it's automating customer support, inventory management, or financial operations, we tailor solutions to fit your unique needs and scale with your growth.</p>
+                </div>
             </div>
             <div class="solution">
-                <h3>Custom AI Models</h3>
-                <p>Get tailored solutions designed to meet your unique business challenges.</p>
+                <div class="video-wrapper">
+                    <video autoplay muted loop class="background-video">
+                        <source src="https://videos.pexels.com/video-files/19419586/19419586-hd_1920_1080_30fps.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="content">
+                    <h3>Custom AI Models</h3>
+                    <p>Transform your business challenges into opportunities with our custom-built AI models. Our team specializes in designing and deploying bespoke solutions tailored to your specific industry and use cases. From natural language processing and computer vision to recommendation systems, we build AI models that give you a competitive edge.</p>
+                </div>
             </div>
         </div>
     </section>
+    
+    
 
     <section id="motivation">
         <h2>Our Motivation</h2>
-        <p>We aim to harness the power of AI to address real-world problems and drive sustainable progress in technology and society.</p>
+        <div class="motivation-content">
+            <p>
+                At AuroZeon, our mission is to harness the transformative power of AI to solve real-world problems, create opportunities, and drive sustainable progress for both technology and society. In an era defined by AI innovation, our unwavering focus is on empowering our customers to succeed and thrive. 
+            </p>
+            <p>
+                We believe that customer success is not just a goal but the foundation of our existence. By delivering tailored solutions, cutting-edge tools, and unparalleled support, we strive to ensure that every interaction brings tangible value to our clients. At the heart of our efforts lies a deep commitment to safeguarding customer privacy, which we consider our lifeline. Your trust is the cornerstone of our innovation, and we uphold it with the utmost integrity and care.
+            </p>
+        </div>
+        <video autoplay muted loop class="background-video">
+            <source src="https://videos.pexels.com/video-files/8814196/8814196-uhd_2560_1440_25fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </section>
+    
 
     <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Have questions or want to learn more? Reach out to us at:</p>
-        <p>Email: <a href="mailto:info@aurozeon.com">info@aurozeon.com</a></p>
-        <!-- <p>Phone: +1 (555) 123-4567</p>
-        <p>Address: 123 Innovation Drive, Tech City, Futureland</p> -->
+        <div class="contact-content">
+            <h2>Contact Us</h2>
+            <p>We’d love to hear from you! Whether you have a question, need support, or just want to explore how we can help, feel free to get in touch.</p>
+            <p>Email us directly at: <a href="mailto:jensen@aurozeon.com">jensen@aurozeon.com</a></p>
+            <p>Or fill out the form below, and we’ll get back to you as soon as possible:</p>
+            <!-- Embed Google Form -->
+            <iframe 
+                src="https://docs.google.com/forms/d/e/1FAIpQLSdslJWXwfTxKL3lUiTW5YY2QFZYAEA4_5NtBKYLyvpELtQiVg/viewform?embedded=true" 
+                width="100%" 
+                height="800" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0">
+                Loading…
+            </iframe>
+        </div>
     </section>
+    
 
     <footer>
-        <p>&copy; 2025 AuroZeon. Designed with passion. <a href="#">Privacy Policy</a></p>
+        <p>&copy; 2025 AuroZeon, LLC. Designed with passion. <a href="#">Privacy Policy</a></p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
 
     <script>
         console.log('Page loaded successfully.');
@@ -211,6 +577,38 @@
 
         document.querySelectorAll('.solution h3').forEach(solution => {
             console.log(`Solution loaded: ${solution.textContent}`);
+        });
+
+        document.getElementById("contact-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+    
+            const form = e.target;
+            const formData = {
+                name: form.name.value,
+                email: form.email.value,
+                message: form.message.value,
+            };
+    
+            fetch("YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL", { // Replace with your Web App URL
+                method: "POST",
+                body: JSON.stringify(formData),
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            })
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.status === "success") {
+                    alert("Thank you! Your message has been sent.");
+                    form.reset();
+                } else {
+                    alert("There was an issue sending your message. Please try again.");
+                }
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+                alert("An error occurred. Please try again later.");
+            });
         });
     </script>
 </body>
