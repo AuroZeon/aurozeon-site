@@ -4,3 +4,6 @@ title = 'AuroZeon'
 
 theme = 'aurozeon'
 
+relativeURLs = true
+canonifyURLs = true
+

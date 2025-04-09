@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html 
+lang="{{ or site.Language.LanguageCode site.Language.Lang }}" 
+dir="{{ or site.Language.LanguageDirection `ltr` }}"
+>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+
+  <!-- CSS -->
+  {{ with resources.Get "css/main.css" }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{ end }}
+
+  <!-- ByeBites CSS -->
+  {{ with resources.Get "css/byebites.css" }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{ end }}
+
+  <!-- JavaScript -->
+  {{ with resources.Get "js/main.js" }}
+    <script src="{{ .RelPermalink }}" defer></script>
+  {{ end }}
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="{{ .Site.BaseURL }}">Home</a></li>
+          <li><a href="{{ .Site.BaseURL }}#about">About</a></li>
+          <li><a href="{{ .Site.BaseURL }}#solutions">Solutions</a></li>
+          <li><a href="{{ .Site.BaseURL }}#motivation">Motivation</a></li>
+          <li><a href="{{ .Site.BaseURL }}#contact">Contact</a></li>
+          <li class="dropdown">
+            <a href="{{ .Site.BaseURL }}byebites/">ByeBites</a>
+            <ul class="dropdown-menu">
+              <li><a href="{{ .Site.BaseURL }}byebites/privacy-policy/">Privacy Policy</a></li>
+              <li><a href="{{ .Site.BaseURL }}byebites/user-agreement/">User Agreement</a></li>
+              <li><a href="{{ .Site.BaseURL }}byebites/health-disclaimer/">Health Disclaimer</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer>
+    <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}. All rights reserved. <a href="{{ .Site.BaseURL }}privacy-policy/">Privacy Policy</a></p>
+  </footer>
+</body>
+</html>
