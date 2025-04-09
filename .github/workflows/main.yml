@@ -65,6 +65,11 @@ jobs:
       - name: Publish to GitHub Pages
         run: npm run build
 
+      - name: List all files in ./public (tree view)
+        run: |
+          echo "Files in ./public:"
+          ls -R ./public
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
