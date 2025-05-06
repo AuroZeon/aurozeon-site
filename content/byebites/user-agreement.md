@@ -72,9 +72,7 @@ We reserve the right to modify this Agreement at any time. If we make material c
 
 ## Contact Us
 
-If you have any questions about this Agreement, please contact us at:
-
-Email: legal@byebites.aurozeon.com
+If you have any questions about this Agreement, please contact us at <a href="byebites-support.html">here</a>.
 
 ByeBites Team
 c/o AuroZeon
