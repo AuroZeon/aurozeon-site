@@ -1,22 +1,73 @@
-<section class="solutions">
-    <div class="container">
-        <h2 class="section-title">Our Solutions</h2>
-        <div class="solutions-grid">
-            {{ range .Site.Data.solutions }}
-            <div class="solution-card">
-                <a href="{{ .link }}">
-                    <!-- {{ with resources.Get .image }}
-                        <img class="solution-image" src="{{ .RelPermalink }}" alt="{{ .title }}">
-                    {{ else }}
-                        <img class="solution-image" src="/assets/images/default-solution.jpg" alt="Default Solution">
-                    {{ end }} -->
-                    <div class="solution-content">
-                        <h3 class="solution-title">{{ .title }}</h3>
-                        <p class="solution-description">{{ .description }}</p>
-                    </div>
-                </a>
-            </div>
-            {{ end }}
-        </div>
+<section class="solutions" style="position:relative;overflow:hidden;">
+  <canvas id="solutions-physics-bg" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;"></canvas>
+  <div class="container" style="position:relative;z-index:1;">
+    <h2 class="section-title">Our Solutions</h2>
+    <p class="section-subtitle">From data engineering to AI-powered automation, we deliver robust, scalable, and innovative solutions for modern enterprises.</p>
+    <div class="solutions-grid">
+      {{ range .Site.Data.solutions }}
+      <div class="solution-card">
+        <a href="{{ .link }}">
+          {{ with .image }}
+            <img class="solution-image" src="/{{ . }}" alt="{{ $.title }}">
+          {{ end }}
+          <div class="solution-content">
+            <h3 class="solution-title">{{ .title }}</h3>
+            <p class="solution-description">{{ .description }}</p>
+            <a href="{{ .link }}" class="cta-button">Learn More</a>
+          </div>
+        </a>
+      </div>
+      {{ end }}
     </div>
+  </div>
+  <script>
+    // Simple bouncing balls physics animation for background
+    (function() {
+      const canvas = document.getElementById('solutions-physics-bg');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let width, height, dpr;
+      function resize() {
+        dpr = window.devicePixelRatio || 1;
+        width = canvas.offsetWidth;
+        height = canvas.offsetHeight;
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        ctx.scale(dpr, dpr);
+      }
+      window.addEventListener('resize', resize);
+      resize();
+      // Ball physics
+      const BALLS = 18;
+      const balls = [];
+      for (let i = 0; i < BALLS; i++) {
+        balls.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          r: 12 + Math.random() * 10,
+          vx: (Math.random() - 0.5) * 1.2,
+          vy: (Math.random() - 0.5) * 1.2,
+          color: `rgba(97,218,251,${0.12 + Math.random() * 0.18})`
+        });
+      }
+      function animate() {
+        ctx.clearRect(0, 0, width, height);
+        for (const b of balls) {
+          b.x += b.vx;
+          b.y += b.vy;
+          if (b.x - b.r < 0 || b.x + b.r > width) b.vx *= -1;
+          if (b.y - b.r < 0 || b.y + b.r > height) b.vy *= -1;
+          ctx.beginPath();
+          ctx.arc(b.x, b.y, b.r, 0, 2 * Math.PI);
+          ctx.fillStyle = b.color;
+          ctx.shadowColor = '#61dafb';
+          ctx.shadowBlur = 12;
+          ctx.fill();
+        }
+        requestAnimationFrame(animate);
+      }
+      animate();
+    })();
+  </script>
 </section>
