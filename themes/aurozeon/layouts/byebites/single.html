@@ -1,0 +1,18 @@
+{{ define "main" }}
+<main>
+    <article class="single-page">
+        <header>
+            <h1>{{ .Title }}</h1>
+            {{ if .Params.description }}
+            <p>{{ .Params.description }}</p>
+            {{ end }}
+        </header>
+        <section>
+            {{ .Content }}
+        </section>
+        <footer>
+            <p><a href="{{ .Site.BaseURL }}byebites/">← Back to ByeBites</a></p>
+        </footer>
+    </article>
+</main>
+{{ end }}

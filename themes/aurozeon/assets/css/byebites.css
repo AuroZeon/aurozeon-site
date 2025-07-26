@@ -1,0 +1,102 @@
+/* ByeBites Pages Styling */
+
+.single-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.single-page header {
+    text-align: center;
+    margin-bottom: 30px;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+
+.single-page header h1 {
+    font-size: 2.5rem;
+    color: #ff9800;
+    margin-bottom: 10px;
+}
+
+.single-page section {
+    padding: 0;
+    text-align: left;
+}
+
+.single-page h1, .single-page h2, .single-page h3 {
+    color: #ff9800;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.single-page p {
+    margin-bottom: 1em;
+    line-height: 1.6;
+}
+
+.single-page ul, .single-page ol {
+    margin-left: 20px;
+    margin-bottom: 1em;
+}
+
+.single-page li {
+    margin-bottom: 0.5em;
+}
+
+.single-page a {
+    color: #ff9800;
+    text-decoration: none;
+}
+
+.single-page a:hover {
+    text-decoration: underline;
+}
+
+/* ByeBites section styling */
+.byebites-content {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.byebites-content h2 {
+    color: #ff9800;
+    border-bottom: 2px solid #ff9800;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.byebites-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.byebites-content ul li {
+    margin-bottom: 10px;
+}
+
+.byebites-content ul li a {
+    display: block;
+    padding: 10px 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.byebites-content ul li a:hover {
+    background-color: #ff9800;
+    color: #fff;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

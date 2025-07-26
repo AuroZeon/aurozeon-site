@@ -24,29 +24,73 @@ body {
   align-items: center;
 }
 
-.header .logo a {
-  font-size: 1.5rem;
-  color: #61dafb;
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #1e1e1e;
+  width: 100%;
+}
+
+.logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff9800;
   text-decoration: none;
 }
 
-.header .navigation ul {
+.main-nav ul {
   list-style: none;
   display: flex;
+  margin: 0;
+  padding: 0;
 }
 
-.header .navigation ul li {
+.main-nav ul li {
+  position: relative;
   margin: 0 1rem;
 }
 
-.header .navigation ul li a {
+.main-nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  padding: 0.5rem 0;
+  transition: color 0.3s;
 }
 
-.header .navigation ul li a:hover {
-  text-decoration: underline;
+.main-nav ul li a:hover {
+  color: #ff9800;
+}
+
+/* Dropdown styling */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1e1e1e;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+  border-radius: 4px;
+  padding: 0.5rem 0;
+}
+
+.dropdown-menu li {
+  margin: 0 !important;
+  width: 100%;
+}
+
+.dropdown-menu li a {
+  padding: 0.5rem 1rem;
+  display: block;
+  white-space: nowrap;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 /* Hero Section */
