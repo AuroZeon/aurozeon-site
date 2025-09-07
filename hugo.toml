@@ -4,4 +4,13 @@ title = 'AuroZeon'
 
 theme = 'aurozeon'
 
+# Allow raw HTML in markdown files
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+# Suppress specific warnings
+ignoreLogs = ['warning-goldmark-raw-html']
+
 

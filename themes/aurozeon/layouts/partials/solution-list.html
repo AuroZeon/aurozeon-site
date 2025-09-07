@@ -4,17 +4,9 @@
         <div class="solutions-grid">
             {{ range .Site.Data.solutions }}
             <div class="solution-card">
-                <a href="{{ .link }}">
-                    <!-- {{ with resources.Get .image }}
-                        <img class="solution-image" src="{{ .RelPermalink }}" alt="{{ .title }}">
-                    {{ else }}
-                        <img class="solution-image" src="/assets/images/default-solution.jpg" alt="Default Solution">
-                    {{ end }} -->
-                    <div class="solution-content">
-                        <h3 class="solution-title">{{ .title }}</h3>
-                        <p class="solution-description">{{ .description }}</p>
-                    </div>
-                </a>
+                <h3>{{ .title }}</h3>
+                <p>{{ .description }}</p>
+                <a href="{{ .link }}" class="btn btn-secondary">Learn More</a>
             </div>
             {{ end }}
         </div>

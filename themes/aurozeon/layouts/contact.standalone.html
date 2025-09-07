@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - AuroZeon</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Contact Page Specific Styles */
+        body {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .contact-hero {
+            position: relative;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-bottom: 50px;
+        }
+
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg') center/cover no-repeat;
+            filter: brightness(0.4) saturate(1.2);
+            z-index: -1;
+        }
+
+        .contact-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-shadow: 0 0 15px rgba(241, 157, 56, 0.5);
+            letter-spacing: 2px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px rgba(241, 157, 56, 0.5);
+            }
+            to {
+                text-shadow: 0 0 15px rgba(241, 157, 56, 0.8), 0 0 25px rgba(241, 157, 56, 0.3);
+            }
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .contact-info {
+            background: rgba(26, 26, 26, 0.8);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(241, 157, 56, 0.15);
+            border: 1px solid rgba(241, 157, 56, 0.1);
+            backdrop-filter: blur(8px);
+        }
+
+        .contact-info h2 {
+            color: #f19d38;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .contact-info h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #f19d38, transparent);
+        }
+
+        .contact-method {
+            margin-bottom: 25px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(241, 157, 56, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: #f19d38;
+            font-size: 1.5rem;
+        }
+
+        .contact-details h3 {
+            margin: 0 0 5px;
+            color: #ffffff;
+            font-size: 1.2rem;
+        }
+
+        .contact-details p, .contact-details a {
+            margin: 0;
+            color: #b8c4ff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-details a:hover {
+            color: #f19d38;
+        }
+
+        .contact-form-container {
+            background: rgba(26, 26, 26, 0.8);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(241, 157, 56, 0.15);
+            border: 1px solid rgba(241, 157, 56, 0.1);
+            backdrop-filter: blur(8px);
+        }
+
+        .contact-form-container h2 {
+            color: #f19d38;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .contact-form-container h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #f19d38, transparent);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #b8c4ff;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 195, 255, 0.2);
+            border-radius: 5px;
+            color: #ffffff;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #f19d38;
+            box-shadow: 0 0 0 3px rgba(241, 157, 56, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: linear-gradient(90deg, #f19d38, #e87b00);
+            color: #ffffff;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(90deg, #e87b00, #f19d38);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(232, 123, 0, 0.4);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Futuristic elements */
+        .circuit-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.1;
+            z-index: -1;
+            background-image: 
+                linear-gradient(90deg, rgba(241, 157, 56, 0.5) 1px, transparent 1px),
+                linear-gradient(0deg, rgba(241, 157, 56, 0.5) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .glow-effect {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(241, 157, 56, 0.2) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .glow-1 {
+            top: 20%;
+            left: 10%;
+        }
+
+        .glow-2 {
+            bottom: 30%;
+            right: 15%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(232, 123, 0, 0.15) 0%, transparent 70%);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">AuroZeon</div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/#about">About</a>
+            <a href="/#solutions">Solutions</a>
+            <a href="/#motivation">Motivation</a>
+            <a href="/contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="contact-hero">
+        <h1>Contact Us</h1>
+    </div>
+
+    <div class="contact-container">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Get In Touch</h2>
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Email</h3>
+                        <a href="mailto:jensen@aurozeon.com">jensen@aurozeon.com</a>
+                    </div>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Location</h3>
+                        <p>San Francisco Bay Area, California</p>
+                    </div>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Business Hours</h3>
+                        <p>Monday - Friday: 9:00 AM - 5:00 PM PST</p>
+                    </div>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Response Time</h3>
+                        <p>We aim to respond to all inquiries within 24-48 hours during business days.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form-container">
+                <h2>Send Us a Message</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" class="form-control" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Futuristic elements -->
+    <div class="circuit-lines"></div>
+    <div class="glow-effect glow-1"></div>
+    <div class="glow-effect glow-2"></div>
+
+    <footer style="background-color: #000000; color: #e0e0e0; text-align: center; padding: 20px 0; font-size: 14px; margin-top: 80px;">
+        <p>
+            &copy; 2025 AuroZeon, LLC. Designed with passion. 
+            <a href="#" style="color: #f19d38; text-decoration: none;">Privacy Policy</a>
+        </p>
+    </footer>
+
+    <!-- No need for Font Awesome script as we're using CDN link in the head -->
+    
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+    
+            const form = e.target;
+            const formData = {
+                name: form.name.value,
+                email: form.email.value,
+                subject: form.subject.value,
+                message: form.message.value,
+            };
+    
+            fetch("YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL", { // Replace with your Web App URL
+                method: "POST",
+                body: JSON.stringify(formData),
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            })
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.status === "success") {
+                    alert("Thank you! Your message has been sent.");
+                    form.reset();
+                } else {
+                    alert("There was an issue sending your message. Please try again.");
+                }
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+                alert("An error occurred. Please try again later.");
+            });
+        });
+    </script>
+</body>
+</html>

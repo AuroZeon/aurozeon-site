@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuroZeon - AI Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #f19d38;
+            --secondary-color: #e87b00;
+            --accent-color: #ffb766;
+            --dark-bg: #000000;
+            --darker-bg: #0a0a0a;
+            --light-text: #ffffff;
+            --medium-text: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Roboto', 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+            color: var(--light-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Futuristic elements */
+        .circuit-lines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.05;
+            z-index: -1;
+            background-image: 
+                linear-gradient(90deg, var(--primary-color) 1px, transparent 1px),
+                linear-gradient(0deg, var(--primary-color) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .glow-effect {
+            position: fixed;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .glow-1 {
+            top: 20%;
+            left: 10%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(0, 195, 255, 0.15) 0%, transparent 70%);
+        }
+
+        .glow-2 {
+            bottom: 30%;
+            right: 15%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(125, 0, 255, 0.1) 0%, transparent 70%);
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(12, 14, 34, 0.8);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 15px 50px;
+            background: rgba(7, 9, 20, 0.95);
+        }
+
+        header .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        header .logo::before {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: var(--primary-color);
+            margin-right: 10px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+
+        header nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: var(--medium-text);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        header nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color), transparent);
+            transition: width 0.3s;
+        }
+
+        header nav a:hover {
+            color: var(--primary-color);
+        }
+
+        header nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+
+        .hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(1) saturate(1.2);
+        }
+
+        .hero-content {
+            max-width: 900px;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+            animation: fadeInDown 1.5s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            color: var(--medium-text);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 195, 255, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 195, 255, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 195, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        /* About Section */
+        #about {
+            position: relative;
+            padding: 100px 20px;
+            overflow: hidden;
+        }
+
+        #about-video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(1) saturate(1.2);
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .about-text {
+            background: rgba(12, 14, 34, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(0, 195, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .about-text h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), transparent);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: var(--medium-text);
+        }
+
+        .about-image {
+            position: relative;
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 195, 255, 0.2);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+
+        /* Solutions Section */
+        #solutions {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, rgba(12, 14, 34, 0.9) 0%, rgba(7, 9, 20, 0.9) 100%);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+
+        .section-header p {
+            color: var(--medium-text);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .solutions {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .solution {
+            background: rgba(12, 14, 34, 0.7);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(0, 195, 255, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .solution:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 195, 255, 0.2);
+        }
+
+        .video-wrapper {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .background-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(1) saturate(1.2);
+        }
+
+        .content {
+            padding: 25px;
+        }
+
+        .content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .content p {
+            color: var(--medium-text);
+            margin-bottom: 20px;
+        }
+
+        .content a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .content a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        /* Motivation Section */
+        #motivation {
+            position: relative;
+            padding: 100px 20px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        #motivation .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(1) saturate(1.2);
+        }
+
+        .motivation-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(12, 14, 34, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(0, 195, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        #motivation h2 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 15px;
+            display: inline-block;
+        }
+
+        #motivation h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+
+        #motivation p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--medium-text);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(0, 195, 255, 0.1) 0%, rgba(125, 0, 255, 0.1) 100%);
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--medium-text);
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(7, 9, 20, 0.9);
+            color: var(--medium-text);
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: left;
+        }
+
+        .footer-column h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color), transparent);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: var(--medium-text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 195, 255, 0.1);
+            border-radius: 50%;
+            color: var(--primary-color);
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        .copyright a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .copyright a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+            }
+
+            header.scrolled {
+                padding: 10px 20px;
+            }
+
+            header nav {
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+
+            .about-content,
+            .solutions {
+                grid-template-columns: 1fr;
+            }
+
+            .solution {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Futuristic elements -->
+    <div class="circuit-lines"></div>
+    <div class="glow-effect glow-1"></div>
+    <div class="glow-effect glow-2"></div>
+
+    <header>
+        <a href="/" class="logo">AuroZeon</a>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#solutions">Solutions</a>
+            <a href="#motivation">Motivation</a>
+            <a href="/contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <video autoplay muted loop id="hero-video">
+            <source src="https://videos.pexels.com/video-files/3129957/3129957-uhd_2560_1440_25fps.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1>Advancing AI for a Better Tomorrow</h1>
+            <p>Building intelligent solutions that empower businesses and individuals to thrive in a rapidly evolving digital landscape</p>
+            <div class="hero-buttons">
+                <a href="#solutions" class="btn btn-primary">Explore Solutions</a>
+                <a href="/contact.html" class="btn btn-secondary">Get in Touch</a>
+            </div>
+        </div>
+    </div>
+
+    <section id="about">
+        <video autoplay muted loop id="about-video-bg">
+            <source src="https://videos.pexels.com/video-files/6420489/6420489-hd_1920_1080_24fps.mp4" type="video/mp4">
+        </video>
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>
+                    At <strong>AuroZeon</strong>, we specialize in building intelligent, effective software tools that help people make better decisions about their health and energy use. Our mission is to support individuals, communities, and organizations with clear, actionable AI-powered solutions that promote healthy habits and optimize energy consumption.
+                </p>
+                <p>
+                    Our team of AI experts, data scientists, and software engineers work together to create innovative solutions that address real-world challenges. We combine cutting-edge technology with human-centered design to deliver products that are both powerful and accessible.
+                </p>
+                <p>
+                    Built on a foundation of trust, collaboration, and a shared commitment to your success, we value transparency in our work and respect your privacy—it's the cornerstone of our relationship with every customer. Your trust means everything to us, and we're here to support you every step of the way.
+                </p>
+            </div>
+            <div class="about-image">
+                <video autoplay muted loop id="about-video-bg">
+                    <source src="https://videos.pexels.com/video-files/6420489/6420489-hd_1920_1080_24fps.mp4" alt="AI Technology">
+                </video>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="solutions">
+        <div class="section-header">
+            <h2>Our Solutions</h2>
+            <p>Discover our innovative AI-powered products designed to transform how you approach health and energy management</p>
+        </div>
+        <div class="solutions">
+            <div class="solution">
+                <div class="video-wrapper">
+                    <video class="background-video" autoplay muted loop>
+                        <source src="https://videos.pexels.com/video-files/8670903/8670903-hd_1920_1080_25fps.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="content">
+                    <h3>ByeBites: Craving Control App</h3>
+                    <p><a href="byebites.html" target="_blank" rel="noopener">ByeBites</a> helps users take control of their eating habits with practical fasting timers, craving tracking, and motivational insights powered by AI. Designed for busy adults and families, the app promotes mindful eating without requiring complex routines or strict diets.</p>
+                </div>
+            </div>
+    
+            <div class="solution">
+                <div class="video-wrapper">
+                    <video class="background-video" autoplay muted loop>
+                        <source src="https://videos.pexels.com/video-files/19419586/19419586-hd_1920_1080_30fps.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="content">
+                    <h3>Energy Tracker Tools</h3>
+                    <p>Our AI-powered web dashboards and mobile tools help households and local governments better understand energy usage, compare trends, and find ways to reduce waste. Our tools leverage machine learning to provide personalized recommendations for energy optimization.</p>
+                </div>
+            </div>
+    
+            <div class="solution">
+                <div class="video-wrapper">
+                    <video class="background-video" autoplay muted loop>
+                        <source src="https://videos.pexels.com/video-files/25935016/11922051_1440_2560_24fps.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="content">
+                    <h3>Custom AI Solutions</h3>
+                    <p>We build specialized AI-driven mobile and web applications that make data more accessible and help people take informed action. Each product is crafted to solve a real-world problem with simplicity, purpose, and the power of artificial intelligence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="motivation">
+        <video autoplay muted loop class="background-video">
+            <source src="https://videos.pexels.com/video-files/8814196/8814196-uhd_2560_1440_25fps.mp4" type="video/mp4">
+        </video>
+        <div class="motivation-content">
+            <h2>Our Vision</h2>
+            <p>
+                At AuroZeon, we envision a future where AI technology seamlessly integrates into everyday life, enhancing human capabilities rather than replacing them. We believe that customer success is not just a goal but the foundation of our existence. By delivering tailored AI solutions, cutting-edge tools, and unparalleled support, we strive to ensure that every interaction brings tangible value to our clients.
+            </p>
+            <p>
+                At the heart of our efforts lies a deep commitment to safeguarding customer privacy and data security, which we consider our lifeline. Your trust is the cornerstone of our innovation, and we uphold it with the utmost integrity and care as we build the AI-powered future together.
+            </p>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Transform Your Business with AI?</h2>
+            <p>Let's start a conversation about how our intelligent solutions can help your organization thrive in the digital age.</p>
+            <a href="/contact.html" class="btn btn-primary">Contact Us Today</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>AuroZeon</h3>
+                <p>Building intelligent solutions for a better tomorrow through the power of AI and human-centered design.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Solutions</h3>
+                <ul>
+                    <li><a href="byebites.html">ByeBites App</a></li>
+                    <li><a href="#solutions">Energy Tracker Tools</a></li>
+                    <li><a href="#solutions">Custom AI Solutions</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#motivation">Our Vision</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="byebites/privacy-policy.html">ByeBites Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 AuroZeon, LLC. All rights reserved. Designed with passion.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

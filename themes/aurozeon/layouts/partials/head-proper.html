@@ -3,6 +3,9 @@
 <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
 
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 <!-- CSS -->
 {{ partial "head/css.html" . }}
 
@@ -16,6 +19,24 @@
     {{- end }}
   {{- end }}
 {{- end }}
+
+<!-- Home CSS -->
+{{ if .IsHome }}
+{{- with resources.Get "css/home.css" }}
+  {{- if eq hugo.Environment "development" }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{- else }}
+    {{- with . | minify | fingerprint }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{ end }}
+
+<!-- Contact CSS -->
+{{ if eq .Layout "contact" }}
+<link rel="stylesheet" href="/css/contact.css">
+{{ end }}
 
 <!-- JavaScript -->
 {{ partial "head/js.html" . }}

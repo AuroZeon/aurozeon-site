@@ -1,0 +1,120 @@
+{{ define "main" }}
+<div class="contact-hero">
+    <h1>{{ .Title }}</h1>
+</div>
+
+<div class="contact-container">
+    <div class="contact-grid">
+        <div class="contact-info">
+            <h2>Get In Touch</h2>
+            <div class="contact-method">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                    <h3>Email</h3>
+                    <a href="mailto:jensen@aurozeon.com">jensen@aurozeon.com</a>
+                </div>
+            </div>
+            
+            <div class="contact-method">
+                <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-details">
+                    <h3>Location</h3>
+                    <p>San Francisco Bay Area, California</p>
+                </div>
+            </div>
+            
+            <div class="contact-method">
+                <div class="contact-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="contact-details">
+                    <h3>Business Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 5:00 PM PST</p>
+                </div>
+            </div>
+            
+            <div class="contact-method">
+                <div class="contact-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <div class="contact-details">
+                    <h3>Response Time</h3>
+                    <p>We aim to respond to all inquiries within 24-48 hours during business days.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-form-container">
+            <h2>Send Us a Message</h2>
+            {{ .Content }}
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" class="form-control" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Futuristic elements -->
+<div class="circuit-lines"></div>
+<div class="glow-effect glow-1"></div>
+<div class="glow-effect glow-2"></div>
+
+<script>
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const form = e.target;
+        const formData = {
+            name: form.name.value,
+            email: form.email.value,
+            subject: form.subject.value,
+            message: form.message.value,
+        };
+
+        fetch("YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL", { // Replace with your Web App URL
+            method: "POST",
+            body: JSON.stringify(formData),
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            if (data.status === "success") {
+                alert("Thank you! Your message has been sent.");
+                form.reset();
+            } else {
+                alert("There was an issue sending your message. Please try again.");
+            }
+        })
+        .catch((error) => {
+            console.error("Error:", error);
+            alert("An error occurred. Please try again later.");
+        });
+    });
+</script>
+{{ end }}
