@@ -1,14 +1,12 @@
-<section class="solutions">
-    <div class="container">
-        <h2 class="section-title">Our Solutions</h2>
-        <div class="solutions-grid">
-            {{ range .Site.Data.solutions }}
-            <div class="solution-card">
-                <h3>{{ .title }}</h3>
-                <p>{{ .description }}</p>
-                <a href="{{ .link }}" class="btn btn-secondary">Learn More</a>
-            </div>
-            {{ end }}
+<div class="solutions-grid">
+    {{ range .Site.Data.solutions }}
+    <div class="solution-card">
+        <div class="solution-icon">
+            <i class="fas fa-{{ .icon }}"></i>
         </div>
+        <h3>{{ .title }}</h3>
+        <p>{{ .description }}</p>
+        <a href="{{ .link }}" class="btn btn-secondary">Learn More</a>
     </div>
-</section>
+    {{ end }}
+</div>

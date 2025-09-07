@@ -1,4 +1,4 @@
-name = "Geoweaver"
+name = "AuroZeon"
 license = "MIT"
 licenselink = "https://github.com/ESIPFed/Geoweaver/blob/master/LICENSE"
 description = "A web system to allow users to automatically record history and manage complicated scientific workflows in web browsers involving the online spatial data facilities, high-performance computation platforms, and open-source libraries."
