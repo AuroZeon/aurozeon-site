@@ -1,102 +1,136 @@
-/* ByeBites Pages Styling */
-
-.single-page {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    background-color: #fff;
-    color: #333;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.single-page header {
-    text-align: center;
-    margin-bottom: 30px;
-    background: transparent;
-    box-shadow: none;
+* {
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.single-page header h1 {
-    font-size: 2.5rem;
-    color: #ff9800;
-    margin-bottom: 10px;
-}
-
-.single-page section {
-    padding: 0;
-    text-align: left;
-}
-
-.single-page h1, .single-page h2, .single-page h3 {
-    color: #ff9800;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-}
-
-.single-page p {
-    margin-bottom: 1em;
+body {
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: #fff;
     line-height: 1.6;
 }
 
-.single-page ul, .single-page ol {
-    margin-left: 20px;
-    margin-bottom: 1em;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #1e1e1e;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-.single-page li {
-    margin-bottom: 0.5em;
-}
-
-.single-page a {
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
     color: #ff9800;
+}
+
+header nav a {
+    margin-left: 20px;
     text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-.single-page a:hover {
-    text-decoration: underline;
+header nav a:hover {
+    color: #ff9800;
 }
 
-/* ByeBites section styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ff9800;
+    text-align: center;
+}
+
 .byebites-content {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 20px;
+    background: #1e1e1e;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 40px;
 }
 
 .byebites-content h2 {
-    color: #ff9800;
-    border-bottom: 2px solid #ff9800;
-    padding-bottom: 10px;
+    font-size: 1.8rem;
     margin-bottom: 20px;
+    color: #ff9800;
 }
 
-.byebites-content ul {
-    list-style-type: none;
-    padding: 0;
+.byebites-content p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
 }
 
-.byebites-content ul li {
-    margin-bottom: 10px;
+.legal-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
 }
 
-.byebites-content ul li a {
-    display: block;
-    padding: 10px 15px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.byebites-content ul li a:hover {
-    background-color: #ff9800;
+.legal-links a {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #292929;
     color: #fff;
     text-decoration: none;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.legal-links a:hover {
+    background: #ff9800;
+    color: #fff;
+}
+
+.app-download-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.app-store-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.app-store-buttons a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.app-store-buttons a:hover {
+    transform: scale(1.05);
+}
+
+.app-store-buttons img {
+    height: 60px;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1e1e1e;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+footer p a {
+    color: #ff9800;
+    text-decoration: none;
 }
