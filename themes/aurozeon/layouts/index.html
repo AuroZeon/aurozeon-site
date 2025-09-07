@@ -15,59 +15,97 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
+    <section id="about">
+        <video autoplay muted loop id="about-video-bg">
+            <source src="https://videos.pexels.com/video-files/6420489/6420489-hd_1920_1080_24fps.mp4" type="video/mp4">
+        </video>
+        <div class="about-content">
+            <div class="about-text">
                 <h2>About Us</h2>
-                <p>Pioneering the future of AI with ethical innovation</p>
+                <p>
+                    At <strong>AuroZeon</strong>, we specialize in building intelligent, effective software tools that help people make better decisions about their health and energy use. Our mission is to support individuals, communities, and organizations with clear, actionable AI-powered solutions that promote healthy habits and optimize energy consumption.
+                </p>
+                <p>
+                    Our team of AI experts, data scientists, and software engineers work together to create innovative solutions that address real-world challenges. We combine cutting-edge technology with human-centered design to deliver products that are both powerful and accessible.
+                </p>
+                <p>
+                    Built on a foundation of trust, collaboration, and a shared commitment to your success, we value transparency in our work and respect your privacy—it's the cornerstone of our relationship with every customer. Your trust means everything to us, and we're here to support you every step of the way.
+                </p>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>AuroZeon is a forward-thinking AI company dedicated to creating solutions that enhance human potential while respecting privacy and promoting sustainability. Our team of experts combines cutting-edge technology with ethical principles to develop AI systems that work harmoniously with humans.</p>
-                    <p>We believe in transparent AI development and are committed to creating tools that empower rather than replace human decision-making. Our approach focuses on augmenting human capabilities while ensuring that technology serves humanity's best interests.</p>
+            <div class="about-image">
+                <video autoplay muted loop id="about-video-bg">
+                    <source src="https://videos.pexels.com/video-files/6420489/6420489-hd_1920_1080_24fps.mp4" alt="AI Technology">
+                </video>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="solutions">
+        <div class="section-header">
+            <h2>Our Solutions</h2>
+            <p>Discover our innovative AI-powered products designed to transform how you approach health and energy management</p>
+        </div>
+        <div class="solutions">
+            <div class="solution">
+                <div class="video-wrapper">
+                    <video class="background-video" autoplay muted loop>
+                        <source src="https://videos.pexels.com/video-files/8670903/8670903-hd_1920_1080_25fps.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="content">
+                    <h3>ByeBites: Craving Control App</h3>
+                    <p><a href="byebites.html" target="_blank" rel="noopener">ByeBites</a> helps users take control of their eating habits with practical fasting timers, craving tracking, and motivational insights powered by AI. Designed for busy adults and families, the app promotes mindful eating without requiring complex routines or strict diets.</p>
+                </div>
+            </div>
+    
+            <div class="solution">
+                <div class="video-wrapper">
+                    <video class="background-video" autoplay muted loop>
+                        <source src="https://videos.pexels.com/video-files/19419586/19419586-hd_1920_1080_30fps.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="content">
+                    <h3>Energy Tracker Tools</h3>
+                    <p>Our AI-powered web dashboards and mobile tools help households and local governments better understand energy usage, compare trends, and find ways to reduce waste. Our tools leverage machine learning to provide personalized recommendations for energy optimization.</p>
+                </div>
+            </div>
+    
+            <div class="solution">
+                <div class="video-wrapper">
+                    <video class="background-video" autoplay muted loop>
+                        <source src="https://videos.pexels.com/video-files/25935016/11922051_1440_2560_24fps.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="content">
+                    <h3>Custom AI Solutions</h3>
+                    <p>We build specialized AI-driven mobile and web applications that make data more accessible and help people take informed action. Each product is crafted to solve a real-world problem with simplicity, purpose, and the power of artificial intelligence.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Motivation Section -->
-    <section id="motivation" class="motivation">
-        <div class="container">
-            <h2>Our Motivation</h2>
-            <p>{{ .Site.Params.motivation }}</p>
+    <section id="motivation">
+        <video autoplay muted loop class="background-video">
+            <source src="https://videos.pexels.com/video-files/8814196/8814196-uhd_2560_1440_25fps.mp4" type="video/mp4">
+        </video>
+        <div class="motivation-content">
+            <h2>Our Vision</h2>
+            <p>
+                At AuroZeon, we envision a future where AI technology seamlessly integrates into everyday life, enhancing human capabilities rather than replacing them. We believe that customer success is not just a goal but the foundation of our existence. By delivering tailored AI solutions, cutting-edge tools, and unparalleled support, we strive to ensure that every interaction brings tangible value to our clients.
+            </p>
+            <p>
+                At the heart of our efforts lies a deep commitment to safeguarding customer privacy and data security, which we consider our lifeline. Your trust is the cornerstone of our innovation, and we uphold it with the utmost integrity and care as we build the AI-powered future together.
+            </p>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <div class="section-header">
-                <h2>Why Choose Us</h2>
-                <p>Our commitment to excellence sets us apart</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Privacy-First Approach</h3>
-                    <p>We design our AI solutions with privacy as a fundamental principle, not an afterthought.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Cutting-Edge Technology</h3>
-                    <p>Our solutions leverage the latest advancements in artificial intelligence and machine learning.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h3>Sustainable Development</h3>
-                    <p>We're committed to creating AI systems that are environmentally conscious and sustainable.</p>
-                </div>
-            </div>
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Transform Your Business with AI?</h2>
+            <p>Let's start a conversation about how our intelligent solutions can help your organization thrive in the digital age.</p>
+            <a href="/contact/" class="btn btn-primary">Contact Us Today</a>
         </div>
     </section>
 </main>
