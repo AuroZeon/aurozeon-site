@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ByeBites on AuroZeon</title>
+    <link>https://www.aurozeon.com/byebites/</link>
+    <description>Recent content in ByeBites on AuroZeon</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.aurozeon.com/byebites/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Health Disclaimer</title>
+      <link>https://www.aurozeon.com/byebites/health-disclaimer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.aurozeon.com/byebites/health-disclaimer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Privacy Policy</title>
+      <link>https://www.aurozeon.com/byebites/privacy-policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.aurozeon.com/byebites/privacy-policy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Support</title>
+      <link>https://www.aurozeon.com/byebites/support/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.aurozeon.com/byebites/support/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>User Agreement</title>
+      <link>https://www.aurozeon.com/byebites/user-agreement/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.aurozeon.com/byebites/user-agreement/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

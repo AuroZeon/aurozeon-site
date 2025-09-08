@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html 
+lang="en-us" 
+dir="ltr"
+>
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | AuroZeon</title>
+<meta name="description" content="">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+      <link rel="stylesheet" href="/css/main.min.6f7c6299b6d3f8e24c4d9cfae9ec2a1925a5de410b1931d951f0ae864c18681e.css" integrity="sha256-b3ximbbT&#43;OJMTZz66ewqGSWl3kELGTHZUfCuhkwYaB4=" crossorigin="anonymous">
+
+
+
+      <link rel="stylesheet" href="/css/byebites.min.0a52f8407daaa53b9e2cc76f58b6c81460687fdc0e81c1118c6536f2fffb4b7e.css" integrity="sha256-ClL4QH2qpTueLMdvWLbIFGBof9wOgcERjGU28v/7S34=" crossorigin="anonymous">
+
+
+
+
+
+
+
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  
+  <div class="circuit-lines"></div>
+  <div class="glow-effect glow-1"></div>
+  <div class="glow-effect glow-2"></div>
+  
+  <header>
+    <div class="logo">
+    <a href="https://www.aurozeon.com/">AuroZeon</a>
+</div>
+<nav>
+    <a href="https://www.aurozeon.com/">Home</a>
+    <a href="https://www.aurozeon.com/#about">About</a>
+    <a href="https://www.aurozeon.com/#solutions">Solutions</a>
+    <a href="https://www.aurozeon.com/#motivation">Motivation</a>
+    <a href="https://www.aurozeon.com/contact/">Contact</a>
+    <a href="https://www.aurozeon.com/byebites/">ByeBites</a>
+</nav>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    });
+</script>
+
+
+  </header>
+  <main>
+    
+
+<style>
+     
+body {
+	background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+	color: #ffffff;
+	font-family: 'Roboto', sans-serif;
+}
+
+.contact-hero {
+	position: relative;
+	height: 40vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	margin-bottom: 50px;
+}
+
+.contact-hero::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url('https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg') center/cover no-repeat;
+	filter: brightness(0.4) saturate(1.2);
+	z-index: -1;
+}
+
+.contact-hero h1 {
+	font-size: 3.5rem;
+	font-weight: 700;
+	text-shadow: 0 0 15px rgba(241, 157, 56, 0.5);
+	letter-spacing: 2px;
+	animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+	from {
+		text-shadow: 0 0 5px rgba(241, 157, 56, 0.5);
+	}
+	to {
+		text-shadow: 0 0 15px rgba(241, 157, 56, 0.8), 0 0 25px rgba(241, 157, 56, 0.3);
+	}
+}
+
+.contact-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.contact-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 50px;
+}
+
+@media (max-width: 768px) {
+	.contact-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+.contact-info {
+	background: rgba(26, 26, 26, 0.8);
+	border-radius: 10px;
+	padding: 30px;
+	box-shadow: 0 8px 32px rgba(241, 157, 56, 0.15);
+	border: 1px solid rgba(241, 157, 56, 0.1);
+	backdrop-filter: blur(8px);
+}
+
+.contact-info h2 {
+	color: #f19d38;
+	margin-bottom: 25px;
+	font-size: 1.8rem;
+	position: relative;
+	padding-bottom: 15px;
+}
+
+.contact-info h2::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 60px;
+	height: 3px;
+	background: linear-gradient(90deg, #f19d38, transparent);
+}
+
+.contact-method {
+	margin-bottom: 25px;
+	display: flex;
+	align-items: flex-start;
+}
+
+.contact-icon {
+	width: 50px;
+	height: 50px;
+	background: rgba(241, 157, 56, 0.1);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 15px;
+	color: #f19d38;
+	font-size: 1.5rem;
+}
+
+.contact-details h3 {
+	margin: 0 0 5px;
+	color: #ffffff;
+	font-size: 1.2rem;
+}
+
+.contact-details p, .contact-details a {
+	margin: 0;
+	color: #b8c4ff;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+.contact-details a:hover {
+	color: #f19d38;
+}
+
+.contact-form-container {
+	background: rgba(26, 26, 26, 0.8);
+	border-radius: 10px;
+	padding: 30px;
+	box-shadow: 0 8px 32px rgba(241, 157, 56, 0.15);
+	border: 1px solid rgba(241, 157, 56, 0.1);
+	backdrop-filter: blur(8px);
+}
+
+.contact-form-container h2 {
+	color: #f19d38;
+	margin-bottom: 25px;
+	font-size: 1.8rem;
+	position: relative;
+	padding-bottom: 15px;
+}
+
+.contact-form-container h2::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 60px;
+	height: 3px;
+	background: linear-gradient(90deg, #f19d38, transparent);
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 8px;
+	color: #b8c4ff;
+	font-weight: 500;
+}
+
+.form-control {
+	width: 100%;
+	padding: 12px 15px;
+	background: rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(0, 195, 255, 0.2);
+	border-radius: 5px;
+	color: #ffffff;
+	font-size: 1rem;
+	transition: all 0.3s;
+}
+
+.form-control:focus {
+	outline: none;
+	border-color: #f19d38;
+	box-shadow: 0 0 0 3px rgba(241, 157, 56, 0.2);
+	background: rgba(255, 255, 255, 0.1);
+}
+
+textarea.form-control {
+	min-height: 150px;
+	resize: vertical;
+}
+
+.submit-btn {
+	background: linear-gradient(90deg, #f19d38, #e87b00);
+	color: #ffffff;
+	border: none;
+	padding: 12px 25px;
+	border-radius: 5px;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+	background: linear-gradient(90deg, #e87b00, #f19d38);
+	transform: translateY(-2px);
+	box-shadow: 0 5px 15px rgba(232, 123, 0, 0.4);
+}
+
+.submit-btn:active {
+	transform: translateY(0);
+}
+
+ 
+.circuit-lines {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	opacity: 0.1;
+	z-index: -1;
+	background-image: 
+		linear-gradient(90deg, rgba(241, 157, 56, 0.5) 1px, transparent 1px),
+		linear-gradient(0deg, rgba(241, 157, 56, 0.5) 1px, transparent 1px);
+	background-size: 30px 30px;
+}
+
+.glow-effect {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background: radial-gradient(circle, rgba(241, 157, 56, 0.2) 0%, transparent 70%);
+	pointer-events: none;
+	z-index: -1;
+}
+
+.glow-1 {
+	top: 20%;
+	left: 10%;
+}
+
+.glow-2 {
+	bottom: 30%;
+	right: 15%;
+	width: 300px;
+	height: 300px;
+	background: radial-gradient(circle, rgba(232, 123, 0, 0.15) 0%, transparent 70%);
+}
+</style>
+
+<div class="contact-hero">
+    <h1>Contact</h1>
+</div>
+
+<div class="contact-container">
+    <div class="contact-grid">
+        <div class="contact-info">
+            <h2>Get In Touch</h2>
+            <div class="contact-method">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                    <h3>Email</h3>
+                    <a href="mailto:jensen@aurozeon.com">jensen@aurozeon.com</a>
+                </div>
+            </div>
+            
+            <div class="contact-method">
+                <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-details">
+                    <h3>Location</h3>
+                    <p>San Francisco Bay Area, California</p>
+                </div>
+            </div>
+            
+            <div class="contact-method">
+                <div class="contact-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="contact-details">
+                    <h3>Business Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 5:00 PM PST</p>
+                </div>
+            </div>
+            
+            <div class="contact-method">
+                <div class="contact-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <div class="contact-details">
+                    <h3>Response Time</h3>
+                    <p>We aim to respond to all inquiries within 24-48 hours during business days.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-form-container">
+            <h2>Send Us a Message</h2>
+            <p>Test if it recognize</p>
+
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" class="form-control" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="circuit-lines"></div>
+<div class="glow-effect glow-1"></div>
+<div class="glow-effect glow-2"></div>
+
+<script>
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const form = e.target;
+        const formData = {
+            name: form.name.value,
+            email: form.email.value,
+            subject: form.subject.value,
+            message: form.message.value,
+        };
+
+        fetch("YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL", { 
+            method: "POST",
+            body: JSON.stringify(formData),
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            if (data.status === "success") {
+                alert("Thank you! Your message has been sent.");
+                form.reset();
+            } else {
+                alert("There was an issue sending your message. Please try again.");
+            }
+        })
+        .catch((error) => {
+            console.error("Error:", error);
+            alert("An error occurred. Please try again later.");
+        });
+    });
+</script>
+
+  </main>
+  <footer>
+    <div class="footer-content">
+    <div class="footer-column">
+        <h3>AuroZeon</h3>
+        <p>Building intelligent solutions for a better tomorrow through the power of AI and human-centered design.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+    <div class="footer-column">
+        <h3>Solutions</h3>
+        <ul>
+            <li><a href="byebites.html">ByeBites App</a></li>
+            <li><a href="#solutions">Energy Tracker Tools</a></li>
+            <li><a href="#solutions">Custom AI Solutions</a></li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <h3>Company</h3>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#motivation">Our Vision</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <h3>Legal</h3>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="byebites/privacy-policy.html">ByeBites Privacy</a></li>
+        </ul>
+    </div>
+</div>
+<div class="copyright">
+    <p>&copy; 2025 AuroZeon, LLC. All rights reserved. Designed with passion.</p>
+</div>
+  </footer>
+</body>
+</html>

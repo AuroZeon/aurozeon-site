@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on AuroZeon</title>
+    <link>https://www.aurozeon.com/</link>
+    <description>Recent content in Home on AuroZeon</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 Mar 2023 11:00:00 -0700</lastBuildDate>
+    <atom:link href="https://www.aurozeon.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Post 3</title>
+      <link>https://www.aurozeon.com/posts/post-3/</link>
+      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
+      <guid>https://www.aurozeon.com/posts/post-3/</guid>
+      <description>&lt;p&gt;Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna dolore quis. Proident fugiat labore eu laboris officia Lorem enim. Ipsum occaecat cillum ut tempor id sint aliqua incididunt nisi incididunt reprehenderit. Voluptate ad minim sint est aute aliquip esse occaecat tempor officia qui sunt. Aute ex ipsum id ut in est velit est laborum incididunt. Aliqua qui id do esse sunt eiusmod id deserunt eu nostrud aute sit ipsum. Deserunt esse cillum Lorem non magna adipisicing mollit amet consequat.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Post 2</title>
+      <link>https://www.aurozeon.com/posts/post-2/</link>
+      <pubDate>Wed, 15 Feb 2023 10:00:00 -0700</pubDate>
+      <guid>https://www.aurozeon.com/posts/post-2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Post 1</title>
+      <link>https://www.aurozeon.com/posts/post-1/</link>
+      <pubDate>Sun, 15 Jan 2023 09:00:00 -0700</pubDate>
+      <guid>https://www.aurozeon.com/posts/post-1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://www.aurozeon.com/solutions/data-pipeline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.aurozeon.com/solutions/data-pipeline/</guid>
+      <description>&lt;h1 id=&#34;solution-overview&#34;&gt;Solution Overview&lt;/h1&gt;&#xA;&lt;p&gt;&lt;img src=&#34;your-image-url&#34; alt=&#34;Hero Background&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;learn-more-at-here&#34;&gt;Learn More At Here&lt;/h2&gt;&#xA;&lt;h3 id=&#34;solution-overview-1&#34;&gt;Solution Overview&lt;/h3&gt;&#xA;&lt;h3 id=&#34;key-features&#34;&gt;Key Features&lt;/h3&gt;&#xA;&lt;h4 id=&#34;data-collection&#34;&gt;Data Collection&lt;/h4&gt;&#xA;&lt;p&gt;Seamlessly ingest data from multiple sources in real-time.&lt;br&gt;&#xA;&lt;img src=&#34;https://your-image-path/images/icons/data-collection.svg&#34; alt=&#34;Data Collection&#34;&gt;&lt;/p&gt;&#xA;&lt;h4 id=&#34;data-cleaning&#34;&gt;Data Cleaning&lt;/h4&gt;&#xA;&lt;p&gt;Transform raw data into actionable insights with automated cleaning.&lt;br&gt;&#xA;&lt;img src=&#34;https://your-image-path/images/icons/data-cleaning.svg&#34; alt=&#34;Data Cleaning&#34;&gt;&lt;/p&gt;&#xA;&lt;h4 id=&#34;ai-powered-analysis&#34;&gt;AI-Powered Analysis&lt;/h4&gt;&#xA;&lt;p&gt;Leverage AI models to gain deep insights and predictions from your data.&lt;br&gt;&#xA;&lt;img src=&#34;https://your-image-path/images/icons/ai-analysis.svg&#34; alt=&#34;AI-Powered Analysis&#34;&gt;&lt;/p&gt;&#xA;&lt;h4 id=&#34;scalability&#34;&gt;Scalability&lt;/h4&gt;&#xA;&lt;p&gt;Scale effortlessly to accommodate growing datasets with zero downtime.&lt;br&gt;&#xA;&lt;img src=&#34;https://your-image-path/images/icons/scalability.svg&#34; alt=&#34;Scalability&#34;&gt;&lt;/p&gt;&#xA;&lt;h4 id=&#34;continuous-monitoring&#34;&gt;Continuous Monitoring&lt;/h4&gt;&#xA;&lt;p&gt;Ensure smooth operations with real-time monitoring and automated troubleshooting.&lt;br&gt;&#xA;&lt;img src=&#34;https://your-image-path/images/icons/monitoring.svg&#34; alt=&#34;Monitoring&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI-Enhanced Decision Intelligence</title>
+      <link>https://www.aurozeon.com/solutions/decision-intelligence/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.aurozeon.com/solutions/decision-intelligence/</guid>
+      <description>&lt;div class=&#34;hero-section&#34; style=&#34;background-image: url(&#39;{{ .Params.image }}&#39;); background-size: cover; padding: 100px 0; text-align: center; color: #fff;&#34;&gt;&#xA;    &lt;div class=&#34;overlay&#34; style=&#34;background: rgba(0, 0, 0, 0.5); padding: 50px 0;&#34;&gt;&#xA;        &lt;h1 style=&#34;font-size: 3rem; font-weight: bold;&#34;&gt;AI-Enhanced Decision Intelligence&lt;/h1&gt;&#xA;        &lt;p style=&#34;font-size: 1.25rem; max-width: 800px; margin: 0 auto;&#34;&gt;Unlock intelligent insights and optimize business decisions with the power of AI-driven analytics and predictive models.&lt;/p&gt;&#xA;        &lt;a href=&#34;#solution-details&#34; class=&#34;cta-button&#34; style=&#34;background-color: #28a745; color: white; padding: 15px 30px; text-decoration: none; font-weight: bold; margin-top: 20px; display: inline-block; border-radius: 5px;&#34;&gt;Learn More&lt;/a&gt;&#xA;    &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;solution-overview&#34;&gt;&lt;strong&gt;Solution Overview&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;AI-Enhanced Decision Intelligence&lt;/strong&gt; transforms how organizations make decisions. By integrating advanced AI models with decision-making frameworks, our solutions offer real-time, data-driven insights to help businesses optimize operations, increase profitability, and reduce risks.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>https://www.aurozeon.com/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.aurozeon.com/contact/</guid>
+      <description>&lt;p&gt;Test if it recognize&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Custom AI Solutions for Business Intelligence</title>
+      <link>https://www.aurozeon.com/solutions/ai-business-intelligence/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.aurozeon.com/solutions/ai-business-intelligence/</guid>
+      <description>&lt;div class=&#34;hero-section&#34; style=&#34;background-image: url(&#39;{{ .Params.image }}&#39;); background-size: cover; padding: 100px 0; text-align: center; color: #fff;&#34;&gt;&#xA;    &lt;div class=&#34;overlay&#34; style=&#34;background: rgba(0, 0, 0, 0.5); padding: 50px 0;&#34;&gt;&#xA;        &lt;h1 style=&#34;font-size: 3rem; font-weight: bold;&#34;&gt;Custom AI Solutions for Business Intelligence&lt;/h1&gt;&#xA;        &lt;p style=&#34;font-size: 1.25rem; max-width: 800px; margin: 0 auto;&#34;&gt;Harness the power of artificial intelligence to drive insightful decisions and gain a competitive edge in your business.&lt;/p&gt;&#xA;        &lt;a href=&#34;#solution-details&#34; class=&#34;cta-button&#34; style=&#34;background-color: #1D72B8; color: white; padding: 15px 30px; text-decoration: none; font-weight: bold; margin-top: 20px; display: inline-block; border-radius: 5px;&#34;&gt;Learn More&lt;/a&gt;&#xA;    &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;solution-overview&#34;&gt;&lt;strong&gt;Solution Overview&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;In today’s fast-paced business environment, data-driven decision-making is a critical factor in staying ahead of the competition. Our &lt;strong&gt;Custom AI Solutions for Business Intelligence&lt;/strong&gt; empower organizations to unlock the full potential of their data by leveraging AI-powered algorithms that provide actionable insights. Whether it’s predicting trends, identifying key business drivers, or automating decision processes, our solutions are designed to integrate seamlessly with your existing business intelligence tools.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Health Disclaimer</title>
+      <link>https://www.aurozeon.com/byebites/health-disclaimer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.aurozeon.com/byebites/health-disclaimer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Privacy Policy</title>
+      <link>https://www.aurozeon.com/byebites/privacy-policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.aurozeon.com/byebites/privacy-policy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Support</title>
+      <link>https://www.aurozeon.com/byebites/support/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.aurozeon.com/byebites/support/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>User Agreement</title>
+      <link>https://www.aurozeon.com/byebites/user-agreement/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.aurozeon.com/byebites/user-agreement/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
