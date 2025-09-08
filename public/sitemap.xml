@@ -2,53 +2,53 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.aurozeon.com/tags/blue/</loc>
+    <loc>http://localhost:1313/tags/blue/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>https://www.aurozeon.com/tags/green/</loc>
+    <loc>http://localhost:1313/tags/green/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>https://www.aurozeon.com/posts/post-3/</loc>
+    <loc>http://localhost:1313/posts/post-3/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>https://www.aurozeon.com/tags/red/</loc>
+    <loc>http://localhost:1313/tags/red/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>https://www.aurozeon.com/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>https://www.aurozeon.com/posts/post-2/</loc>
+    <loc>http://localhost:1313/posts/post-2/</loc>
     <lastmod>2023-02-15T10:00:00-07:00</lastmod>
   </url><url>
-    <loc>https://www.aurozeon.com/posts/post-1/</loc>
+    <loc>http://localhost:1313/posts/post-1/</loc>
     <lastmod>2023-01-15T09:00:00-07:00</lastmod>
   </url><url>
-    <loc>https://www.aurozeon.com/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2023-01-01T08:30:00-07:00</lastmod>
   </url><url>
-    <loc>https://www.aurozeon.com/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2023-01-01T08:00:00-07:00</lastmod>
   </url><url>
-    <loc>https://www.aurozeon.com/solutions/data-pipeline/</loc>
+    <loc>http://localhost:1313/solutions/data-pipeline/</loc>
   </url><url>
-    <loc>https://www.aurozeon.com/solutions/decision-intelligence/</loc>
+    <loc>http://localhost:1313/solutions/decision-intelligence/</loc>
   </url><url>
-    <loc>https://www.aurozeon.com/byebites/</loc>
+    <loc>http://localhost:1313/byebites/</loc>
   </url><url>
-    <loc>https://www.aurozeon.com/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://www.aurozeon.com/contact/</loc>
+    <loc>http://localhost:1313/contact/</loc>
   </url><url>
-    <loc>https://www.aurozeon.com/solutions/ai-business-intelligence/</loc>
+    <loc>http://localhost:1313/solutions/ai-business-intelligence/</loc>
   </url><url>
-    <loc>https://www.aurozeon.com/byebites/health-disclaimer/</loc>
+    <loc>http://localhost:1313/byebites/health-disclaimer/</loc>
   </url><url>
-    <loc>https://www.aurozeon.com/byebites/privacy-policy/</loc>
+    <loc>http://localhost:1313/byebites/privacy-policy/</loc>
   </url><url>
-    <loc>https://www.aurozeon.com/solutions/</loc>
+    <loc>http://localhost:1313/solutions/</loc>
   </url><url>
-    <loc>https://www.aurozeon.com/byebites/support/</loc>
+    <loc>http://localhost:1313/byebites/support/</loc>
   </url><url>
-    <loc>https://www.aurozeon.com/byebites/user-agreement/</loc>
+    <loc>http://localhost:1313/byebites/user-agreement/</loc>
   </url>
 </urlset>
