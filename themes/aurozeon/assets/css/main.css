@@ -424,12 +424,6 @@ section {
   text-decoration: underline;
 }
 
-.solutions {
-  padding: 60px 20px;
-  background-color: #f9f9f9; /* Light background for better readability */
-  text-align: center;
-}
-
 .container {
   max-width: 1200px;
   margin: 0 auto;

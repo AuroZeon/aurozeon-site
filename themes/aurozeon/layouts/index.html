@@ -21,13 +21,86 @@
                     Built on a foundation of trust, collaboration, and a shared commitment to your success, we value transparency in our work and respect your privacy—it's the cornerstone of our relationship with every customer. Your trust means everything to us, and we're here to support you every step of the way.
                 </p>
             </div>
-            <div class="about-image">
-                <video autoplay muted loop id="about-video-bg">
-                    <source src="https://videos.pexels.com/video-files/6420489/6420489-hd_1920_1080_24fps.mp4" alt="AI Technology">
+            <!-- Digital Twin Video -->
+            <div class="about-image sci-fi-screen">
+                <video autoplay muted loop>
+                    <source src="https://videos.pexels.com/video-files/6420489/6420489-hd_1920_1080_24fps.mp4" type="video/mp4">
                 </video>
-                
+
+                <!-- HUD Overlays -->
+                <div class="hud-overlay"></div>
+                <div class="scan-lines"></div>
+                <canvas class="matrix-overlay"></canvas>
+                <div class="sci-fi-buttons">
+                    <span></span><span></span><span></span>
+                </div>
             </div>
         </div>
+        <script>
+            const canvas = document.querySelector(".matrix-overlay");
+            const ctx = canvas.getContext("2d");
+
+            function resizeCanvas() {
+                canvas.width = canvas.offsetWidth;
+                canvas.height = canvas.offsetHeight;
+            }
+            resizeCanvas();
+            window.addEventListener("resize", resizeCanvas);
+
+            // Some example HUD elements
+            function drawHUD() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height); // clear previous frame
+
+                // Semi-transparent overlay for glow effect
+                ctx.fillStyle = "rgba(0, 255, 255, 0.05)";
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                // Glowing horizontal scan line
+                ctx.strokeStyle = "rgba(0, 255, 255, 0.5)";
+                ctx.lineWidth = 2;
+                const y = (Date.now() / 50) % canvas.height; // moving line
+                ctx.beginPath();
+                ctx.moveTo(0, y);
+                ctx.lineTo(canvas.width, y);
+                ctx.stroke();
+
+                // Circular radar / signal indicator
+                const radarX = canvas.width - 80;
+                const radarY = canvas.height - 80;
+                const radius = 50;
+                ctx.strokeStyle = "rgba(0, 255, 255, 0.6)";
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.arc(radarX, radarY, radius, 0, Math.PI * 2);
+                ctx.stroke();
+
+                // Radar sweep line
+                const sweepAngle = (Date.now() / 1000) % (2 * Math.PI);
+                ctx.beginPath();
+                ctx.moveTo(radarX, radarY);
+                ctx.lineTo(radarX + radius * Math.cos(sweepAngle), radarY + radius * Math.sin(sweepAngle));
+                ctx.stroke();
+
+                // Some dashboard bars
+                const barWidth = 10;
+                for (let i = 0; i < 5; i++) {
+                    const barHeight = 30 + 20 * Math.sin(Date.now() / 500 + i);
+                    ctx.fillStyle = "rgba(0,255,255,0.7)";
+                    ctx.fillRect(20 + i * (barWidth + 5), canvas.height - barHeight - 20, barWidth, barHeight);
+                }
+
+                // Small glowing buttons
+                for (let i = 0; i < 3; i++) {
+                    ctx.fillStyle = "rgba(0,255,255,0.8)";
+                    ctx.beginPath();
+                    ctx.arc(canvas.width - 30 - i * 20, 20, 6, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+
+            setInterval(drawHUD, 50); // redraw every 50ms for animation
+
+        </script>
     </section>
 
     <section id="solutions">
