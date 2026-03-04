@@ -9,17 +9,17 @@ dir="{{ or site.Language.LanguageDirection `ltr` }}"
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <!-- CSS -->
   {{ with resources.Get "css/main.css" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{ end }}
 
-  <!-- ByeBites CSS -->
   {{ with resources.Get "css/byebites.css" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{ end }}
 
-  <!-- ByeBites CSS -->
   {{ with resources.Get "css/home.css" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{ end }}
@@ -29,7 +29,7 @@ dir="{{ or site.Language.LanguageDirection `ltr` }}"
     <script src="{{ .RelPermalink }}" defer></script>
   {{ end }}
 </head>
-<body>
+<body class="auroweaver-product-page">
   <header>
       <div class="logo">
         <a href="{{ .Site.BaseURL }}">
@@ -38,12 +38,11 @@ dir="{{ or site.Language.LanguageDirection `ltr` }}"
         </a>
       </div>
       <nav>
-          <a href="/">AuroZeon Home</a>
-          <a href="/byebites" class="active">ByeBites</a>
-          <a href="/byebites/privacy-policy">Privacy Policy</a>
-          <a href="/byebites/user-agreement">User Agreement</a>
-          <a href="/byebites/health-disclaimer">Health Disclaimer</a>
-          <a href="/byebites/support">Contact Us</a>
+          <a href="{{ .Site.BaseURL }}">AuroZeon Home</a>
+          <a href="{{ .Site.BaseURL }}byebites/">ByeBites</a>
+          <a href="{{ .Site.BaseURL }}auroweaver/" class="active">AuroWeaver</a>
+          <a href="{{ .Site.BaseURL }}#solutions">Solutions</a>
+          <a href="{{ .Site.BaseURL }}contact/">Contact</a>
       </nav>
   </header>
 

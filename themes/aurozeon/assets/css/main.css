@@ -95,6 +95,45 @@ header.scrolled {
   text-decoration: none;
   display: flex;
   align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.logo a:hover {
+  transform: scale(1.02);
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  filter: invert(1) brightness(1.1);
+  margin-right: 10px;
+  animation: logo-glow 3s ease-in-out infinite;
+}
+
+.logo a:hover .logo-img {
+  animation: logo-glow-hover 0.6s ease-in-out forwards;
+}
+
+@keyframes logo-glow {
+  0%, 100% { filter: invert(1) brightness(1.1) drop-shadow(0 0 4px rgba(241, 157, 56, 0.3)); }
+  50% { filter: invert(1) brightness(1.15) drop-shadow(0 0 8px rgba(241, 157, 56, 0.5)); }
+}
+
+@keyframes logo-glow-hover {
+  to { filter: invert(1) brightness(1.2) drop-shadow(0 0 12px rgba(241, 157, 56, 0.7)); }
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  transition: text-shadow 0.3s ease;
+}
+
+.logo a:hover .logo-text {
+  text-shadow: 0 0 12px rgba(241, 157, 56, 0.6);
 }
 
 nav {

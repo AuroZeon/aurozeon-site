@@ -1,4 +1,11 @@
+# AuroWeaver app URL - local default, update for production deployment
+[auroweaver]
+app_url = "http://localhost:8806/AuroWeaver"
+auroweaver_logo = "images/auroweaver.logo.drawio.png"
+
 #################### default parameters ################################
+# Site logo (served from static/images/) - used in header
+site_logo = "images/aurozeon.logo.png"
 # favicon module: https://github.com/gethugothemes/hugo-modules/tree/master/images#favicon-implementation
 favicon = "images/favicon.png"
 # logo module: https://github.com/gethugothemes/hugo-modules/tree/master/images#logo-implementation

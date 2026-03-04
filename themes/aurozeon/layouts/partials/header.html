@@ -1,5 +1,8 @@
 <div class="logo">
-    <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+    <a href="{{ .Site.BaseURL }}">
+        <img src="{{ .Site.BaseURL }}images/aurozeon.logo.png" alt="" class="logo-img">
+        <span class="logo-text">{{ .Site.Title }}</span>
+    </a>
 </div>
 <nav>
     <a href="{{ .Site.BaseURL }}">Home</a>
@@ -8,6 +11,7 @@
     <a href="{{ .Site.BaseURL }}#motivation">Motivation</a>
     <a href="{{ .Site.BaseURL }}contact/">Contact</a>
     <a href="{{ .Site.BaseURL }}byebites/">ByeBites</a>
+    <a href="{{ .Site.BaseURL }}auroweaver/">AuroWeaver</a>
 </nav>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
