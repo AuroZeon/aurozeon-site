@@ -1,6 +1,6 @@
 # AuroWeaver app URL - local default, update for production deployment
 [auroweaver]
-app_url = "http://localhost:8806/AuroWeaver"
+app_url = "http://ec2-52-91-79-13.compute-1.amazonaws.com:8806/AuroWeaver/web/auroweaver"
 auroweaver_logo = "images/auroweaver.logo.drawio.png"
 
 #################### default parameters ################################
