@@ -27,6 +27,10 @@ dir="{{ or site.Language.LanguageDirection `ltr` }}"
     <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{ end }}
 
+  {{ with resources.Get "css/scroll-animation.css" }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{ end }}
+
   <!-- JavaScript -->
   {{ with resources.Get "js/main.js" }}
     <script src="{{ .RelPermalink }}" defer></script>
@@ -36,14 +40,13 @@ dir="{{ or site.Language.LanguageDirection `ltr` }}"
   {{ end }}
 </head>
 <body class="shoulema-page">
+  <!-- Futuristic Elements -->
+  <div class="circuit-lines"></div>
+  <div class="glow-effect glow-1"></div>
+  <div class="glow-effect glow-2"></div>
+
   <header>
-      <div class="logo">
-        <a href="{{ .Site.BaseURL }}">
-          <img src="{{ .Site.BaseURL }}images/aurozeon.logo.png" alt="" class="logo-img">
-          <span class="logo-text">AuroZeon</span>
-        </a>
-      </div>
-      {{ partial "nav-main.html" . }}
+    {{ partial "header.html" . }}
   </header>
 
   <main>
