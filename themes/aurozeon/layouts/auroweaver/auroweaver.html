@@ -2,8 +2,11 @@
 {{ $base := .Site.BaseURL }}
 {{ $appUrl := .Site.Params.auroweaver.app_url | default "http://ec2-52-91-79-13.compute-1.amazonaws.com:8806/AuroWeaver/web/auroweaver" }}
 <div class="product-scroll-page auroweaver-scroll">
-    <!-- Hero: full-screen with Pexels tech background -->
-    <section class="product-hero" style="background-image: url('https://images.pexels.com/photos/577210/pexels-photo-577210.jpeg?auto=compress&cs=tinysrgb&w=1920');">
+    <!-- Hero: video background - coding/computer (unique to AuroWeaver page) -->
+    <section class="product-hero product-hero-video">
+        <video autoplay muted loop playsinline>
+            <source src="https://videos.pexels.com/video-files/5495781/5495781-uhd_2560_1080_30fps.mp4" type="video/mp4">
+        </video>
         <div class="product-hero-overlay"></div>
         <div class="product-hero-content">
             <span class="product-badge">Enterprise AI Workflow Platform</span>
@@ -52,8 +55,8 @@
         </div>
     </section>
 
-    <!-- Parallax CTA -->
-    <section class="product-parallax" style="background-image: url('https://images.pexels.com/photos/577210/pexels-photo-577210.jpeg?auto=compress&cs=tinysrgb&w=1920');">
+    <!-- Parallax CTA - unique tech image (not used on home) -->
+    <section class="product-parallax" style="background-image: url('https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1920');">
         <div class="product-parallax-overlay"></div>
         <div class="product-parallax-content" data-animate="scale-in">
             <p>Ready to automate with AI?</p>
@@ -70,7 +73,7 @@
                 <a href="{{ $base }}auroweaver/privacy-policy/">Privacy Policy</a>
                 <a href="{{ $base }}auroweaver/user-agreement/">User Agreement</a>
             </div>
-            <p class="product-pexels-credit">Backgrounds: <a href="https://www.pexels.com/photo/pexels-photo-577210/" target="_blank" rel="noopener">Photo on Pexels</a></p>
+            <p class="product-pexels-credit">Video: <a href="https://www.pexels.com/video/5495781/" target="_blank" rel="noopener">Pexels</a> · Parallax: <a href="https://www.pexels.com/photo/3861969/" target="_blank" rel="noopener">Pexels</a></p>
         </div>
     </section>
 </div>

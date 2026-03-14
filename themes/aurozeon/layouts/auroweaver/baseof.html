@@ -4,47 +4,16 @@ lang="{{ or site.Language.LanguageCode site.Language.Lang }}"
 dir="{{ or site.Language.LanguageDirection `ltr` }}"
 >
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
-  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <!-- CSS -->
-  {{ with resources.Get "css/main.css" }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{ end }}
-
-  {{ with resources.Get "css/byebites.css" }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{ end }}
-
-  {{ with resources.Get "css/home.css" }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{ end }}
-
-  {{ with resources.Get "css/product-scroll.css" }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{ end }}
-
-  <!-- JavaScript -->
-  {{ with resources.Get "js/main.js" }}
-    <script src="{{ .RelPermalink }}" defer></script>
-  {{ end }}
-  {{ with resources.Get "js/product-scroll.js" }}
-    <script src="{{ .RelPermalink }}" defer></script>
-  {{ end }}
+  {{ partial "head-proper.html" . }}
 </head>
 <body class="auroweaver-product-page">
+  <!-- Futuristic Elements -->
+  <div class="circuit-lines"></div>
+  <div class="glow-effect glow-1"></div>
+  <div class="glow-effect glow-2"></div>
+
   <header>
-      <div class="logo">
-        <a href="{{ .Site.BaseURL }}">
-          <img src="{{ .Site.BaseURL }}images/aurozeon.logo.png" alt="" class="logo-img">
-          <span class="logo-text">AuroZeon</span>
-        </a>
-      </div>
-      {{ partial "nav-main.html" . }}
+    {{ partial "header.html" . }}
   </header>
 
   <main>

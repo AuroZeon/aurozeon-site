@@ -31,8 +31,7 @@
   {{- end }}
 {{- end }}
 
-<!-- Home CSS -->
-{{ if .IsHome }}
+<!-- Home CSS - load for all pages so header/menu works consistently -->
 {{- with resources.Get "css/home.css" }}
   {{- if eq hugo.Environment "development" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}">
@@ -42,7 +41,32 @@
     {{- end }}
   {{- end }}
 {{- end }}
-{{ end }}
+
+<!-- Product scroll CSS - for SHOULEMA, AuroWeaver, ByeBites -->
+{{- if or (eq .Section "shoulema") (eq .Section "auroweaver") (eq .Section "byebites") }}
+  {{- with resources.Get "css/product-scroll.css" }}
+    {{- if eq hugo.Environment "development" }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{- else }}
+      {{- with . | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+<!-- SHOULEMA CSS -->
+{{- if eq .Section "shoulema" }}
+  {{- with resources.Get "css/shoulema.css" }}
+    {{- if eq hugo.Environment "development" }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{- else }}
+      {{- with . | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
 
 <!-- Contact CSS -->
 {{ if eq .Layout "contact" }}
