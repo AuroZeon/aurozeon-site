@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOULEMA - AuroZeon</title>
+    <meta name="description" content="对准食物，秒知热量 · Point your camera at food. Instantly see calories. Real-time AI camera app for food recognition and calorie overlay.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8f9fa; color: #1a1a2e; line-height: 1.6; }
+
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; background: rgba(255,255,255,0.98); box-shadow: 0 1px 12px rgba(0,0,0,0.08); position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.06); }
+        header .logo a { font-size: 1.5rem; font-weight: bold; color: #e87b00; text-decoration: none; display: flex; align-items: center; }
+        header .logo-img { height: 32px; width: auto; margin-right: 8px; filter: none; }
+        header nav a { margin-left: 20px; text-decoration: none; color: #1a1a2e; font-weight: 500; transition: color 0.2s; }
+        header nav a:hover, header nav a.active { color: #e87b00; }
+
+        main { padding-top: 88px; min-height: 100vh; }
+        .wrap { max-width: 960px; margin: 0 auto; padding: 48px 24px 64px; }
+
+        .hero { text-align: center; padding: 24px 0 40px; }
+        .hero h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 700; color: #1a1a2e; margin-bottom: 12px; }
+        .hero .tagline { font-size: 1.25rem; color: #e87b00; margin: 0 0 20px; font-weight: 500; }
+        .hero .desc { font-size: 1.05rem; color: #4a5568; max-width: 520px; margin: 0 auto; }
+
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-bottom: 40px; }
+        .feature { background: #fff; border-radius: 12px; padding: 28px 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.06); transition: box-shadow 0.2s, transform 0.2s; }
+        .feature:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.12); transform: translateY(-4px); }
+        .feature-icon { width: 48px; height: 48px; background: linear-gradient(135deg, rgba(232,123,0,0.12), rgba(232,123,0,0.06)); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #e87b00; font-size: 1.2rem; margin-bottom: 16px; }
+        .feature h3 { font-size: 1.05rem; font-weight: 600; color: #1a1a2e; margin-bottom: 8px; }
+        .feature p { font-size: 0.9rem; color: #4a5568; margin: 0; line-height: 1.55; }
+
+        .download { background: linear-gradient(135deg, #e87b00 0%, #c96a00 100%); border-radius: 16px; padding: 40px 28px; text-align: center; box-shadow: 0 8px 32px rgba(232,123,0,0.25); margin-bottom: 40px; }
+        .download h2 { font-size: 1.4rem; color: #fff; margin-bottom: 8px; }
+        .download > p { color: rgba(255,255,255,0.92); margin-bottom: 24px; }
+        .download .app-btns { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+        .download .app-btns a { transition: transform 0.2s; }
+        .download .app-btns a:hover { transform: scale(1.05); }
+        .download .app-btns img { height: 52px; }
+
+        .legal { background: #fff; border-radius: 12px; padding: 28px 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.06); }
+        .legal h2 { font-size: 1.1rem; color: #1a1a2e; margin-bottom: 12px; font-weight: 600; }
+        .legal p { font-size: 0.95rem; color: #4a5568; margin-bottom: 12px; }
+        .legal a { color: #e87b00; text-decoration: none; margin-right: 16px; }
+        .legal a:hover { color: #c96a00; }
+
+        footer { text-align: center; padding: 24px; background: #fff; border-top: 1px solid rgba(0,0,0,0.08); color: #4a5568; font-size: 0.9rem; }
+        footer a { color: #e87b00; }
+
+        @media (max-width: 768px) { header nav a { margin-left: 12px; font-size: 0.9rem; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="/"><img src="/images/aurozeon.logo.png" alt="" class="logo-img"><span>AuroZeon</span></a></div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="byebites.html">ByeBites</a>
+            <a href="auroweaver.html">AuroWeaver</a>
+            <a href="shoulema.html" class="active">SHOULEMA</a>
+            <a href="/#solutions">Solutions</a>
+            <a href="/contact/">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="wrap">
+            <section class="hero">
+                <h1>SHOULEMA</h1>
+                <p class="tagline">对准食物，秒知热量 · Point your camera at food. Instantly see calories.</p>
+                <p class="desc">Real-time AI camera app that identifies food and overlays calorie information—like Shazam for food.</p>
+            </section>
+
+            <section class="features">
+                <div class="feature">
+                    <div class="feature-icon"><i class="fas fa-camera"></i></div>
+                    <h3>AI Food Detection</h3>
+                    <p>Real-time camera + COCO-SSD. Recognizes pizza, sandwich, apple, bowl, cup, and more.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><i class="fas fa-bowl-food"></i></div>
+                    <h3>Smart Bowl/Cup</h3>
+                    <p>Select rice, noodles, porridge, soy milk, coffee, tea—100+ Chinese and common foods.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Ingredient Match</h3>
+                    <p>Rice + egg → fried rice. Pick ingredients, get dish recommendations instantly.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><i class="fas fa-language"></i></div>
+                    <h3>Bilingual</h3>
+                    <p>Chinese and English interface. Search by name or browse by category.</p>
+                </div>
+            </section>
+
+            <section class="download">
+                <h2>Download SHOULEMA</h2>
+                <p>Point, shoot, and know your calories. Free on App Store and Google Play.</p>
+                <div class="app-btns">
+                    <a href="https://play.google.com/store/apps/details?id=com.shou.calorie" target="_blank" rel="noopener noreferrer">
+                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+                    </a>
+                    <a href="https://apps.apple.com/app/shoulema" target="_blank" rel="noopener noreferrer">
+                        <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store">
+                    </a>
+                </div>
+            </section>
+
+            <section class="legal">
+                <h2>Legal</h2>
+                <p>Review our policies and terms.</p>
+                <a href="/shoulema/privacy-policy/">Privacy Policy</a>
+                <a href="/shoulema/user-agreement/">User Agreement</a>
+                <a href="/contact/">Contact Us</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>&copy; 2025 AuroZeon, LLC. All rights reserved.</footer>
+</body>
+</html>

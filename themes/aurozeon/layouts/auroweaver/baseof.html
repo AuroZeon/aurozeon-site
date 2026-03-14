@@ -24,8 +24,15 @@ dir="{{ or site.Language.LanguageDirection `ltr` }}"
     <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{ end }}
 
+  {{ with resources.Get "css/product-scroll.css" }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{ end }}
+
   <!-- JavaScript -->
   {{ with resources.Get "js/main.js" }}
+    <script src="{{ .RelPermalink }}" defer></script>
+  {{ end }}
+  {{ with resources.Get "js/product-scroll.js" }}
     <script src="{{ .RelPermalink }}" defer></script>
   {{ end }}
 </head>
@@ -37,13 +44,7 @@ dir="{{ or site.Language.LanguageDirection `ltr` }}"
           <span class="logo-text">AuroZeon</span>
         </a>
       </div>
-      <nav>
-          <a href="{{ .Site.BaseURL }}">AuroZeon Home</a>
-          <a href="{{ .Site.BaseURL }}byebites/">ByeBites</a>
-          <a href="{{ .Site.BaseURL }}auroweaver/" class="active">AuroWeaver</a>
-          <a href="{{ .Site.BaseURL }}#solutions">Solutions</a>
-          <a href="{{ .Site.BaseURL }}contact/">Contact</a>
-      </nav>
+      {{ partial "nav-main.html" . }}
   </header>
 
   <main>

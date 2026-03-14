@@ -3,7 +3,7 @@
 lang="en-us" 
 dir="ltr"
 >
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=64516&amp;path=livereload" data-no-instant defer></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Post 1 | AuroZeon</title>
@@ -21,6 +21,9 @@ dir="ltr"
     <link rel="stylesheet" href="/css/byebites.css">
 
 
+    <link rel="stylesheet" href="/css/scroll-animation.css">
+
+
 
 
 
@@ -30,6 +33,7 @@ dir="ltr"
 
       <script src="/js/main.js"></script>
 
+    <script src="/js/product-scroll.js" defer></script>
 </head>
 <body>
   
@@ -39,20 +43,28 @@ dir="ltr"
   
   <header>
     <div class="logo">
-    <a href="http://localhost:1313/">
-        <img src="http://localhost:1313/images/aurozeon.logo.png" alt="" class="logo-img">
+    <a href="http://localhost:64516/">
+        <img src="http://localhost:64516/images/aurozeon.logo.png" alt="" class="logo-img">
         <span class="logo-text">AuroZeon</span>
     </a>
 </div>
-<nav>
-    <a href="http://localhost:1313/">Home</a>
-    <a href="http://localhost:1313/#about">About</a>
-    <a href="http://localhost:1313/#solutions">Solutions</a>
-    <a href="http://localhost:1313/#motivation">Motivation</a>
-    <a href="http://localhost:1313/contact/">Contact</a>
-    <a href="http://localhost:1313/byebites/">ByeBites</a>
-    <a href="http://localhost:1313/auroweaver/">AuroWeaver</a>
+
+<nav class="main-nav">
+    <ul class="nav-list">
+        <li><a href="http://localhost:64516/">Home</a></li>
+        <li><a href="http://localhost:64516/#about">About</a></li>
+        <li class="dropdown">
+            <a href="http://localhost:64516/#solutions" class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Solutions <span class="nav-arrow">▾</span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="http://localhost:64516/byebites/" role="menuitem">ByeBites</a></li>
+                <li><a href="http://localhost:64516/auroweaver/" role="menuitem">AuroWeaver</a></li>
+                <li><a href="http://localhost:64516/shoulema/" role="menuitem">SHOULEMA</a></li>
+            </ul>
+        </li>
+        <li><a href="http://localhost:64516/contact/">Contact</a></li>
+    </ul>
 </nav>
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const header = document.querySelector('header');
@@ -96,26 +108,28 @@ dir="ltr"
     <div class="footer-column">
         <h3>Solutions</h3>
         <ul>
-            <li><a href="/byebites">ByeBites App</a></li>
-            <li><a href="/auroweaver">AuroWeaver</a></li>
-            <li><a href="#solutions">Energy Tracker Tools</a></li>
-            <li><a href="#solutions">Custom AI Solutions</a></li>
+            <li><a href="http://localhost:64516/byebites/">ByeBites</a></li>
+            <li><a href="http://localhost:64516/auroweaver/">AuroWeaver</a></li>
+            <li><a href="http://localhost:64516/shoulema/">SHOULEMA</a></li>
         </ul>
     </div>
     <div class="footer-column">
         <h3>Company</h3>
         <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#motivation">Our Vision</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="http://localhost:64516/">Home</a></li>
+            <li><a href="http://localhost:64516/#about">About</a></li>
+            <li><a href="http://localhost:64516/contact/">Contact</a></li>
         </ul>
     </div>
     <div class="footer-column">
         <h3>Legal</h3>
         <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="byebites/privacy-policy.html">ByeBites Privacy</a></li>
+            <li><a href="http://localhost:64516/byebites/privacy-policy/">ByeBites Privacy</a></li>
+            <li><a href="http://localhost:64516/byebites/user-agreement/">ByeBites User Agreement</a></li>
+            <li><a href="http://localhost:64516/auroweaver/privacy-policy/">AuroWeaver Privacy</a></li>
+            <li><a href="http://localhost:64516/auroweaver/user-agreement/">AuroWeaver User Agreement</a></li>
+            <li><a href="http://localhost:64516/shoulema/privacy-policy/">SHOULEMA Privacy</a></li>
+            <li><a href="http://localhost:64516/shoulema/user-agreement/">SHOULEMA User Agreement</a></li>
         </ul>
     </div>
 </div>

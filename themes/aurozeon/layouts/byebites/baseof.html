@@ -8,6 +8,7 @@ dir="{{ or site.Language.LanguageDirection `ltr` }}"
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- CSS -->
   {{ with resources.Get "css/main.css" }}
@@ -19,8 +20,11 @@ dir="{{ or site.Language.LanguageDirection `ltr` }}"
     <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{ end }}
 
-  <!-- ByeBites CSS -->
   {{ with resources.Get "css/home.css" }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{ end }}
+
+  {{ with resources.Get "css/product-scroll.css" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{ end }}
 
@@ -28,8 +32,11 @@ dir="{{ or site.Language.LanguageDirection `ltr` }}"
   {{ with resources.Get "js/main.js" }}
     <script src="{{ .RelPermalink }}" defer></script>
   {{ end }}
+  {{ with resources.Get "js/product-scroll.js" }}
+    <script src="{{ .RelPermalink }}" defer></script>
+  {{ end }}
 </head>
-<body>
+<body class="byebites-page">
   <header>
       <div class="logo">
         <a href="{{ .Site.BaseURL }}">
@@ -37,14 +44,7 @@ dir="{{ or site.Language.LanguageDirection `ltr` }}"
           <span class="logo-text">AuroZeon</span>
         </a>
       </div>
-      <nav>
-          <a href="/">AuroZeon Home</a>
-          <a href="/byebites" class="active">ByeBites</a>
-          <a href="/byebites/privacy-policy">Privacy Policy</a>
-          <a href="/byebites/user-agreement">User Agreement</a>
-          <a href="/byebites/health-disclaimer">Health Disclaimer</a>
-          <a href="/byebites/support">Contact Us</a>
-      </nav>
+      {{ partial "nav-main.html" . }}
   </header>
 
   <main>

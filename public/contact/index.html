@@ -3,7 +3,7 @@
 lang="en-us" 
 dir="ltr"
 >
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=64516&amp;path=livereload" data-no-instant defer></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | AuroZeon</title>
@@ -21,6 +21,9 @@ dir="ltr"
     <link rel="stylesheet" href="/css/byebites.css">
 
 
+    <link rel="stylesheet" href="/css/scroll-animation.css">
+
+
 
 
 
@@ -30,6 +33,7 @@ dir="ltr"
 
       <script src="/js/main.js"></script>
 
+    <script src="/js/product-scroll.js" defer></script>
 </head>
 <body>
   
@@ -39,20 +43,28 @@ dir="ltr"
   
   <header>
     <div class="logo">
-    <a href="http://localhost:1313/">
-        <img src="http://localhost:1313/images/aurozeon.logo.png" alt="" class="logo-img">
+    <a href="http://localhost:64516/">
+        <img src="http://localhost:64516/images/aurozeon.logo.png" alt="" class="logo-img">
         <span class="logo-text">AuroZeon</span>
     </a>
 </div>
-<nav>
-    <a href="http://localhost:1313/">Home</a>
-    <a href="http://localhost:1313/#about">About</a>
-    <a href="http://localhost:1313/#solutions">Solutions</a>
-    <a href="http://localhost:1313/#motivation">Motivation</a>
-    <a href="http://localhost:1313/contact/">Contact</a>
-    <a href="http://localhost:1313/byebites/">ByeBites</a>
-    <a href="http://localhost:1313/auroweaver/">AuroWeaver</a>
+
+<nav class="main-nav">
+    <ul class="nav-list">
+        <li><a href="http://localhost:64516/">Home</a></li>
+        <li><a href="http://localhost:64516/#about">About</a></li>
+        <li class="dropdown">
+            <a href="http://localhost:64516/#solutions" class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Solutions <span class="nav-arrow">▾</span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="http://localhost:64516/byebites/" role="menuitem">ByeBites</a></li>
+                <li><a href="http://localhost:64516/auroweaver/" role="menuitem">AuroWeaver</a></li>
+                <li><a href="http://localhost:64516/shoulema/" role="menuitem">SHOULEMA</a></li>
+            </ul>
+        </li>
+        <li><a href="http://localhost:64516/contact/">Contact</a></li>
+    </ul>
 </nav>
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const header = document.querySelector('header');
@@ -74,9 +86,8 @@ dir="ltr"
 <style>
      
 body {
-	background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-	color: #ffffff;
-	font-family: 'Roboto', sans-serif;
+	background: #f8f9fa !important;
+	color: #1a1a2e !important;
 }
 
 .contact-hero {
@@ -96,26 +107,20 @@ body {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: url('https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg') center/cover no-repeat;
-	filter: brightness(0.4) saturate(1.2);
+	background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.35)),
+		url('https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg') center/cover no-repeat;
+	filter: brightness(0.9) saturate(1.1);
 	z-index: -1;
 }
 
 .contact-hero h1 {
 	font-size: 3.5rem;
 	font-weight: 700;
-	text-shadow: 0 0 15px rgba(241, 157, 56, 0.5);
+	color: #fff;
 	letter-spacing: 2px;
-	animation: glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-	from {
-		text-shadow: 0 0 5px rgba(241, 157, 56, 0.5);
-	}
-	to {
-		text-shadow: 0 0 15px rgba(241, 157, 56, 0.8), 0 0 25px rgba(241, 157, 56, 0.3);
-	}
+	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+	position: relative;
+	z-index: 1;
 }
 
 .contact-container {
@@ -137,16 +142,15 @@ body {
 }
 
 .contact-info {
-	background: rgba(26, 26, 26, 0.8);
+	background: #fff;
 	border-radius: 10px;
 	padding: 30px;
-	box-shadow: 0 8px 32px rgba(241, 157, 56, 0.15);
-	border: 1px solid rgba(241, 157, 56, 0.1);
-	backdrop-filter: blur(8px);
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+	border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .contact-info h2 {
-	color: #f19d38;
+	color: #e87b00;
 	margin-bottom: 25px;
 	font-size: 1.8rem;
 	position: relative;
@@ -160,7 +164,7 @@ body {
 	left: 0;
 	width: 60px;
 	height: 3px;
-	background: linear-gradient(90deg, #f19d38, transparent);
+	background: linear-gradient(90deg, #e87b00, transparent);
 }
 
 .contact-method {
@@ -172,44 +176,43 @@ body {
 .contact-icon {
 	width: 50px;
 	height: 50px;
-	background: rgba(241, 157, 56, 0.1);
+	background: rgba(232, 123, 0, 0.1);
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin-right: 15px;
-	color: #f19d38;
+	color: #e87b00;
 	font-size: 1.5rem;
 }
 
 .contact-details h3 {
 	margin: 0 0 5px;
-	color: #ffffff;
+	color: #1a1a2e;
 	font-size: 1.2rem;
 }
 
 .contact-details p, .contact-details a {
 	margin: 0;
-	color: #b8c4ff;
+	color: #4a5568;
 	text-decoration: none;
 	transition: color 0.3s;
 }
 
 .contact-details a:hover {
-	color: #f19d38;
+	color: #e87b00;
 }
 
 .contact-form-container {
-	background: rgba(26, 26, 26, 0.8);
+	background: #fff;
 	border-radius: 10px;
 	padding: 30px;
-	box-shadow: 0 8px 32px rgba(241, 157, 56, 0.15);
-	border: 1px solid rgba(241, 157, 56, 0.1);
-	backdrop-filter: blur(8px);
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+	border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .contact-form-container h2 {
-	color: #f19d38;
+	color: #e87b00;
 	margin-bottom: 25px;
 	font-size: 1.8rem;
 	position: relative;
@@ -223,7 +226,7 @@ body {
 	left: 0;
 	width: 60px;
 	height: 3px;
-	background: linear-gradient(90deg, #f19d38, transparent);
+	background: linear-gradient(90deg, #e87b00, transparent);
 }
 
 .form-group {
@@ -233,26 +236,26 @@ body {
 .form-group label {
 	display: block;
 	margin-bottom: 8px;
-	color: #b8c4ff;
+	color: #4a5568;
 	font-weight: 500;
 }
 
 .form-control {
 	width: 100%;
 	padding: 12px 15px;
-	background: rgba(255, 255, 255, 0.05);
-	border: 1px solid rgba(0, 195, 255, 0.2);
+	background: #f8f9fa;
+	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 5px;
-	color: #ffffff;
+	color: #1a1a2e;
 	font-size: 1rem;
 	transition: all 0.3s;
 }
 
 .form-control:focus {
 	outline: none;
-	border-color: #f19d38;
-	box-shadow: 0 0 0 3px rgba(241, 157, 56, 0.2);
-	background: rgba(255, 255, 255, 0.1);
+	border-color: #e87b00;
+	box-shadow: 0 0 0 3px rgba(232, 123, 0, 0.15);
+	background: #fff;
 }
 
 textarea.form-control {
@@ -261,8 +264,8 @@ textarea.form-control {
 }
 
 .submit-btn {
-	background: linear-gradient(90deg, #f19d38, #e87b00);
-	color: #ffffff;
+	background: linear-gradient(135deg, #e87b00, #c96a00);
+	color: #fff;
 	border: none;
 	padding: 12px 25px;
 	border-radius: 5px;
@@ -276,7 +279,6 @@ textarea.form-control {
 }
 
 .submit-btn:hover {
-	background: linear-gradient(90deg, #e87b00, #f19d38);
 	transform: translateY(-2px);
 	box-shadow: 0 5px 15px rgba(232, 123, 0, 0.4);
 }
@@ -285,7 +287,6 @@ textarea.form-control {
 	transform: translateY(0);
 }
 
- 
 .circuit-lines {
 	position: absolute;
 	top: 0;
@@ -293,11 +294,11 @@ textarea.form-control {
 	width: 100%;
 	height: 100%;
 	pointer-events: none;
-	opacity: 0.1;
+	opacity: 0.04;
 	z-index: -1;
 	background-image: 
-		linear-gradient(90deg, rgba(241, 157, 56, 0.5) 1px, transparent 1px),
-		linear-gradient(0deg, rgba(241, 157, 56, 0.5) 1px, transparent 1px);
+		linear-gradient(90deg, rgba(232, 123, 0, 0.3) 1px, transparent 1px),
+		linear-gradient(0deg, rgba(232, 123, 0, 0.3) 1px, transparent 1px);
 	background-size: 30px 30px;
 }
 
@@ -306,7 +307,7 @@ textarea.form-control {
 	width: 200px;
 	height: 200px;
 	border-radius: 50%;
-	background: radial-gradient(circle, rgba(241, 157, 56, 0.2) 0%, transparent 70%);
+	background: radial-gradient(circle, rgba(232, 123, 0, 0.08) 0%, transparent 70%);
 	pointer-events: none;
 	z-index: -1;
 }
@@ -321,7 +322,7 @@ textarea.form-control {
 	right: 15%;
 	width: 300px;
 	height: 300px;
-	background: radial-gradient(circle, rgba(232, 123, 0, 0.15) 0%, transparent 70%);
+	background: radial-gradient(circle, rgba(232, 123, 0, 0.06) 0%, transparent 70%);
 }
 </style>
 
@@ -459,26 +460,28 @@ textarea.form-control {
     <div class="footer-column">
         <h3>Solutions</h3>
         <ul>
-            <li><a href="/byebites">ByeBites App</a></li>
-            <li><a href="/auroweaver">AuroWeaver</a></li>
-            <li><a href="#solutions">Energy Tracker Tools</a></li>
-            <li><a href="#solutions">Custom AI Solutions</a></li>
+            <li><a href="http://localhost:64516/byebites/">ByeBites</a></li>
+            <li><a href="http://localhost:64516/auroweaver/">AuroWeaver</a></li>
+            <li><a href="http://localhost:64516/shoulema/">SHOULEMA</a></li>
         </ul>
     </div>
     <div class="footer-column">
         <h3>Company</h3>
         <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#motivation">Our Vision</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="http://localhost:64516/">Home</a></li>
+            <li><a href="http://localhost:64516/#about">About</a></li>
+            <li><a href="http://localhost:64516/contact/">Contact</a></li>
         </ul>
     </div>
     <div class="footer-column">
         <h3>Legal</h3>
         <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="byebites/privacy-policy.html">ByeBites Privacy</a></li>
+            <li><a href="http://localhost:64516/byebites/privacy-policy/">ByeBites Privacy</a></li>
+            <li><a href="http://localhost:64516/byebites/user-agreement/">ByeBites User Agreement</a></li>
+            <li><a href="http://localhost:64516/auroweaver/privacy-policy/">AuroWeaver Privacy</a></li>
+            <li><a href="http://localhost:64516/auroweaver/user-agreement/">AuroWeaver User Agreement</a></li>
+            <li><a href="http://localhost:64516/shoulema/privacy-policy/">SHOULEMA Privacy</a></li>
+            <li><a href="http://localhost:64516/shoulema/user-agreement/">SHOULEMA User Agreement</a></li>
         </ul>
     </div>
 </div>

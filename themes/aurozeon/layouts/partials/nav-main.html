@@ -1,0 +1,16 @@
+{{/* Main site navigation - used by default baseof and product pages */}}
+<nav class="main-nav">
+    <ul class="nav-list">
+        <li><a href="{{ .Site.BaseURL }}">Home</a></li>
+        <li><a href="{{ .Site.BaseURL }}#about">About</a></li>
+        <li class="dropdown">
+            <a href="{{ .Site.BaseURL }}#solutions" class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Solutions <span class="nav-arrow">▾</span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="{{ .Site.BaseURL }}byebites/" role="menuitem">ByeBites</a></li>
+                <li><a href="{{ .Site.BaseURL }}auroweaver/" role="menuitem">AuroWeaver</a></li>
+                <li><a href="{{ .Site.BaseURL }}shoulema/" role="menuitem">SHOULEMA</a></li>
+            </ul>
+        </li>
+        <li><a href="{{ .Site.BaseURL }}contact/">Contact</a></li>
+    </ul>
+</nav>

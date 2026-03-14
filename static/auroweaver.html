@@ -8,23 +8,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Roboto', 'Segoe UI', sans-serif; background: #1a1a2e; color: #fff; line-height: 1.6; overflow-x: hidden; }
+        body { font-family: 'Roboto', 'Segoe UI', sans-serif; background: #f8f9fa; color: #1a1a2e; line-height: 1.6; overflow-x: hidden; }
         body.auroweaver-product-page main { padding-top: 0; position: relative; }
-        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: rgba(12, 14, 34, 0.9); position: fixed; width: 100%; top: 0; z-index: 1000; backdrop-filter: blur(10px); }
-        header .logo a { font-size: 1.8rem; font-weight: bold; color: #f19d38; text-decoration: none; display: flex; align-items: center; }
-        header .logo a { transition: transform 0.3s ease; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: rgba(255,255,255,0.98); position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 1px 12px rgba(0,0,0,0.08); border-bottom: 1px solid rgba(0,0,0,0.06); }
+        header .logo a { font-size: 1.8rem; font-weight: bold; color: #e87b00; text-decoration: none; display: flex; align-items: center; }
         header .logo a:hover { transform: scale(1.02); }
-        header .logo-img { height: 36px; width: auto; object-fit: contain; filter: invert(1) brightness(1.1); margin-right: 10px; animation: logoGlow 3s ease-in-out infinite; }
-        header .logo a:hover .logo-img { animation: logoGlowHover 0.6s ease-in-out forwards; }
-        @keyframes logoGlow { 0%, 100% { filter: invert(1) brightness(1.1) drop-shadow(0 0 4px rgba(241,157,56,0.3)); } 50% { filter: invert(1) brightness(1.15) drop-shadow(0 0 8px rgba(241,157,56,0.5)); } }
-        @keyframes logoGlowHover { to { filter: invert(1) brightness(1.2) drop-shadow(0 0 12px rgba(241,157,56,0.7)); } }
-        header .logo .logo-text { font-size: 1.8rem; font-weight: bold; color: #f19d38; transition: text-shadow 0.3s ease; }
-        header .logo a:hover .logo-text { text-shadow: 0 0 12px rgba(241,157,56,0.6); }
-        header nav a { margin-left: 24px; text-decoration: none; color: #e0e0e0; font-weight: 500; transition: color 0.2s; }
-        header nav a:hover, header nav a.active { color: #f19d38; }
-        .auroweaver-bg { position: fixed; inset: 0; z-index: -1; overflow: hidden; background: linear-gradient(160deg, #1a1a2e 0%, #16213e 25%, #0f0f1a 50%, #1a1520 100%); }
-        .auroweaver-bg::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(241,157,56,0.12) 0%, transparent 50%); pointer-events: none; }
-        .auroweaver-bg-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(241,157,56,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(241,157,56,0.08) 1px, transparent 1px); background-size: 60px 60px; animation: gridMove 20s linear infinite; }
+        header .logo-img { height: 36px; width: auto; object-fit: contain; filter: none; margin-right: 10px; }
+        header .logo .logo-text { font-size: 1.8rem; font-weight: bold; color: #e87b00; }
+        header nav a { margin-left: 24px; text-decoration: none; color: #1a1a2e; font-weight: 500; transition: color 0.2s; }
+        header nav a:hover, header nav a.active { color: #e87b00; }
+        .auroweaver-bg { position: fixed; inset: 0; z-index: -1; overflow: hidden; background: linear-gradient(160deg, #f8f9fa 0%, #fff 50%, #f5f5f5 100%); }
+        .auroweaver-bg::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(232,123,0,0.06) 0%, transparent 50%); pointer-events: none; }
+        .auroweaver-bg-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(232,123,0,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(232,123,0,0.04) 1px, transparent 1px); background-size: 60px 60px; animation: gridMove 20s linear infinite; }
         @keyframes gridMove { 0% { transform: translate(0,0); } 100% { transform: translate(60px,60px); } }
         .auroweaver-bg-glow { position: absolute; border-radius: 50%; filter: blur(100px); opacity: 0.7; animation: glowFloat 15s ease-in-out infinite; }
         .auroweaver-bg-glow-1 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(241,157,56,0.4) 0%, rgba(241,157,56,0.15) 40%, transparent 70%); top: -150px; left: -100px; }
@@ -40,45 +35,48 @@
         .auroweaver-hero-logo img { height: 64px; width: auto; object-fit: contain; }
         @media (min-width: 600px) { .auroweaver-hero-logo img { height: 80px; } }
         .auroweaver-badge { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #f19d38; margin-bottom: 24px; padding: 6px 14px; border: 1px solid rgba(241,157,56,0.4); border-radius: 100px; }
-        .auroweaver-hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 700; letter-spacing: -0.02em; margin: 0 0 20px; }
-        .auroweaver-hero-text { font-size: 1.2rem; line-height: 1.7; color: #a0a0a0; margin: 0 0 40px; }
+        .auroweaver-hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 700; letter-spacing: -0.02em; margin: 0 0 20px; background: linear-gradient(135deg, #1a1a2e, #e87b00); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .auroweaver-hero-text { font-size: 1.2rem; line-height: 1.7; color: #4a5568; margin: 0 0 40px; }
         .auroweaver-cta { display: inline-flex; align-items: center; gap: 10px; padding: 16px 40px; font-size: 1.1rem; font-weight: 600; background: linear-gradient(135deg, #f19d38, #e87b00); color: #fff !important; text-decoration: none; border-radius: 8px; transition: transform 0.2s, box-shadow 0.2s; }
         .auroweaver-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(241,157,56,0.45); }
         .auroweaver-demo { padding: 40px 24px 100px; max-width: 1100px; margin: 0 auto; }
-        .auroweaver-demo-title { text-align: center; font-size: 1.5rem; font-weight: 600; color: #e0e0e0; margin-bottom: 36px; }
-        .auroweaver-demo-window { background: #1e1e2e; border-radius: 12px; overflow: hidden; border: 1px solid rgba(241,157,56,0.25); box-shadow: 0 0 0 1px rgba(0,0,0,0.3), 0 25px 50px -12px rgba(0,0,0,0.5), 0 0 60px rgba(241,157,56,0.08); }
-        .auroweaver-demo-chrome { display: flex; align-items: center; gap: 16px; padding: 12px 20px; background: #2a2a3e; border-bottom: 1px solid rgba(255,255,255,0.06); }
+        .auroweaver-demo-title { text-align: center; font-size: 1.5rem; font-weight: 600; color: #1a1a2e; margin-bottom: 36px; }
+        .auroweaver-demo-window { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,0,0,0.1); box-shadow: 0 4px 24px rgba(0,0,0,0.1); }
+        .auroweaver-demo-chrome { display: flex; align-items: center; gap: 16px; padding: 12px 20px; background: #f5f5f5; border-bottom: 1px solid rgba(0,0,0,0.08); }
         .auroweaver-demo-dots { display: flex; gap: 8px; }
         .auroweaver-demo-dots span { width: 12px; height: 12px; border-radius: 50%; }
         .auroweaver-demo-dots span:nth-child(1) { background: #ff5f57; }
         .auroweaver-demo-dots span:nth-child(2) { background: #febc2e; }
         .auroweaver-demo-dots span:nth-child(3) { background: #28c840; }
-        .auroweaver-demo-url { flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 8px 16px; background: #1a1a2a; border-radius: 8px; font-size: 0.85rem; color: #888; }
+        .auroweaver-demo-url { flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 8px 16px; background: #fff; border-radius: 8px; font-size: 0.85rem; color: #4a5568; border: 1px solid rgba(0,0,0,0.08); }
         .auroweaver-demo-url i { color: #28c840; font-size: 0.75rem; }
         .auroweaver-demo-body { display: flex; min-height: 420px; }
         .auroweaver-demo-video-wrap { flex: 1; position: relative; min-width: 0; min-height: 360px; }
         .auroweaver-demo-video-wrap::before { content: ''; display: block; padding-bottom: 56.25%; }
         .auroweaver-demo-video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-        .auroweaver-demo-captions { width: 260px; flex-shrink: 0; padding: 24px; background: rgba(0,0,0,0.2); border-left: 1px solid rgba(255,255,255,0.06); }
-        .auroweaver-demo-captions h4 { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #f19d38; margin-bottom: 16px; }
+        .auroweaver-demo-captions { width: 260px; flex-shrink: 0; padding: 24px; background: #f8f9fa; border-left: 1px solid rgba(0,0,0,0.08); }
+        .auroweaver-demo-captions h4 { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #e87b00; margin-bottom: 16px; }
         .auroweaver-demo-captions ul { list-style: none; margin: 0; padding: 0; }
-        .auroweaver-demo-captions li { display: flex; align-items: center; gap: 10px; padding: 10px 0; font-size: 0.9rem; color: #b0b0b0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+        .auroweaver-demo-captions li { display: flex; align-items: center; gap: 10px; padding: 10px 0; font-size: 0.9rem; color: #4a5568; border-bottom: 1px solid rgba(0,0,0,0.06); }
         .auroweaver-demo-captions li:last-child { border-bottom: none; }
         .auroweaver-demo-captions li i { color: #f19d38; font-size: 0.85rem; width: 18px; text-align: center; }
         @media (max-width: 768px) { .auroweaver-demo-body { flex-direction: column; } .auroweaver-demo-captions { width: 100%; border-left: none; border-top: 1px solid rgba(255,255,255,0.06); display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; } .auroweaver-demo-captions h4 { width: 100%; text-align: center; } .auroweaver-demo-captions li { border-bottom: none; padding: 8px 12px; background: rgba(255,255,255,0.03); border-radius: 6px; } }
         .auroweaver-values { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px; max-width: 1000px; margin: 0 auto; padding: 60px 24px 80px; }
-        .auroweaver-value { text-align: center; padding: 32px 24px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; transition: border-color 0.2s, background 0.2s, transform 0.2s; }
-        .auroweaver-value:hover { background: rgba(255,255,255,0.04); border-color: rgba(241,157,56,0.25); transform: translateY(-4px); }
+        .auroweaver-value { text-align: center; padding: 32px 24px; background: #fff; border: 1px solid rgba(0,0,0,0.08); border-radius: 12px; transition: border-color 0.2s, background 0.2s, transform 0.2s; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+        .auroweaver-value:hover { background: #fff; border-color: rgba(232,123,0,0.4); transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
         .auroweaver-value-icon { width: 56px; height: 56px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(241,157,56,0.2), rgba(232,123,0,0.1)); border-radius: 12px; color: #f19d38; font-size: 1.4rem; }
         .auroweaver-value h3 { font-size: 1.1rem; font-weight: 600; margin: 0 0 8px; }
-        .auroweaver-value p { font-size: 0.95rem; color: #888; margin: 0; line-height: 1.5; }
+        .auroweaver-value p { font-size: 0.95rem; color: #4a5568; margin: 0; line-height: 1.5; }
         .auroweaver-final-cta { text-align: center; padding: 60px 24px 100px; }
-        .auroweaver-final-cta p { font-size: 1.25rem; color: #e0e0e0; margin: 0 0 24px; }
-        .auroweaver-cta-secondary { background: transparent !important; border: 2px solid #f19d38; }
-        .auroweaver-cta-secondary:hover { background: rgba(241,157,56,0.1) !important; }
-        .auroweaver-contact { display: block; margin-top: 24px; font-size: 0.9rem; color: #666; }
-        .auroweaver-contact a { color: #f19d38; text-decoration: none; }
-        footer { text-align: center; padding: 24px; background: rgba(12,14,34,0.9); color: #666; font-size: 0.9rem; }
+        .auroweaver-final-cta p { font-size: 1.25rem; color: #1a1a2e; margin: 0 0 24px; }
+        .auroweaver-cta-secondary { background: transparent !important; border: 2px solid #e87b00; color: #e87b00 !important; }
+        .auroweaver-cta-secondary:hover { background: rgba(232,123,0,0.1) !important; color: #c96a00 !important; }
+        .auroweaver-contact { display: block; margin-top: 24px; font-size: 0.9rem; color: #4a5568; }
+        .auroweaver-contact a { color: #e87b00; text-decoration: none; }
+        .auroweaver-legal-links { margin-top: 16px; font-size: 0.9rem; }
+        .auroweaver-legal-links a { color: #e87b00; text-decoration: none; }
+        .auroweaver-legal-sep { margin: 0 8px; color: #666; }
+        footer { text-align: center; padding: 24px; background: #fff; color: #4a5568; font-size: 0.9rem; border-top: 1px solid rgba(0,0,0,0.08); }
     </style>
 </head>
 <body class="auroweaver-product-page">
@@ -158,6 +156,11 @@
                 <p>Ready to automate with AI?</p>
                 <a href="http://ec2-52-91-79-13.compute-1.amazonaws.com:8806/AuroWeaver/web/auroweaver" target="_blank" rel="noopener noreferrer" class="auroweaver-cta auroweaver-cta-secondary"><i class="fas fa-arrow-right"></i> Get Started</a>
                 <span class="auroweaver-contact">For enterprise licensing & support, <a href="/contact/">contact us</a></span>
+                <div class="auroweaver-legal-links">
+                    <a href="/auroweaver/privacy-policy/">Privacy Policy</a>
+                    <span class="auroweaver-legal-sep">·</span>
+                    <a href="/auroweaver/user-agreement/">User Agreement</a>
+                </div>
             </section>
         </div>
     </main>

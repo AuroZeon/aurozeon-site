@@ -1,85 +1,77 @@
 {{ define "main" }}
-
-<!-- Animated background -->
-<div class="auroweaver-bg">
-    <div class="auroweaver-bg-grid"></div>
-    <div class="auroweaver-bg-glow auroweaver-bg-glow-1"></div>
-    <div class="auroweaver-bg-glow auroweaver-bg-glow-2"></div>
-    <div class="auroweaver-bg-glow auroweaver-bg-glow-3"></div>
-    <div class="auroweaver-bg-particles"></div>
-</div>
-
-<div class="auroweaver-landing">
-    <!-- Hero -->
-    <section class="auroweaver-hero">
-        <div class="auroweaver-hero-spotlight"></div>
-        <span class="auroweaver-badge">Enterprise AI Workflow Platform</span>
-        <div class="auroweaver-hero-logo">
-            <img src="{{ .Site.BaseURL }}images/auroweaver.logo.drawio.png" alt="AuroWeaver">
-        </div>
-        <h1>AuroWeaver</h1>
-        <p class="auroweaver-hero-text">Design, run, and monitor AI-powered workflows in your browser. Python, Shell, and AI agents—unified in one visual workspace.</p>
-        <a href="{{ .Site.Params.auroweaver.app_url | default "http://ec2-52-91-79-13.compute-1.amazonaws.com:8806/AuroWeaver/web/auroweaver" }}" target="_blank" rel="noopener noreferrer" class="auroweaver-cta">
-            <i class="fas fa-play"></i> Launch AuroWeaver
-        </a>
-    </section>
-
-    <!-- Demo Video Showcase -->
-    <section class="auroweaver-demo">
-        <h2 class="auroweaver-demo-title">See AuroWeaver in Action</h2>
-        <div class="auroweaver-demo-window">
-            <div class="auroweaver-demo-chrome">
-                <div class="auroweaver-demo-dots">
-                    <span></span><span></span><span></span>
-                </div>
-                <div class="auroweaver-demo-url">
-                    <i class="fas fa-lock"></i>
-                    <span>auroweaver.local/demo</span>
-                </div>
+{{ $base := .Site.BaseURL }}
+{{ $appUrl := .Site.Params.auroweaver.app_url | default "http://ec2-52-91-79-13.compute-1.amazonaws.com:8806/AuroWeaver/web/auroweaver" }}
+<div class="product-scroll-page auroweaver-scroll">
+    <!-- Hero: full-screen with Pexels tech background -->
+    <section class="product-hero" style="background-image: url('https://images.pexels.com/photos/577210/pexels-photo-577210.jpeg?auto=compress&cs=tinysrgb&w=1920');">
+        <div class="product-hero-overlay"></div>
+        <div class="product-hero-content">
+            <span class="product-badge">Enterprise AI Workflow Platform</span>
+            <div class="auroweaver-hero-logo">
+                <img src="{{ $base }}images/auroweaver.logo.drawio.png" alt="AuroWeaver">
             </div>
-            <div class="auroweaver-demo-body">
-                <div class="auroweaver-demo-video-wrap">
-                    <iframe src="https://drive.google.com/file/d/1J7VtWHVVRImSDlRWR1KlUXJR7QMmY1YK/preview" allow="autoplay" allowfullscreen></iframe>
-                </div>
-                <aside class="auroweaver-demo-captions">
-                    <h4>What you'll see</h4>
-                    <ul>
-                        <li><i class="fas fa-diagram-project"></i> Visual workflow builder</li>
-                        <li><i class="fas fa-robot"></i> AI agents in action</li>
-                        <li><i class="fas fa-wand-magic-sparkles"></i> Self-healing AI Fix</li>
-                        <li><i class="fas fa-play"></i> Process execution</li>
-                    </ul>
-                </aside>
-            </div>
+            <h1>AuroWeaver</h1>
+            <p class="product-hero-tagline">Design, run, and monitor AI-powered workflows in your browser.</p>
+            <p class="product-hero-desc">Python, Shell, and AI agents—unified in one visual workspace. Self-healing workflows. Zero API costs with local LLM.</p>
+            <a href="{{ $appUrl }}" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="fas fa-play"></i> Launch AuroWeaver</a>
         </div>
     </section>
 
     <!-- Value Props -->
-    <section class="auroweaver-values">
-        <div class="auroweaver-value">
-            <div class="auroweaver-value-icon"><i class="fas fa-bolt"></i></div>
-            <h3>Self-Healing Workflows</h3>
-            <p>AI Fix automatically corrects failing code—no manual debugging.</p>
-        </div>
-        <div class="auroweaver-value">
-            <div class="auroweaver-value-icon"><i class="fas fa-shield-halved"></i></div>
-            <h3>Local LLM Option</h3>
-            <p>Run AI entirely on your infrastructure. Zero API costs, full privacy.</p>
-        </div>
-        <div class="auroweaver-value">
-            <div class="auroweaver-value-icon"><i class="fas fa-plug"></i></div>
-            <h3>Built-in Integrations</h3>
-            <p>GitHub, Slack, Email—connect your tools in one place.</p>
+    <section class="product-section product-section-light" data-animate="fade-up">
+        <div class="product-section-inner">
+            <h2>Why AuroWeaver?</h2>
+            <p class="product-section-lead">Automate smarter. Build faster. Deploy with confidence.</p>
+            <div class="product-features" data-stagger>
+                <div class="product-feature">
+                    <span class="product-feature-icon"><i class="fas fa-bolt"></i></span>
+                    <h3>Self-Healing Workflows</h3>
+                    <p>AI Fix automatically corrects failing code—no manual debugging.</p>
+                </div>
+                <div class="product-feature">
+                    <span class="product-feature-icon"><i class="fas fa-shield-halved"></i></span>
+                    <h3>Local LLM Option</h3>
+                    <p>Run AI entirely on your infrastructure. Zero API costs, full privacy.</p>
+                </div>
+                <div class="product-feature">
+                    <span class="product-feature-icon"><i class="fas fa-plug"></i></span>
+                    <h3>Built-in Integrations</h3>
+                    <p>GitHub, Slack, Email—connect your tools in one place.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="auroweaver-final-cta">
-        <p>Ready to automate with AI?</p>
-        <a href="{{ .Site.Params.auroweaver.app_url | default "http://ec2-52-91-79-13.compute-1.amazonaws.com:8806/AuroWeaver/web/auroweaver" }}" target="_blank" rel="noopener noreferrer" class="auroweaver-cta auroweaver-cta-secondary">
-            <i class="fas fa-arrow-right"></i> Get Started
-        </a>
-        <span class="auroweaver-contact">For enterprise licensing & support, <a href="{{ .Site.BaseURL }}contact/">contact us</a></span>
+    <!-- Demo Video -->
+    <section class="product-section product-section-alt" data-animate="fade-up">
+        <div class="product-section-inner">
+            <h2>See AuroWeaver in Action</h2>
+            <div class="auroweaver-demo-embed">
+                <iframe src="https://drive.google.com/file/d/1J7VtWHVVRImSDlRWR1KlUXJR7QMmY1YK/preview" allow="autoplay" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax CTA -->
+    <section class="product-parallax" style="background-image: url('https://images.pexels.com/photos/577210/pexels-photo-577210.jpeg?auto=compress&cs=tinysrgb&w=1920');">
+        <div class="product-parallax-overlay"></div>
+        <div class="product-parallax-content" data-animate="scale-in">
+            <p>Ready to automate with AI?</p>
+            <a href="{{ $appUrl }}" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="fas fa-arrow-right"></i> Get Started</a>
+            <span class="product-cta-note">For enterprise licensing & support, <a href="{{ $base }}contact/">contact us</a></span>
+        </div>
+    </section>
+
+    <!-- Legal -->
+    <section class="product-section product-section-dark" data-animate="slide-up">
+        <div class="product-section-inner">
+            <h2>Legal</h2>
+            <div class="product-legal-links">
+                <a href="{{ $base }}auroweaver/privacy-policy/">Privacy Policy</a>
+                <a href="{{ $base }}auroweaver/user-agreement/">User Agreement</a>
+            </div>
+            <p class="product-pexels-credit">Backgrounds: <a href="https://www.pexels.com/photo/pexels-photo-577210/" target="_blank" rel="noopener">Photo on Pexels</a></p>
+        </div>
     </section>
 </div>
 {{ end }}

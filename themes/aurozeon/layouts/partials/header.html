@@ -4,15 +4,7 @@
         <span class="logo-text">{{ .Site.Title }}</span>
     </a>
 </div>
-<nav>
-    <a href="{{ .Site.BaseURL }}">Home</a>
-    <a href="{{ .Site.BaseURL }}#about">About</a>
-    <a href="{{ .Site.BaseURL }}#solutions">Solutions</a>
-    <a href="{{ .Site.BaseURL }}#motivation">Motivation</a>
-    <a href="{{ .Site.BaseURL }}contact/">Contact</a>
-    <a href="{{ .Site.BaseURL }}byebites/">ByeBites</a>
-    <a href="{{ .Site.BaseURL }}auroweaver/">AuroWeaver</a>
-</nav>
+{{ partial "nav-main.html" . }}
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const header = document.querySelector('header');

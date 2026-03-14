@@ -20,6 +20,17 @@
   {{- end }}
 {{- end }}
 
+<!-- Scroll animation CSS (home + product pages) -->
+{{- with resources.Get "css/scroll-animation.css" }}
+  {{- if eq hugo.Environment "development" }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{- else }}
+    {{- with . | minify | fingerprint }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{- end }}
+  {{- end }}
+{{- end }}
+
 <!-- Home CSS -->
 {{ if .IsHome }}
 {{- with resources.Get "css/home.css" }}
@@ -40,3 +51,12 @@
 
 <!-- JavaScript -->
 {{ partial "head/js.html" . }}
+{{- with resources.Get "js/product-scroll.js" }}
+  {{- if eq hugo.Environment "development" }}
+    <script src="{{ .RelPermalink }}" defer></script>
+  {{- else }}
+    {{- with . | minify | fingerprint }}
+      <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" defer></script>
+    {{- end }}
+  {{- end }}
+{{- end }}

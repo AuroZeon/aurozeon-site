@@ -13,19 +13,17 @@
         }
 
         :root {
-            --primary-color: #f19d38;
-            --secondary-color: #e87b00;
+            --primary-color: #e87b00;
+            --secondary-color: #c96a00;
             --accent-color: #ffb766;
-            --dark-bg: #000000;
-            --darker-bg: #0a0a0a;
-            --light-text: #ffffff;
-            --medium-text: #e0e0e0;
+            --text-dark: #1a1a2e;
+            --text-medium: #4a5568;
         }
 
         body {
             font-family: 'Roboto', 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
-            color: var(--light-text);
+            background: #f8f9fa;
+            color: var(--text-dark);
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -69,14 +67,16 @@
             background: radial-gradient(circle, rgba(125, 0, 255, 0.1) 0%, transparent 70%);
         }
 
-        /* Header */
+        /* Header - Light theme */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px 50px;
-            background: rgba(12, 14, 34, 0.8);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
+            box-shadow: 0 1px 12px rgba(0, 0, 0, 0.08);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
             position: fixed;
             width: 100%;
             z-index: 1000;
@@ -86,7 +86,7 @@
 
         header.scrolled {
             padding: 15px 50px;
-            background: rgba(7, 9, 20, 0.95);
+            background: rgba(255, 255, 255, 0.98);
         }
 
         header .logo {
@@ -123,7 +123,7 @@
 
         header nav a {
             text-decoration: none;
-            color: var(--medium-text);
+            color: var(--text-dark);
             font-weight: 500;
             font-size: 1rem;
             transition: all 0.3s;
@@ -193,7 +193,7 @@
         .hero p {
             font-size: 1.5rem;
             margin-bottom: 40px;
-            color: var(--medium-text);
+            color: var(--text-medium);
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
@@ -275,11 +275,11 @@
         }
 
         .about-text {
-            background: rgba(12, 14, 34, 0.7);
+            background: rgba(255, 255, 255, 0.95);
             padding: 40px;
             border-radius: 10px;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(0, 195, 255, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.06);
             backdrop-filter: blur(10px);
         }
 
@@ -304,7 +304,7 @@
         .about-text p {
             margin-bottom: 20px;
             font-size: 1.1rem;
-            color: var(--medium-text);
+            color: var(--text-medium);
         }
 
         .about-image {
@@ -327,7 +327,7 @@
         /* Solutions Section */
         #solutions {
             padding: 100px 20px;
-            background: linear-gradient(135deg, rgba(12, 14, 34, 0.9) 0%, rgba(7, 9, 20, 0.9) 100%);
+            background: #fff;
         }
 
         .section-header {
@@ -355,7 +355,7 @@
         }
 
         .section-header p {
-            color: var(--medium-text);
+            color: var(--text-medium);
             max-width: 700px;
             margin: 0 auto;
             font-size: 1.1rem;
@@ -370,17 +370,17 @@
         }
 
         .solution {
-            background: rgba(12, 14, 34, 0.7);
+            background: #fff;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(0, 195, 255, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.06);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .solution:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 195, 255, 0.2);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
         }
 
         .video-wrapper {
@@ -407,7 +407,7 @@
         }
 
         .content p {
-            color: var(--medium-text);
+            color: var(--text-medium);
             margin-bottom: 20px;
         }
 
@@ -444,11 +444,11 @@
         .motivation-content {
             max-width: 900px;
             margin: 0 auto;
-            background: rgba(12, 14, 34, 0.7);
+            background: rgba(255, 255, 255, 0.95);
             padding: 40px;
             border-radius: 10px;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(0, 195, 255, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.06);
             backdrop-filter: blur(10px);
         }
 
@@ -475,14 +475,14 @@
         #motivation p {
             font-size: 1.2rem;
             line-height: 1.8;
-            color: var(--medium-text);
+            color: var(--text-medium);
         }
 
         /* CTA Section */
         .cta-section {
             padding: 80px 20px;
             text-align: center;
-            background: linear-gradient(135deg, rgba(0, 195, 255, 0.1) 0%, rgba(125, 0, 255, 0.1) 100%);
+            background: #f8f9fa;
         }
 
         .cta-content {
@@ -499,13 +499,14 @@
         .cta-content p {
             font-size: 1.2rem;
             margin-bottom: 30px;
-            color: var(--medium-text);
+            color: var(--text-medium);
         }
 
         /* Footer */
         footer {
-            background-color: rgba(7, 9, 20, 0.9);
-            color: var(--medium-text);
+            background-color: #fff;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            color: var(--text-medium);
             text-align: center;
             padding: 40px 20px;
             position: relative;
@@ -547,7 +548,7 @@
         }
 
         .footer-column ul li a {
-            color: var(--medium-text);
+            color: var(--text-medium);
             text-decoration: none;
             transition: color 0.3s;
         }
@@ -759,6 +760,18 @@
             <div class="solution">
                 <div class="video-wrapper">
                     <video class="background-video" autoplay muted loop>
+                        <source src="https://videos.pexels.com/video-files/8670903/8670903-hd_1920_1080_25fps.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="content">
+                    <h3>SHOULEMA</h3>
+                    <p><a href="shoulema.html" target="_blank" rel="noopener">SHOULEMA</a> — Point your camera at food, instantly see calories. Real-time AI camera app for food recognition and calorie overlay. Like Shazam for food. Download on App Store and Google Play.</p>
+                </div>
+            </div>
+    
+            <div class="solution">
+                <div class="video-wrapper">
+                    <video class="background-video" autoplay muted loop>
                         <source src="https://videos.pexels.com/video-files/19419586/19419586-hd_1920_1080_30fps.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -821,6 +834,7 @@
                 <ul>
                     <li><a href="byebites.html">ByeBites App</a></li>
                     <li><a href="auroweaver.html">AuroWeaver</a></li>
+                    <li><a href="shoulema.html">SHOULEMA</a></li>
                     <li><a href="#solutions">Energy Tracker Tools</a></li>
                     <li><a href="#solutions">Custom AI Solutions</a></li>
                 </ul>
@@ -836,9 +850,11 @@
             <div class="footer-column">
                 <h3>Legal</h3>
                 <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="byebites/privacy-policy.html">ByeBites Privacy</a></li>
+                    <li><a href="byebites/privacy-policy/">Privacy Policy</a></li>
+                    <li><a href="byebites/user-agreement/">Terms of Service</a></li>
+                    <li><a href="byebites/privacy-policy/">ByeBites Privacy</a></li>
+                    <li><a href="auroweaver/privacy-policy/">AuroWeaver Privacy</a></li>
+                    <li><a href="shoulema/privacy-policy/">SHOULEMA Privacy</a></li>
                 </ul>
             </div>
         </div>

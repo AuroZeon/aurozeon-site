@@ -3,6 +3,11 @@
 app_url = "http://ec2-52-91-79-13.compute-1.amazonaws.com:8806/AuroWeaver/web/auroweaver"
 auroweaver_logo = "images/auroweaver.logo.drawio.png"
 
+# SHOULEMA app store URLs - update when app is published
+[shoulema]
+app_store_url = "https://play.google.com/store/apps/details?id=com.shou.calorie"
+ios_store_url = "https://apps.apple.com/app/shoulema"
+
 #################### default parameters ################################
 # Site logo (served from static/images/) - used in header
 site_logo = "images/aurozeon.logo.png"
