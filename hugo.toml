@@ -13,4 +13,5 @@ theme = 'aurozeon'
 # Suppress specific warnings
 ignoreLogs = ['warning-goldmark-raw-html']
 
-
+[params]
+google_analytics = "G-LFTJCZDP66"
