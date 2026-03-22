@@ -1,0 +1,225 @@
+{{ define "main" }}
+{{ $base := .Site.BaseURL }}
+{{ $appStore := .Site.Params.xinbridge.app_store_url | default "https://play.google.com/store/apps/details?id=com.aurozeon.xinbridge" }}
+{{ $iosStore := .Site.Params.xinbridge.ios_store_url | default "https://apps.apple.com/app/xinbridge" }}
+<div class="product-scroll-page xinbridge-scroll">
+    <!-- Hero: care/wellness (XinBridge assets) -->
+    <section class="product-hero" style="background-image: url('/images/xinbridge/hero-sunrise.jpg');">
+        <div class="product-hero-overlay"></div>
+        <div class="product-hero-content">
+            <span class="product-badge">Healthcare · AI Emotional Support</span>
+            <h1>XinBridge 心桥</h1>
+            <p class="product-hero-tagline">不让任何癌症患者在夜晚感到孤单 · No cancer patient should feel alone at night.</p>
+            <p class="product-hero-desc">AI emotional companionship for cancer patients. Mood check-ins, local LLM chat, symptom tracking, Night Sanctuary, breathing exercises, and family connection—all in one app. Built with privacy first.</p>
+            <div class="product-hero-cta">
+                <a href="{{ $appStore }}" target="_blank" rel="noopener noreferrer" class="btn-store">
+                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+                </a>
+                <a href="{{ $iosStore }}" target="_blank" rel="noopener noreferrer" class="btn-store">
+                    <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features - Big company feel: clean grid -->
+    <section class="product-section product-section-light" data-animate="fade-up">
+        <div class="product-section-inner">
+            <h2>Emotional Support, Designed for You</h2>
+            <p class="product-section-lead">Every feature is built around one idea: no cancer patient should feel alone at night.</p>
+            <div class="product-features xinbridge-feature-grid" data-stagger>
+                <div class="product-feature xinbridge-feature-card">
+                    <span class="product-feature-icon xinbridge-icon"><i class="fas fa-heart"></i></span>
+                    <h3>Mood Check-In</h3>
+                    <p>Record how you feel right now. Optional pain level for doctor visits. Gentle prompts that understand the moment.</p>
+                </div>
+                <div class="product-feature xinbridge-feature-card">
+                    <span class="product-feature-icon xinbridge-icon"><i class="fas fa-comments"></i></span>
+                    <h3>AI Heart Companion</h3>
+                    <p>Local LLM runs on your device—no cloud, full privacy. Gentle Companion uses metaphor and warmth, avoids clinical language. Never judges.</p>
+                </div>
+                <div class="product-feature xinbridge-feature-card">
+                    <span class="product-feature-icon xinbridge-icon"><i class="fas fa-notes-medical"></i></span>
+                    <h3>Symptom Tracker</h3>
+                    <p>Daily fatigue, nausea, pain, sleep, appetite. Smart alerts: 3 high-pain days? We suggest questions to prepare for your doctor.</p>
+                </div>
+                <div class="product-feature xinbridge-feature-card">
+                    <span class="product-feature-icon xinbridge-icon"><i class="fas fa-stethoscope"></i></span>
+                    <h3>Questions for Your Doctor</h3>
+                    <p>Write down questions before visits. Never forget what you wanted to ask at your next checkup.</p>
+                </div>
+                <div class="product-feature xinbridge-feature-card">
+                    <span class="product-feature-icon xinbridge-icon"><i class="fas fa-calendar-check"></i></span>
+                    <h3>Treatment Countdown</h3>
+                    <p>Set your next treatment or follow-up date. Stay oriented and prepared.</p>
+                </div>
+                <div class="product-feature xinbridge-feature-card">
+                    <span class="product-feature-icon xinbridge-icon"><i class="fas fa-wind"></i></span>
+                    <h3>Breathing Exercises</h3>
+                    <p>Calm your mind and body. Auto calm mode when you're feeling angry or overwhelmed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Night Sanctuary - Premium section -->
+    <section class="product-section product-section-alt xinbridge-night-section" data-animate="fade-up">
+        <div class="product-section-inner">
+            <h2>Night Sanctuary 夜晚陪伴</h2>
+            <p class="product-section-lead">When the world sleeps and it's hard to rest—we're here.</p>
+            <div class="xinbridge-showcase">
+                <div class="xinbridge-showcase-media" style="background-image: url('/images/xinbridge/night-calm.jpg');"></div>
+                <div class="xinbridge-showcase-content">
+                    <ul class="xinbridge-feature-list">
+                        <li><i class="fas fa-volume-up"></i> Soundscapes: Brown noise + rain, ocean, forest, stream</li>
+                        <li><i class="fas fa-circle-notch"></i> 4-2-6 breathing ball with haptic feedback</li>
+                        <li><i class="fas fa-moon"></i> Body scan, sleep stories, OLED-friendly dark mode</li>
+                        <li><i class="fas fa-magic"></i> Night Watchman: 1–4 AM? We show sleep support first, dim the screen</li>
+                        <li><i class="fas fa-comment-dots"></i> Night Companion: Quiet, grounding AI when you chat from here</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Family & SOS -->
+    <section class="product-section product-section-light" data-animate="fade-up">
+        <div class="product-section-inner">
+            <h2>Family & Quick SOS</h2>
+            <p class="product-section-lead">Stay connected. Get help when you need it most.</p>
+            <div class="product-features" data-stagger>
+                <div class="product-feature xinbridge-feature-card">
+                    <span class="product-feature-icon xinbridge-icon"><i class="fas fa-users"></i></span>
+                    <h3>Family Connection</h3>
+                    <p>Notify family members. Write the words you can't say out loud. Share your journey safely.</p>
+                </div>
+                <div class="product-feature xinbridge-feature-card">
+                    <span class="product-feature-icon xinbridge-icon"><i class="fas fa-life-ring"></i></span>
+                    <h3>Quick SOS</h3>
+                    <p>Hard moment? Instant 5-4-3-2-1 grounding exercise. One tap to contact family.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Preview Cards (like SHOULEMA) -->
+    <section class="product-section product-section-light xinbridge-play-embed-section" data-animate="fade-up">
+        <div class="product-section-inner">
+            <h2>See XinBridge on the App Stores</h2>
+            <p class="product-section-lead">Download for iOS and Android. Screenshots, reviews, and more.</p>
+            <div class="play-embed-wrapper">
+                <div class="play-embed-boundary xinbridge-preview-boundary">
+                    <div class="play-embed-scroll play-preview-card">
+                        <div class="play-preview-header">
+                            <div class="play-preview-icon xinbridge-preview-icon">
+                                <img src="/images/xinbridge/icon-192.webp" alt="XinBridge" style="width:100%;height:100%;object-fit:contain;">
+                            </div>
+                            <div class="play-preview-info">
+                                <h3>XinBridge 心桥</h3>
+                                <p class="play-preview-developer">AuroZeon</p>
+                                <p class="play-preview-desc">No cancer patient should feel alone at night. AI emotional companionship with mood tracking, local LLM chat, Night Sanctuary, breathing exercises, and family connection.</p>
+                            </div>
+                        </div>
+                        <div class="play-preview-screenshots">
+                            <div class="play-screenshot" style="background-image: url('/images/xinbridge/app-gradient-float-1.png');"></div>
+                            <div class="play-screenshot" style="background-image: url('/images/xinbridge/app-gradient-float-2.png');"></div>
+                            <div class="play-screenshot" style="background-image: url('/images/xinbridge/app-gradient-float-3.png');"></div>
+                            <div class="play-screenshot" style="background-image: url('/images/xinbridge/app-gradient-float-4.png');"></div>
+                            <div class="play-screenshot" style="background-image: url('/images/xinbridge/app-gradient-float-5.png');"></div>
+                            <div class="play-screenshot" style="background-image: url('/images/xinbridge/app-gradient-float-6.png');"></div>
+                            <div class="play-screenshot" style="background-image: url('/images/xinbridge/app-gradient-float-7.png');"></div>
+                            <div class="play-screenshot" style="background-image: url('/images/xinbridge/app-gradient-float-8.png');"></div>
+                            <div class="play-screenshot" style="background-image: url('/images/xinbridge/app-gradient-float-9.png');"></div>
+                            <div class="play-screenshot" style="background-image: url('/images/xinbridge/app-gradient-float-10.png');"></div>
+                        </div>
+                        <div class="play-preview-features">
+                            <span><i class="fas fa-heart"></i> Local AI</span>
+                            <span><i class="fas fa-moon"></i> Night Sanctuary</span>
+                            <span><i class="fas fa-chart-line"></i> Symptom Tracking</span>
+                            <span><i class="fas fa-users"></i> Family Connection</span>
+                            <span><i class="fas fa-gamepad"></i> Zen Toys</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="{{ $appStore }}" target="_blank" rel="noopener noreferrer" class="play-embed-open-btn xinbridge-open-btn">
+                    <i class="fas fa-external-link-alt"></i> Open in Google Play
+                </a>
+                <a href="{{ $iosStore }}" target="_blank" rel="noopener noreferrer" class="play-embed-open-btn xinbridge-open-btn" style="margin-left:12px;">
+                    <i class="fas fa-apple-alt"></i> Open in App Store
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zen Toys & Hope Library -->
+    <section class="product-section product-section-alt" data-animate="fade-up">
+        <div class="product-section-inner">
+            <h2>Zen Toys & Hope Library</h2>
+            <p class="product-section-lead">Relaxation and hope, when you need a moment of peace.</p>
+            <div class="product-features xinbridge-feature-grid" data-stagger>
+                <div class="product-feature xinbridge-feature-card">
+                    <span class="product-feature-icon xinbridge-icon"><i class="fas fa-gamepad"></i></span>
+                    <h3>Zen Toys</h3>
+                    <p>5 calming games: Fluid Sand, Constellation, Breathe-Sync, Geometric Garden, Light-Paint. Matter.js physics, missions, haptics, confetti on completion.</p>
+                </div>
+                <div class="product-feature xinbridge-feature-card">
+                    <span class="product-feature-icon xinbridge-icon"><i class="fas fa-book-open"></i></span>
+                    <h3>Hope Library</h3>
+                    <p>Recovery stories from others. Refresh to fetch new stories from the web. Gallery of Hope shows your unlocked stars and treasures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Context-Aware & Privacy -->
+    <section class="product-section product-section-light" data-animate="fade-up">
+        <div class="product-section-inner">
+            <h2>Smart & Private</h2>
+            <p class="product-section-lead">We designed XinBridge to understand context—and to respect your privacy.</p>
+            <div class="xinbridge-privacy-cards">
+                <div class="xinbridge-privacy-card">
+                    <h4><i class="fas fa-brain"></i> Context-Aware Greetings</h4>
+                    <p>Based on time and recent symptoms. "Tired today? Try 2 minutes of sleep support."</p>
+                </div>
+                <div class="xinbridge-privacy-card">
+                    <h4><i class="fas fa-lock"></i> Local AI Only</h4>
+                    <p>WebLLM (desktop) and Transformers.js (mobile). No data leaves your device for AI.</p>
+                </div>
+                <div class="xinbridge-privacy-card">
+                    <h4><i class="fas fa-shield-alt"></i> Crisis-Safe</h4>
+                    <p>Detects distress. Uses preset support, no LLM. Encourages professional help.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax CTA -->
+    <section class="product-parallax" style="background-image: url('/images/xinbridge/ocean-sunrise.jpg');">
+        <div class="product-parallax-overlay"></div>
+        <div class="product-parallax-content" data-animate="scale-in">
+            <p>You are not alone. 你不孤单。</p>
+            <div class="product-hero-cta">
+                <a href="{{ $appStore }}" target="_blank" rel="noopener noreferrer" class="btn-store">
+                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+                </a>
+                <a href="{{ $iosStore }}" target="_blank" rel="noopener noreferrer" class="btn-store">
+                    <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal -->
+    <section class="product-section product-section-dark" data-animate="slide-up">
+        <div class="product-section-inner">
+            <h2>Legal</h2>
+            <div class="product-legal-links">
+                <a href="{{ $base }}xinbridge/privacy-policy/">Privacy Policy</a>
+                <a href="{{ $base }}xinbridge/user-agreement/">User Agreement</a>
+                <a href="{{ $base }}contact/">Contact Us</a>
+            </div>
+            <p class="product-pexels-credit">XinBridge is built with React, Capacitor, WebLLM, and Transformers.js. Vite + TypeScript.</p>
+        </div>
+    </section>
+</div>
+{{ end }}

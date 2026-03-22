@@ -42,9 +42,22 @@
   {{- end }}
 {{- end }}
 
-<!-- Product scroll CSS - for SHOULEMA, AuroWeaver, ByeBites -->
-{{- if or (eq .Section "shoulema") (eq .Section "auroweaver") (eq .Section "byebites") }}
+<!-- Product scroll CSS - for SHOULEMA, AuroWeaver, ByeBites, XinBridge -->
+{{- if or (eq .Section "shoulema") (eq .Section "auroweaver") (eq .Section "byebites") (eq .Section "xinbridge") }}
   {{- with resources.Get "css/product-scroll.css" }}
+    {{- if eq hugo.Environment "development" }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{- else }}
+      {{- with . | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+<!-- XinBridge CSS -->
+{{- if eq .Section "xinbridge" }}
+  {{- with resources.Get "css/xinbridge.css" }}
     {{- if eq hugo.Environment "development" }}
       <link rel="stylesheet" href="{{ .RelPermalink }}">
     {{- else }}

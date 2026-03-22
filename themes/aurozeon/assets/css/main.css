@@ -135,7 +135,7 @@ header.scrolled {
 nav {
   display: flex;
   gap: 15px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 nav a {
@@ -152,9 +152,11 @@ nav a:hover {
   color: var(--primary-color);
 }
 
-/* Main nav with Products dropdown */
+/* Main nav with Products dropdown - must stay horizontal */
 .main-nav .nav-list {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 32px;
   list-style: none;

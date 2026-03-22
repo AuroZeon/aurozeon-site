@@ -8,6 +8,11 @@ auroweaver_logo = "images/auroweaver.logo.drawio.png"
 app_store_url = "https://play.google.com/store/apps/details?id=com.shou.calorie"
 ios_store_url = "https://apps.apple.com/app/shoulema"
 
+# XinBridge 心桥 - AI emotional companionship for cancer patients
+[xinbridge]
+app_store_url = "https://play.google.com/store/apps/details?id=com.aurozeon.xinbridge"  # Update when published
+ios_store_url = "https://apps.apple.com/app/xinbridge"  # Update when published
+
 #################### default parameters ################################
 # Site logo (served from static/images/) - used in header
 site_logo = "images/aurozeon.logo.png"

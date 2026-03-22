@@ -63,6 +63,14 @@
                     <span class="solution-link">Read story →</span>
                 </div>
             </a>
+            <a href="#xinbridge-story" class="solution solution-card" data-animate="zoom">
+                <div class="solution-bg" style="background-image: url('https://images.pexels.com/photos/7659573/pexels-photo-7659573.jpeg?auto=compress&cs=tinysrgb&w=800');"></div>
+                <div class="content">
+                    <h3>XinBridge 心桥</h3>
+                    <p>AI emotional support for cancer patients</p>
+                    <span class="solution-link">Read story →</span>
+                </div>
+            </a>
             <a href="#energy-story" class="solution solution-card" data-animate="zoom">
                 <div class="solution-bg" style="background-image: url('https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=800');"></div>
                 <div class="content">
@@ -208,6 +216,48 @@
         </div>
     </section>
 
+    <!-- XinBridge Story -->
+    <section id="xinbridge-story" class="solution-story">
+        <div class="solution-story-hero" style="background-image: url('https://images.pexels.com/photos/7659573/pexels-photo-7659573.jpeg?auto=compress&cs=tinysrgb&w=1920');">
+            <div class="solution-story-overlay"></div>
+            <div class="solution-story-hero-content" data-animate="fade-up">
+                <span class="solution-story-badge">Healthcare · AI Companionship</span>
+                <h2>XinBridge 心桥</h2>
+                <p>不让任何癌症患者在夜晚感到孤单 · No cancer patient should feel alone at night. AI emotional support, mood tracking, Night Sanctuary, and family connection.</p>
+                <a href="{{ $base }}xinbridge/" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+        <div class="solution-story-body">
+            <div class="story-block story-block-img-right">
+                <div class="story-content" data-animate="slide-reveal-left">
+                    <h3>The Problem: Loneliness at Night</h3>
+                    <p>Cancer treatment brings fear, fatigue, and sleepless nights. Patients need emotional support without clinical coldness—and privacy matters. Cloud AI raises concerns; most apps don't understand the moment.</p>
+                </div>
+                <div class="story-media" data-animate="drift-in">
+                    <img src="https://images.pexels.com/photos/3783470/pexels-photo-3783470.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Support and care">
+                </div>
+            </div>
+            <div class="story-block story-block-img-left">
+                <div class="story-media" data-animate="drift-in-left">
+                    <video autoplay muted loop playsinline>
+                        <source src="https://videos.pexels.com/video-files/4063531/4063531-hd_1920_1080_24fps.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="story-content" data-animate="slide-reveal">
+                    <h3>Our Solution: Gentle AI, Local & Private</h3>
+                    <p>XinBridge runs local LLM on your device—WebLLM on desktop, Transformers.js on mobile. Gentle Companion persona uses metaphor and warmth. Night Sanctuary for 1–4 AM: soundscapes, breathing, body scan. Symptom tracking with smart alerts. Family connection for unsaid words.</p>
+                </div>
+            </div>
+            <div class="story-block story-block-cta">
+                <div class="story-cta-box" data-animate="float-parts">
+                    <h3>You Are Not Alone. 你不孤单。</h3>
+                    <p>Zen Toys, Hope Library, Quick SOS. Built with React, Capacitor, and care.</p>
+                    <a href="{{ $base }}xinbridge/" class="btn btn-primary">Explore XinBridge</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Energy Tracker Story -->
     <section id="energy-story" class="solution-story">
         <div class="solution-story-hero" style="background-image: url('https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1920');">
@@ -312,6 +362,7 @@
                 <a href="{{ $base }}contact/" class="btn btn-primary">Contact Us Today</a>
                 <a href="{{ $base }}byebites/" class="btn btn-secondary">Try ByeBites</a>
                 <a href="{{ $base }}auroweaver/" class="btn btn-secondary">Launch AuroWeaver</a>
+                <a href="{{ $base }}xinbridge/" class="btn btn-secondary">XinBridge</a>
             </div>
         </div>
     </section>
