@@ -46,6 +46,15 @@ body.xinbridge-page .product-section-alt {
     background: linear-gradient(180deg, #f8f6fc 0%, #f0ecf8 100%);
 }
 
+/* Solid fallbacks while local /images/xinbridge/* backgrounds load */
+body.xinbridge-page .product-hero {
+    background-color: #2d1f4e;
+}
+
+body.xinbridge-page .product-parallax {
+    background-color: #1a1428;
+}
+
 /* Feature cards - clean, spacious */
 .xinbridge-feature-grid {
     display: grid !important;
@@ -102,6 +111,7 @@ body.xinbridge-page .product-section-alt {
 .xinbridge-showcase-media {
     height: 320px;
     border-radius: 20px;
+    background-color: #ede8f5;
     background-size: cover;
     background-position: center;
     box-shadow: 0 12px 48px rgba(107, 78, 158, 0.2);

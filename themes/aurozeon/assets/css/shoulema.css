@@ -9,6 +9,15 @@ body.shoulema-page {
     color: #1a1a2e;
 }
 
+/* Fallbacks while /images/shoulema/* food photography loads */
+body.shoulema-page .product-hero {
+    background-color: #3d3428;
+}
+
+body.shoulema-page .product-parallax {
+    background-color: #2c2419;
+}
+
 /* Header colors — layout lives in site-header-nav.css */
 body.shoulema-page header.site-header {
     background: rgba(255, 255, 255, 0.98);
