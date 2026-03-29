@@ -1,5 +1,4 @@
 {{ define "main" }}
-{{ $base := .Site.BaseURL }}
 {{ $appUrl := .Site.Params.auroweaver.app_url | default "http://ec2-52-91-79-13.compute-1.amazonaws.com:8806/AuroWeaver/web/auroweaver" }}
 <div class="product-scroll-page auroweaver-scroll">
     <!-- Hero: video background - coding/computer (unique to AuroWeaver page) -->
@@ -61,7 +60,7 @@
         <div class="product-parallax-content" data-animate="scale-in">
             <p>Ready to automate with AI?</p>
             <a href="{{ $appUrl }}" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="fas fa-arrow-right"></i> Get Started</a>
-            <span class="product-cta-note">For enterprise licensing & support, <a href="{{ $base }}contact/">contact us</a></span>
+            <span class="product-cta-note">For enterprise licensing & support, <a href="/contact/">contact us</a></span>
         </div>
     </section>
 
@@ -70,8 +69,8 @@
         <div class="product-section-inner">
             <h2>Legal</h2>
             <div class="product-legal-links">
-                <a href="{{ $base }}auroweaver/privacy-policy/">Privacy Policy</a>
-                <a href="{{ $base }}auroweaver/user-agreement/">User Agreement</a>
+                <a href="/auroweaver/privacy-policy/">Privacy Policy</a>
+                <a href="/auroweaver/user-agreement/">User Agreement</a>
             </div>
             <p class="product-pexels-credit">Video: <a href="https://www.pexels.com/video/5495781/" target="_blank" rel="noopener">Pexels</a> · Parallax: <a href="https://www.pexels.com/photo/3861969/" target="_blank" rel="noopener">Pexels</a></p>
         </div>

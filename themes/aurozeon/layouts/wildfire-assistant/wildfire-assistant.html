@@ -1,5 +1,4 @@
 {{ define "main" }}
-{{ $base := .Site.BaseURL }}
 {{ $appStore := .Site.Params.wildfire_assistant.app_store_url | default "https://play.google.com/store/apps/details?id=com.nyu.wildfire.assistant" }}
 {{ $iosStore := .Site.Params.wildfire_assistant.ios_store_url | default "https://apps.apple.com/app/wildfire-assistant" }}
 <div class="product-scroll-page wildfire-assistant-scroll">
@@ -139,9 +138,9 @@
         <div class="product-section-inner">
             <h2>Legal</h2>
             <div class="product-legal-links">
-                <a href="{{ $base }}wildfire-assistant/privacy-policy/">Privacy Policy</a>
-                <a href="{{ $base }}wildfire-assistant/user-agreement/">User Agreement</a>
-                <a href="{{ $base }}contact/">Contact Us</a>
+                <a href="/wildfire-assistant/privacy-policy/">Privacy Policy</a>
+                <a href="/wildfire-assistant/user-agreement/">User Agreement</a>
+                <a href="/contact/">Contact Us</a>
             </div>
             <p class="product-pexels-credit">Photos: <a href="https://www.pexels.com/photo/2323799/" target="_blank" rel="noopener">Frank Cone</a>, <a href="https://www.pexels.com/photo/18092546/" target="_blank" rel="noopener">Frank Cone</a>, <a href="https://www.pexels.com/photo/691953/" target="_blank" rel="noopener">Jure Širić</a>, <a href="https://www.pexels.com/photo/417070/" target="_blank" rel="noopener">Pixabay</a> · <a href="https://www.pexels.com/" target="_blank" rel="noopener">Pexels</a> · <a href="https://www.nifc.gov/" target="_blank" rel="noopener">NIFC</a> data referenced in app.</p>
         </div>

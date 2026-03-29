@@ -1,10 +1,10 @@
 ---
 title: "XinBridge 心桥"
-image: "https://images.pexels.com/photos/3783510/pexels-photo-3783510.jpeg?auto=compress&cs=tinysrgb&w=1920"
+image: "https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=1920"
 description: "AI emotional companionship for cancer patients. Gentle Companion chat, mood tracking, Night Sanctuary, and family connection."
 ---
 
-<div class="hero-section" style="background-image: url('https://images.pexels.com/photos/3783510/pexels-photo-3783510.jpeg?auto=compress&cs=tinysrgb&w=1920'); background-size: cover; padding: 100px 0; text-align: center; color: #fff;">
+<div class="hero-section" style="background-image: url('https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=1920'); background-size: cover; padding: 100px 0; text-align: center; color: #fff;">
     <div class="overlay" style="background: rgba(0, 0, 0, 0.5); padding: 50px 0;">
         <h1 style="font-size: 3rem; font-weight: bold;">XinBridge 心桥</h1>
         <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto;">No cancer patient should feel alone at night. AI emotional companionship with Gentle Companion chat, mood tracking, Night Sanctuary, and family connection.</p>

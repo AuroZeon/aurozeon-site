@@ -1,5 +1,4 @@
 {{ define "main" }}
-{{ $base := .Site.BaseURL }}
 {{ $appStore := .Site.Params.shoulema.app_store_url | default "https://play.google.com/store/apps/details?id=com.shou.calorie" }}
 {{ $iosStore := .Site.Params.shoulema.ios_store_url | default "https://apps.apple.com/us/app/shoulema-calorie-scanner/id6760223102" }}
 <div class="product-scroll-page shoulema-scroll">
@@ -71,9 +70,9 @@
                         </div>
                         <div class="play-preview-screenshots">
                             <div class="play-screenshot" style="background-image: url('https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400');"></div>
-                            <div class="play-screenshot" style="background-image: url('https://images.pexels.com/photos/5938/pexels-photo-5938.jpeg?auto=compress&cs=tinysrgb&w=400');"></div>
-                            <div class="play-screenshot" style="background-image: url('https://images.pexels.com/photos/959933/pexels-photo-959933.jpeg?auto=compress&cs=tinysrgb&w=400');"></div>
                             <div class="play-screenshot" style="background-image: url('https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg?auto=compress&cs=tinysrgb&w=400');"></div>
+                            <div class="play-screenshot" style="background-image: url('https://images.pexels.com/photos/959933/pexels-photo-959933.jpeg?auto=compress&cs=tinysrgb&w=400');"></div>
+                            <div class="play-screenshot" style="background-image: url('https://images.pexels.com/photos/577210/pexels-photo-577210.jpeg?auto=compress&cs=tinysrgb&w=400');"></div>
                         </div>
                         <div class="play-preview-features">
                             <span><i class="fas fa-camera"></i> AI Food Detection</span>
@@ -90,7 +89,7 @@
     </section>
 
     <!-- Parallax: unique food variety (not used on home) -->
-    <section class="product-parallax" style="background-image: url('https://images.pexels.com/photos/2667066/pexels-photo-2667066.jpeg?auto=compress&cs=tinysrgb&w=1920');">
+    <section class="product-parallax" style="background-image: url('https://images.pexels.com/photos/959933/pexels-photo-959933.jpeg?auto=compress&cs=tinysrgb&w=1920');">
         <div class="product-parallax-overlay"></div>
         <div class="product-parallax-content" data-animate="zoom">
             <p>Point, shoot, and know your calories.</p>
@@ -110,11 +109,11 @@
         <div class="product-section-inner">
             <h2>Legal</h2>
             <div class="product-legal-links">
-                <a href="{{ $base }}shoulema/privacy-policy/">Privacy Policy</a>
-                <a href="{{ $base }}shoulema/user-agreement/">User Agreement</a>
-                <a href="{{ $base }}contact/">Contact Us</a>
+                <a href="/shoulema/privacy-policy/">Privacy Policy</a>
+                <a href="/shoulema/user-agreement/">User Agreement</a>
+                <a href="/contact/">Contact Us</a>
             </div>
-            <p class="product-pexels-credit">Photos: <a href="https://www.pexels.com/photo/1640777/" target="_blank" rel="noopener">Ella Olsson</a> · <a href="https://www.pexels.com/photo/5938/" target="_blank" rel="noopener">Karolina Grabowska</a> · <a href="https://www.pexels.com/photo/959933/" target="_blank" rel="noopener">Chan Walrus</a> · <a href="https://www.pexels.com/photo/1092730/" target="_blank" rel="noopener">Ylanite Koppens</a> · <a href="https://www.pexels.com/photo/2667066/" target="_blank" rel="noopener">Daria Shevtsova</a> · <a href="https://www.pexels.com/" target="_blank" rel="noopener">Pexels</a></p>
+            <p class="product-pexels-credit">Photos: <a href="https://www.pexels.com/photo/1640777/" target="_blank" rel="noopener">Ella Olsson</a> · <a href="https://www.pexels.com/photo/959933/" target="_blank" rel="noopener">Chan Walrus</a> · <a href="https://www.pexels.com/photo/1092730/" target="_blank" rel="noopener">Ylanite Koppens</a> · <a href="https://www.pexels.com/" target="_blank" rel="noopener">Pexels</a></p>
         </div>
     </section>
 </div>

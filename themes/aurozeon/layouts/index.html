@@ -1,5 +1,4 @@
 {{ define "main" }}
-{{ $base := .Site.BaseURL }}
 <div class="home-scroll-page">
     <!-- Hero Section -->
     <section class="home-hero" style="background-image: url('https://images.pexels.com/photos/577210/pexels-photo-577210.jpeg?auto=compress&cs=tinysrgb&w=1920');">
@@ -9,7 +8,7 @@
             <p>Building intelligent solutions that empower businesses and individuals to thrive in a rapidly evolving digital landscape</p>
             <div class="hero-buttons">
                 <a href="#solutions" class="btn btn-primary">Explore Solutions</a>
-                <a href="{{ $base }}contact/" class="btn btn-secondary">Get in Touch</a>
+                <a href="/contact/" class="btn btn-secondary">Get in Touch</a>
             </div>
         </div>
     </section>
@@ -106,7 +105,7 @@
                 <span class="solution-story-badge">Health & Wellness</span>
                 <h2>ByeBites</h2>
                 <p>Take control of your eating habits with AI-powered craving tracking and mindful eating insights.</p>
-                <a href="{{ $base }}byebites/" class="btn btn-primary">Download Free</a>
+                <a href="/byebites/" class="btn btn-primary">Download Free</a>
             </div>
         </div>
         <div class="solution-story-body">
@@ -116,7 +115,7 @@
                     <p>Busy schedules, stress, and endless temptations make it hard to stick to healthy eating. Most diet apps are rigid and overwhelming—they don't understand your real life.</p>
                 </div>
                 <div class="story-media" data-animate="drift-in">
-                    <img src="https://images.pexels.com/photos/5938/pexels-photo-5938.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Healthy salad and mindful eating">
+                    <img src="https://images.pexels.com/photos/959933/pexels-photo-959933.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Healthy salad and mindful eating">
                 </div>
             </div>
             <div class="story-block story-block-img-left">
@@ -134,7 +133,7 @@
                 <div class="story-cta-box" data-animate="float-parts">
                     <h3>Start Your Journey Today</h3>
                     <p>Join thousands building healthier habits. Free on App Store and Google Play.</p>
-                    <a href="{{ $base }}byebites/" class="btn btn-primary">Get ByeBites</a>
+                    <a href="/byebites/" class="btn btn-primary">Get ByeBites</a>
                 </div>
             </div>
         </div>
@@ -148,7 +147,7 @@
                 <span class="solution-story-badge">Enterprise AI</span>
                 <h2>AuroWeaver</h2>
                 <p>Design, run, and monitor AI-powered workflows in your browser. Python, Shell, and AI agents—unified in one visual workspace.</p>
-                <a href="{{ $base }}auroweaver/" class="btn btn-primary">Launch AuroWeaver</a>
+                <a href="/auroweaver/" class="btn btn-primary">Launch AuroWeaver</a>
             </div>
         </div>
         <div class="solution-story-body">
@@ -176,7 +175,7 @@
                 <div class="story-cta-box" data-animate="float-parts">
                     <h3>Ready to Automate Smarter?</h3>
                     <p>Design workflows visually. Deploy with confidence. Self-healing AI included.</p>
-                    <a href="{{ $base }}auroweaver/" class="btn btn-primary">Launch AuroWeaver</a>
+                    <a href="/auroweaver/" class="btn btn-primary">Launch AuroWeaver</a>
                 </div>
             </div>
         </div>
@@ -190,7 +189,7 @@
                 <span class="solution-story-badge">AI Camera App</span>
                 <h2>SHOULEMA</h2>
                 <p>对准食物，秒知热量 · Point your camera at food. Instantly see calories. Like Shazam for food.</p>
-                <a href="{{ $base }}shoulema/" class="btn btn-primary">Download Free</a>
+                <a href="/shoulema/" class="btn btn-primary">Download Free</a>
             </div>
         </div>
         <div class="solution-story-body">
@@ -218,7 +217,7 @@
                 <div class="story-cta-box" data-animate="float-parts">
                     <h3>Point. Shoot. Know.</h3>
                     <p>Free on App Store and Google Play. Start tracking calories the smart way.</p>
-                    <a href="{{ $base }}shoulema/" class="btn btn-primary">Get SHOULEMA</a>
+                    <a href="/shoulema/" class="btn btn-primary">Get SHOULEMA</a>
                 </div>
             </div>
         </div>
@@ -226,13 +225,13 @@
 
     <!-- XinBridge Story -->
     <section id="xinbridge-story" class="solution-story">
-        <div class="solution-story-hero" style="background-image: url('https://images.pexels.com/photos/3783510/pexels-photo-3783510.jpeg?auto=compress&cs=tinysrgb&w=1920');">
+        <div class="solution-story-hero" style="background-image: url('https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=1920');">
             <div class="solution-story-overlay"></div>
             <div class="solution-story-hero-content" data-animate="fade-up">
                 <span class="solution-story-badge">Healthcare · AI Companionship</span>
                 <h2>XinBridge 心桥</h2>
                 <p>不让任何癌症患者在夜晚感到孤单 · No cancer patient should feel alone at night. AI emotional support, mood tracking, Night Sanctuary, and family connection.</p>
-                <a href="{{ $base }}xinbridge/" class="btn btn-primary">Learn More</a>
+                <a href="/xinbridge/" class="btn btn-primary">Learn More</a>
             </div>
         </div>
         <div class="solution-story-body">
@@ -260,7 +259,7 @@
                 <div class="story-cta-box" data-animate="float-parts">
                     <h3>You Are Not Alone. 你不孤单。</h3>
                     <p>Zen Toys, Hope Library, Quick SOS. Built with React, Capacitor, and care.</p>
-                    <a href="{{ $base }}xinbridge/" class="btn btn-primary">Explore XinBridge</a>
+                    <a href="/xinbridge/" class="btn btn-primary">Explore XinBridge</a>
                 </div>
             </div>
         </div>
@@ -274,7 +273,7 @@
                 <span class="solution-story-badge">Safety &amp; Preparedness</span>
                 <h2>Wildfire Assistant</h2>
                 <p>AI-powered wildfire risk assessment with NIFC perimeter maps, address-based scoring, and GPT-4 guidance for preparedness—not a replacement for official evacuation orders.</p>
-                <a href="{{ $base }}wildfire-assistant/" class="btn btn-primary">Explore Wildfire Assistant</a>
+                <a href="/wildfire-assistant/" class="btn btn-primary">Explore Wildfire Assistant</a>
             </div>
         </div>
         <div class="solution-story-body">
@@ -302,7 +301,7 @@
                 <div class="story-cta-box" data-animate="float-parts">
                     <h3>Prepare Today</h3>
                     <p>Free on App Store and Google Play. Vite, React, Capacitor—NYU Capstone project.</p>
-                    <a href="{{ $base }}wildfire-assistant/" class="btn btn-primary">Get Wildfire Assistant</a>
+                    <a href="/wildfire-assistant/" class="btn btn-primary">Get Wildfire Assistant</a>
                 </div>
             </div>
         </div>
@@ -316,7 +315,7 @@
                 <span class="solution-story-badge">Sustainability</span>
                 <h2>Energy Tracker Tools</h2>
                 <p>AI-powered dashboards and mobile tools for households and local governments to understand energy usage and reduce waste.</p>
-                <a href="{{ $base }}contact/" class="btn btn-primary">Learn More</a>
+                <a href="/contact/" class="btn btn-primary">Learn More</a>
             </div>
         </div>
         <div class="solution-story-body">
@@ -344,7 +343,7 @@
                 <div class="story-cta-box" data-animate="float-parts">
                     <h3>Optimize Your Energy</h3>
                     <p>Contact us to learn how our tools can help your household or community.</p>
-                    <a href="{{ $base }}contact/" class="btn btn-primary">Contact Us</a>
+                    <a href="/contact/" class="btn btn-primary">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -358,7 +357,7 @@
                 <span class="solution-story-badge">Tailored Solutions</span>
                 <h2>Custom AI Solutions</h2>
                 <p>We build specialized AI-driven mobile and web applications that make data accessible and help people take informed action.</p>
-                <a href="{{ $base }}contact/" class="btn btn-primary">Start a Project</a>
+                <a href="/contact/" class="btn btn-primary">Start a Project</a>
             </div>
         </div>
         <div class="solution-story-body">
@@ -386,7 +385,7 @@
                 <div class="story-cta-box" data-animate="float-parts">
                     <h3>Let's Build Together</h3>
                     <p>Tell us your challenge. We'll design the solution.</p>
-                    <a href="{{ $base }}contact/" class="btn btn-primary">Contact Us</a>
+                    <a href="/contact/" class="btn btn-primary">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -409,11 +408,11 @@
             <h2>Ready to Transform Your Business with AI?</h2>
             <p>Let's start a conversation about how our intelligent solutions can help your organization thrive in the digital age.</p>
             <div class="cta-buttons">
-                <a href="{{ $base }}contact/" class="btn btn-primary">Contact Us Today</a>
-                <a href="{{ $base }}byebites/" class="btn btn-secondary">Try ByeBites</a>
-                <a href="{{ $base }}auroweaver/" class="btn btn-secondary">Launch AuroWeaver</a>
-                <a href="{{ $base }}xinbridge/" class="btn btn-secondary">XinBridge</a>
-                <a href="{{ $base }}wildfire-assistant/" class="btn btn-secondary">Wildfire Assistant</a>
+                <a href="/contact/" class="btn btn-primary">Contact Us Today</a>
+                <a href="/byebites/" class="btn btn-secondary">Try ByeBites</a>
+                <a href="/auroweaver/" class="btn btn-secondary">Launch AuroWeaver</a>
+                <a href="/xinbridge/" class="btn btn-secondary">XinBridge</a>
+                <a href="/wildfire-assistant/" class="btn btn-secondary">Wildfire Assistant</a>
             </div>
         </div>
     </section>

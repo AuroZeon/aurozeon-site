@@ -1,5 +1,4 @@
 {{ define "main" }}
-{{ $base := .Site.BaseURL }}
 <div class="product-scroll-page byebites-scroll">
     <!-- Hero: unique food/health image (not used on home) -->
     <section class="product-hero" style="background-image: url('https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1920');">
@@ -45,7 +44,7 @@
     </section>
 
     <!-- Mid: parallax - unique healthy eating image -->
-    <section class="product-parallax" style="background-image: url('https://images.pexels.com/photos/5938/pexels-photo-5938.jpeg?auto=compress&cs=tinysrgb&w=1920');">
+    <section class="product-parallax" style="background-image: url('https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1920');">
         <div class="product-parallax-overlay"></div>
         <div class="product-parallax-content" data-animate="zoom">
             <p>Join thousands building healthier habits.</p>
@@ -59,12 +58,12 @@
             <h2>Legal & Support</h2>
             <p class="product-section-lead">Everything you need to know. We're here to help.</p>
             <div class="product-legal-links">
-                <a href="{{ $base }}byebites/privacy-policy/">Privacy Policy</a>
-                <a href="{{ $base }}byebites/user-agreement/">User Agreement</a>
-                <a href="{{ $base }}byebites/health-disclaimer/">Health Disclaimer</a>
-                <a href="{{ $base }}byebites/support/">Contact Us</a>
+                <a href="/byebites/privacy-policy/">Privacy Policy</a>
+                <a href="/byebites/user-agreement/">User Agreement</a>
+                <a href="/byebites/health-disclaimer/">Health Disclaimer</a>
+                <a href="/byebites/support/">Contact Us</a>
             </div>
-            <p class="product-pexels-credit">Photos: <a href="https://www.pexels.com/photo/1640777/" target="_blank" rel="noopener">Ella Olsson</a> · <a href="https://www.pexels.com/photo/5938/" target="_blank" rel="noopener">Karolina Grabowska</a> · <a href="https://www.pexels.com/" target="_blank" rel="noopener">Pexels</a></p>
+            <p class="product-pexels-credit">Photos: <a href="https://www.pexels.com/photo/1640777/" target="_blank" rel="noopener">Ella Olsson</a> · <a href="https://www.pexels.com/" target="_blank" rel="noopener">Pexels</a></p>
         </div>
     </section>
 </div>

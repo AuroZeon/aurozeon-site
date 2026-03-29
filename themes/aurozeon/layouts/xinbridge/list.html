@@ -1,10 +1,9 @@
 {{ define "main" }}
-{{ $base := .Site.BaseURL }}
 {{ $appStore := .Site.Params.xinbridge.app_store_url | default "https://play.google.com/store/apps/details?id=com.aurozeon.xinbridge" }}
 {{ $iosStore := .Site.Params.xinbridge.ios_store_url | default "https://apps.apple.com/app/xinbridge" }}
 <div class="product-scroll-page xinbridge-scroll">
     <!-- Hero: care/wellness (XinBridge assets) -->
-    <section class="product-hero" style="background-image: url('https://images.pexels.com/photos/3783510/pexels-photo-3783510.jpeg?auto=compress&cs=tinysrgb&w=1920');">
+    <section class="product-hero" style="background-image: url('https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=1920');">
         <div class="product-hero-overlay"></div>
         <div class="product-hero-content">
             <span class="product-badge">Healthcare · AI Emotional Support</span>
@@ -68,7 +67,7 @@
             <h2>Night Sanctuary 夜晚陪伴</h2>
             <p class="product-section-lead">When the world sleeps and it's hard to rest—we're here.</p>
             <div class="xinbridge-showcase">
-                <div class="xinbridge-showcase-media" style="background-image: url('https://images.pexels.com/photos/32237/pexels-photo-32237.jpeg?auto=compress&cs=tinysrgb&w=1920');"></div>
+                <div class="xinbridge-showcase-media" style="background-image: url('https://images.pexels.com/photos/1508666/pexels-photo-1508666.jpeg?auto=compress&cs=tinysrgb&w=1920');"></div>
                 <div class="xinbridge-showcase-content">
                     <ul class="xinbridge-feature-list">
                         <li><i class="fas fa-volume-up"></i> Soundscapes: Brown noise + rain, ocean, forest, stream</li>
@@ -121,15 +120,15 @@
                             </div>
                         </div>
                         <div class="play-preview-screenshots">
-                            <div class="play-screenshot" style="background-image: url('https://images.pexels.com/photos/3783510/pexels-photo-3783510.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400');"></div>
-                            <div class="play-screenshot" style="background-image: url('https://images.pexels.com/photos/32237/pexels-photo-32237.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400');"></div>
+                            <div class="play-screenshot" style="background-image: url('https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400');"></div>
+                            <div class="play-screenshot" style="background-image: url('https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400');"></div>
                             <div class="play-screenshot" style="background-image: url('https://images.pexels.com/photos/1508666/pexels-photo-1508666.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400');"></div>
                             <div class="play-screenshot" style="background-image: url('https://images.pexels.com/photos/7659573/pexels-photo-7659573.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400');"></div>
                             <div class="play-screenshot" style="background-image: url('https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400');"></div>
                             <div class="play-screenshot" style="background-image: url('https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400');"></div>
-                            <div class="play-screenshot" style="background-image: url('https://images.pexels.com/photos/5938/pexels-photo-5938.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400');"></div>
                             <div class="play-screenshot" style="background-image: url('https://images.pexels.com/photos/959933/pexels-photo-959933.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400');"></div>
-                            <div class="play-screenshot" style="background-image: url('https://images.pexels.com/photos/2667066/pexels-photo-2667066.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400');"></div>
+                            <div class="play-screenshot" style="background-image: url('https://images.pexels.com/photos/959933/pexels-photo-959933.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400');"></div>
+                            <div class="play-screenshot" style="background-image: url('https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400');"></div>
                             <div class="play-screenshot" style="background-image: url('https://images.pexels.com/photos/577210/pexels-photo-577210.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400');"></div>
                         </div>
                         <div class="play-preview-features">
@@ -214,11 +213,11 @@
         <div class="product-section-inner">
             <h2>Legal</h2>
             <div class="product-legal-links">
-                <a href="{{ $base }}xinbridge/privacy-policy/">Privacy Policy</a>
-                <a href="{{ $base }}xinbridge/user-agreement/">User Agreement</a>
-                <a href="{{ $base }}contact/">Contact Us</a>
+                <a href="/xinbridge/privacy-policy/">Privacy Policy</a>
+                <a href="/xinbridge/user-agreement/">User Agreement</a>
+                <a href="/contact/">Contact Us</a>
             </div>
-            <p class="product-pexels-credit">Hero &amp; parallax photos: <a href="https://www.pexels.com/photo/3783510/" target="_blank" rel="noopener">Simon Berger</a>, <a href="https://www.pexels.com/photo/1508666/" target="_blank" rel="noopener">Quang Nguyen Vinh</a>, <a href="https://www.pexels.com/photo/32237/" target="_blank" rel="noopener">Pixabay</a> · <a href="https://www.pexels.com/" target="_blank" rel="noopener">Pexels</a>. XinBridge is built with React and Capacitor.</p>
+            <p class="product-pexels-credit">Photos: <a href="https://www.pexels.com/photo/3768131/" target="_blank" rel="noopener">Andrea Piacquadio</a> · <a href="https://www.pexels.com/photo/1508666/" target="_blank" rel="noopener">Quang Nguyen Vinh</a> · <a href="https://www.pexels.com/" target="_blank" rel="noopener">Pexels</a>. XinBridge is built with React and Capacitor.</p>
         </div>
     </section>
 </div>

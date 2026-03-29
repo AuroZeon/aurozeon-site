@@ -2,6 +2,11 @@
 extended = true
 min = "0.115.2"
 
+# Theme holds the canonical Markdown; languages.toml uses contentDir = "content/english"
+[[module.mounts]]
+source = "themes/aurozeon/content"
+target = "content/english"
+
 # [[imports]]
 # path = "github.com/zeon-studio/hugoplate"
 
