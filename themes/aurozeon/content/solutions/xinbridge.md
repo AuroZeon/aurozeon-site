@@ -1,6 +1,6 @@
 ---
 title: "XinBridge 心桥"
-image: "images/xinbridge-background.jpg"
+image: "https://images.pexels.com/photos/3783510/pexels-photo-3783510.jpeg?auto=compress&cs=tinysrgb&w=1920"
 description: "AI emotional companionship for cancer patients. Gentle Companion chat, mood tracking, Night Sanctuary, and family connection."
 ---
 

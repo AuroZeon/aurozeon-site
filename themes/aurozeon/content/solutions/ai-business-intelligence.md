@@ -1,10 +1,10 @@
 ---
 title: "Custom AI Solutions for Business Intelligence"
-image: "images/business-intelligence-background.jpg"
+image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1920"
 description: "Leverage AI to unlock insights from your business data and drive smarter decisions."
 ---
 
-<div class="hero-section" style="background-image: url('{{ .Params.image }}'); background-size: cover; padding: 100px 0; text-align: center; color: #fff;">
+<div class="hero-section" style="background-image: url('https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1920'); background-size: cover; padding: 100px 0; text-align: center; color: #fff;">
     <div class="overlay" style="background: rgba(0, 0, 0, 0.5); padding: 50px 0;">
         <h1 style="font-size: 3rem; font-weight: bold;">Custom AI Solutions for Business Intelligence</h1>
         <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto;">Harness the power of artificial intelligence to drive insightful decisions and gain a competitive edge in your business.</p>
@@ -20,17 +20,17 @@ In today’s fast-paced business environment, data-driven decision-making is a c
 
 <div class="key-features" style="display: flex; flex-wrap: wrap; justify-content: space-around; padding: 50px 0; background-color: #f9f9f9;">
     <div class="feature-item" style="flex: 1 1 30%; text-align: center; padding: 20px;">
-        <img src="/images/icons/data-analysis.svg" alt="Data Analysis" class="feature-icon" style="width: 50px; margin-bottom: 15px;">
+        <div class="feature-icon" style="font-size: 2.5rem; color: #1D72B8; margin-bottom: 15px;"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
         <h4 style="font-size: 1.5rem;">Advanced Data Analysis</h4>
         <p style="font-size: 1rem;">Utilize sophisticated AI algorithms to analyze and interpret vast amounts of data for business insights.</p>
     </div>
     <div class="feature-item" style="flex: 1 1 30%; text-align: center; padding: 20px;">
-        <img src="/images/icons/predictive-analytics.svg" alt="Predictive Analytics" class="feature-icon" style="width: 50px; margin-bottom: 15px;">
+        <div class="feature-icon" style="font-size: 2.5rem; color: #1D72B8; margin-bottom: 15px;"><i class="fas fa-chart-area" aria-hidden="true"></i></div>
         <h4 style="font-size: 1.5rem;">Predictive Analytics</h4>
         <p style="font-size: 1rem;">Forecast future trends and outcomes, helping your business to proactively plan and respond to market changes.</p>
     </div>
     <div class="feature-item" style="flex: 1 1 30%; text-align: center; padding: 20px;">
-        <img src="/images/icons/data-visualization.svg" alt="Data Visualization" class="feature-icon" style="width: 50px; margin-bottom: 15px;">
+        <div class="feature-icon" style="font-size: 2.5rem; color: #1D72B8; margin-bottom: 15px;"><i class="fas fa-chart-pie" aria-hidden="true"></i></div>
         <h4 style="font-size: 1.5rem;">Data Visualization</h4>
         <p style="font-size: 1rem;">Transform complex data sets into easy-to-understand visualizations for quick decision-making.</p>
     </div>

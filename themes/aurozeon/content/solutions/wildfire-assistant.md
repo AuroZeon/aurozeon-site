@@ -1,6 +1,6 @@
 ---
 title: "Wildfire Assistant"
-image: "images/wildfire-assistant-hero.jpg"
+image: "https://images.pexels.com/photos/2323799/pexels-photo-2323799.jpeg?auto=compress&cs=tinysrgb&w=1920"
 description: "AI wildfire risk maps, NIFC perimeters, address-based scoring, GPT-4 chat, and image analysis for preparedness."
 ---
 

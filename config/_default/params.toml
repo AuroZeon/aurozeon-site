@@ -1,7 +1,8 @@
 # AuroWeaver app URL - local default, update for production deployment
 [auroweaver]
 app_url = "http://ec2-52-91-79-13.compute-1.amazonaws.com:8806/AuroWeaver/web/auroweaver"
-auroweaver_logo = "images/auroweaver.logo.drawio.png"
+# Hero uses Font Awesome; no separate image file required
+auroweaver_logo = ""
 
 # SHOULEMA app store URLs - update when app is published
 [shoulema]
@@ -20,7 +21,7 @@ ios_store_url = "https://apps.apple.com/app/wildfire-assistant"
 
 #################### default parameters ################################
 # Site logo (served from static/images/) - used in header
-site_logo = "images/aurozeon.logo.png"
+site_logo = "images/aurozeon.logo.svg"
 # favicon module: https://github.com/gethugothemes/hugo-modules/tree/master/images#favicon-implementation
 favicon = "images/favicon.png"
 # logo module: https://github.com/gethugothemes/hugo-modules/tree/master/images#logo-implementation

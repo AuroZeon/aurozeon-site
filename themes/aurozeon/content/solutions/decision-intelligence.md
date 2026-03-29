@@ -1,10 +1,10 @@
 ---
 title: "AI-Enhanced Decision Intelligence"
-image: "images/ai-decision-intelligence-background.jpg"
+image: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1920"
 description: "Leverage artificial intelligence to enhance decision-making across all areas of your business."
 ---
 
-<div class="hero-section" style="background-image: url('{{ .Params.image }}'); background-size: cover; padding: 100px 0; text-align: center; color: #fff;">
+<div class="hero-section" style="background-image: url('https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1920'); background-size: cover; padding: 100px 0; text-align: center; color: #fff;">
     <div class="overlay" style="background: rgba(0, 0, 0, 0.5); padding: 50px 0;">
         <h1 style="font-size: 3rem; font-weight: bold;">AI-Enhanced Decision Intelligence</h1>
         <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto;">Unlock intelligent insights and optimize business decisions with the power of AI-driven analytics and predictive models.</p>
@@ -22,17 +22,17 @@ Through predictive analytics, automated decision models, and actionable intellig
 
 <div class="key-features" style="display: flex; flex-wrap: wrap; justify-content: space-around; padding: 50px 0; background-color: #f9f9f9;">
     <div class="feature-item" style="flex: 1 1 30%; text-align: center; padding: 20px;">
-        <img src="/images/icons/predictive-models.svg" alt="Predictive Models" class="feature-icon" style="width: 50px; margin-bottom: 15px;">
+        <div class="feature-icon" style="font-size: 2.5rem; color: #28a745; margin-bottom: 15px;"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
         <h4 style="font-size: 1.5rem;">Predictive Analytics</h4>
         <p style="font-size: 1rem;">Leverage predictive models to forecast future outcomes and trends, helping your business make proactive decisions.</p>
     </div>
     <div class="feature-item" style="flex: 1 1 30%; text-align: center; padding: 20px;">
-        <img src="/images/icons/ai-decision-support.svg" alt="AI Decision Support" class="feature-icon" style="width: 50px; margin-bottom: 15px;">
+        <div class="feature-icon" style="font-size: 2.5rem; color: #28a745; margin-bottom: 15px;"><i class="fas fa-brain" aria-hidden="true"></i></div>
         <h4 style="font-size: 1.5rem;">AI-Driven Decision Support</h4>
         <p style="font-size: 1rem;">Integrate AI into decision-making processes to provide real-time, data-driven insights and recommendations.</p>
     </div>
     <div class="feature-item" style="flex: 1 1 30%; text-align: center; padding: 20px;">
-        <img src="/images/icons/optimization.svg" alt="Optimization" class="feature-icon" style="width: 50px; margin-bottom: 15px;">
+        <div class="feature-icon" style="font-size: 2.5rem; color: #28a745; margin-bottom: 15px;"><i class="fas fa-sliders" aria-hidden="true"></i></div>
         <h4 style="font-size: 1.5rem;">Optimization</h4>
         <p style="font-size: 1rem;">Utilize AI to optimize business processes and improve resource allocation, leading to increased operational efficiency.</p>
     </div>
