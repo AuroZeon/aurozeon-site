@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{ $base := .Site.BaseURL }}
-<main class="home-scroll-page">
+<div class="home-scroll-page">
     <!-- Hero Section -->
     <section class="home-hero" style="background-image: url('https://images.pexels.com/photos/577210/pexels-photo-577210.jpeg?auto=compress&cs=tinysrgb&w=1920');">
         <div class="home-hero-overlay"></div>
@@ -56,7 +56,7 @@
                 </div>
             </a>
             <a href="#shoulema-story" class="solution solution-card" data-animate="zoom">
-                <div class="solution-bg" style="background-image: url('https://images.pexels.com/photos/2252584/pexels-photo-2252584.jpeg?auto=compress&cs=tinysrgb&w=800');"></div>
+                <div class="solution-bg" style="background-image: url('https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800');"></div>
                 <div class="content">
                     <h3>SHOULEMA</h3>
                     <p>Point at food, see calories</p>
@@ -68,6 +68,14 @@
                 <div class="content">
                     <h3>XinBridge 心桥</h3>
                     <p>AI emotional support for cancer patients</p>
+                    <span class="solution-link">Read story →</span>
+                </div>
+            </a>
+            <a href="#wildfire-assistant-story" class="solution solution-card" data-animate="zoom">
+                <div class="solution-bg" style="background-image: url('https://images.pexels.com/photos/2323799/pexels-photo-2323799.jpeg?auto=compress&cs=tinysrgb&w=800');"></div>
+                <div class="content">
+                    <h3>Wildfire Assistant</h3>
+                    <p>Risk maps, AI chat &amp; preparedness</p>
                     <span class="solution-link">Read story →</span>
                 </div>
             </a>
@@ -108,7 +116,7 @@
                     <p>Busy schedules, stress, and endless temptations make it hard to stick to healthy eating. Most diet apps are rigid and overwhelming—they don't understand your real life.</p>
                 </div>
                 <div class="story-media" data-animate="drift-in">
-                    <img src="https://images.pexels.com/photos/1414651/pexels-photo-1414651.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Healthy eating">
+                    <img src="https://images.pexels.com/photos/5938/pexels-photo-5938.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Healthy salad and mindful eating">
                 </div>
             </div>
             <div class="story-block story-block-img-left">
@@ -176,7 +184,7 @@
 
     <!-- SHOULEMA Story -->
     <section id="shoulema-story" class="solution-story">
-        <div class="solution-story-hero" style="background-image: url('https://images.pexels.com/photos/2252584/pexels-photo-2252584.jpeg?auto=compress&cs=tinysrgb&w=1920');">
+        <div class="solution-story-hero" style="background-image: url('https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1920');">
             <div class="solution-story-overlay"></div>
             <div class="solution-story-hero-content" data-animate="fade-up">
                 <span class="solution-story-badge">AI Camera App</span>
@@ -192,7 +200,7 @@
                     <p>No more typing or searching. Point your phone at any dish—pizza, rice, salad—and see calories in real time. AI food recognition powered by COCO-SSD.</p>
                 </div>
                 <div class="story-media" data-animate="drift-in">
-                    <img src="https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Food">
+                    <img src="https://images.pexels.com/photos/959933/pexels-photo-959933.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Prepared meals and food photography">
                 </div>
             </div>
             <div class="story-block story-block-img-left">
@@ -218,7 +226,7 @@
 
     <!-- XinBridge Story -->
     <section id="xinbridge-story" class="solution-story">
-        <div class="solution-story-hero" style="background-image: url('https://images.pexels.com/photos/7659573/pexels-photo-7659573.jpeg?auto=compress&cs=tinysrgb&w=1920');">
+        <div class="solution-story-hero" style="background-image: url('https://images.pexels.com/photos/3783510/pexels-photo-3783510.jpeg?auto=compress&cs=tinysrgb&w=1920');">
             <div class="solution-story-overlay"></div>
             <div class="solution-story-hero-content" data-animate="fade-up">
                 <span class="solution-story-badge">Healthcare · AI Companionship</span>
@@ -231,10 +239,10 @@
             <div class="story-block story-block-img-right">
                 <div class="story-content" data-animate="slide-reveal-left">
                     <h3>The Problem: Loneliness at Night</h3>
-                    <p>Cancer treatment brings fear, fatigue, and sleepless nights. Patients need emotional support without clinical coldness—and privacy matters. Cloud AI raises concerns; most apps don't understand the moment.</p>
+                    <p>Cancer treatment brings fear, fatigue, and sleepless nights. Patients need emotional support without clinical coldness—and an experience that feels human, not generic.</p>
                 </div>
                 <div class="story-media" data-animate="drift-in">
-                    <img src="https://images.pexels.com/photos/3783470/pexels-photo-3783470.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Support and care">
+                    <img src="https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Family connection and emotional support">
                 </div>
             </div>
             <div class="story-block story-block-img-left">
@@ -244,8 +252,8 @@
                     </video>
                 </div>
                 <div class="story-content" data-animate="slide-reveal">
-                    <h3>Our Solution: Gentle AI, Local & Private</h3>
-                    <p>XinBridge runs local LLM on your device—WebLLM on desktop, Transformers.js on mobile. Gentle Companion persona uses metaphor and warmth. Night Sanctuary for 1–4 AM: soundscapes, breathing, body scan. Symptom tracking with smart alerts. Family connection for unsaid words.</p>
+                    <h3>Our Solution: Gentle Cloud AI</h3>
+                    <p>Gentle Companion uses secure, cloud-based AI so replies stay thoughtful and up to date—metaphor and warmth, not clinical coldness. Night Sanctuary for 1–4 AM: soundscapes, breathing, body scan. Symptom tracking with smart alerts. Family connection for unsaid words.</p>
                 </div>
             </div>
             <div class="story-block story-block-cta">
@@ -253,6 +261,48 @@
                     <h3>You Are Not Alone. 你不孤单。</h3>
                     <p>Zen Toys, Hope Library, Quick SOS. Built with React, Capacitor, and care.</p>
                     <a href="{{ $base }}xinbridge/" class="btn btn-primary">Explore XinBridge</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wildfire Assistant Story -->
+    <section id="wildfire-assistant-story" class="solution-story">
+        <div class="solution-story-hero" style="background-image: url('https://images.pexels.com/photos/2323799/pexels-photo-2323799.jpeg?auto=compress&cs=tinysrgb&w=1920');">
+            <div class="solution-story-overlay"></div>
+            <div class="solution-story-hero-content" data-animate="fade-up">
+                <span class="solution-story-badge">Safety &amp; Preparedness</span>
+                <h2>Wildfire Assistant</h2>
+                <p>AI-powered wildfire risk assessment with NIFC perimeter maps, address-based scoring, and GPT-4 guidance for preparedness—not a replacement for official evacuation orders.</p>
+                <a href="{{ $base }}wildfire-assistant/" class="btn btn-primary">Explore Wildfire Assistant</a>
+            </div>
+        </div>
+        <div class="solution-story-body">
+            <div class="story-block story-block-img-right">
+                <div class="story-content" data-animate="slide-reveal-left">
+                    <h3>Know Your Risk</h3>
+                    <p>See active federal perimeters on a map, search any address, and get a transparent 0–100% screening score combining regional hazard and proximity to incidents—built for awareness, not insurance certification.</p>
+                </div>
+                <div class="story-media" data-animate="drift-in">
+                    <img src="https://images.pexels.com/photos/691953/pexels-photo-691953.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Forest wildfire awareness">
+                </div>
+            </div>
+            <div class="story-block story-block-img-left">
+                <div class="story-media" data-animate="drift-in-left">
+                    <video autoplay muted loop playsinline>
+                        <source src="https://videos.pexels.com/video-files/3045163/3045163-hd_1920_1080_30fps.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="story-content" data-animate="slide-reveal">
+                    <h3>AI Chat &amp; Image Analysis</h3>
+                    <p>Ask about emergency kits, defensible space, and evacuation concepts. Upload photos of your surroundings for AI vision feedback on potential hazards—always follow local authorities in a real emergency.</p>
+                </div>
+            </div>
+            <div class="story-block story-block-cta">
+                <div class="story-cta-box" data-animate="float-parts">
+                    <h3>Prepare Today</h3>
+                    <p>Free on App Store and Google Play. Vite, React, Capacitor—NYU Capstone project.</p>
+                    <a href="{{ $base }}wildfire-assistant/" class="btn btn-primary">Get Wildfire Assistant</a>
                 </div>
             </div>
         </div>
@@ -363,8 +413,9 @@
                 <a href="{{ $base }}byebites/" class="btn btn-secondary">Try ByeBites</a>
                 <a href="{{ $base }}auroweaver/" class="btn btn-secondary">Launch AuroWeaver</a>
                 <a href="{{ $base }}xinbridge/" class="btn btn-secondary">XinBridge</a>
+                <a href="{{ $base }}wildfire-assistant/" class="btn btn-secondary">Wildfire Assistant</a>
             </div>
         </div>
     </section>
-</main>
+</div>
 {{ end }}

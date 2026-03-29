@@ -6,12 +6,17 @@ auroweaver_logo = "images/auroweaver.logo.drawio.png"
 # SHOULEMA app store URLs - update when app is published
 [shoulema]
 app_store_url = "https://play.google.com/store/apps/details?id=com.shou.calorie"
-ios_store_url = "https://apps.apple.com/app/shoulema"
+ios_store_url = "https://apps.apple.com/us/app/shoulema-calorie-scanner/id6760223102"
 
-# XinBridge 心桥 - AI emotional companionship for cancer patients
+# XinBridge 心桥 - AI emotional companionship for cancer patients (cloud-based Gentle Companion; see site privacy policy)
 [xinbridge]
 app_store_url = "https://play.google.com/store/apps/details?id=com.aurozeon.xinbridge"  # Update when published
 ios_store_url = "https://apps.apple.com/app/xinbridge"  # Update when published
+
+# Wildfire Assistant — NYU Capstone wildfire risk & preparedness app
+[wildfire_assistant]
+app_store_url = "https://play.google.com/store/apps/details?id=com.nyu.wildfire.assistant"
+ios_store_url = "https://apps.apple.com/app/wildfire-assistant"
 
 #################### default parameters ################################
 # Site logo (served from static/images/) - used in header

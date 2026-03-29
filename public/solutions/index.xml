@@ -1,39 +1,52 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Solutions on AuroZeon</title>
-    <link>http://localhost:1313/solutions/</link>
-    <description>Recent content in Solutions on AuroZeon</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="http://localhost:1313/solutions/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>http://localhost:1313/solutions/data-pipeline/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/solutions/data-pipeline/</guid>
-      <description>&lt;h1 id=&#34;solution-overview&#34;&gt;Solution Overview&lt;/h1&gt;&#xA;&lt;p&gt;&lt;img src=&#34;your-image-url&#34; alt=&#34;Hero Background&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;learn-more-at-here&#34;&gt;Learn More At Here&lt;/h2&gt;&#xA;&lt;h3 id=&#34;solution-overview-1&#34;&gt;Solution Overview&lt;/h3&gt;&#xA;&lt;h3 id=&#34;key-features&#34;&gt;Key Features&lt;/h3&gt;&#xA;&lt;h4 id=&#34;data-collection&#34;&gt;Data Collection&lt;/h4&gt;&#xA;&lt;p&gt;Seamlessly ingest data from multiple sources in real-time.&lt;br&gt;&#xA;&lt;img src=&#34;https://your-image-path/images/icons/data-collection.svg&#34; alt=&#34;Data Collection&#34;&gt;&lt;/p&gt;&#xA;&lt;h4 id=&#34;data-cleaning&#34;&gt;Data Cleaning&lt;/h4&gt;&#xA;&lt;p&gt;Transform raw data into actionable insights with automated cleaning.&lt;br&gt;&#xA;&lt;img src=&#34;https://your-image-path/images/icons/data-cleaning.svg&#34; alt=&#34;Data Cleaning&#34;&gt;&lt;/p&gt;&#xA;&lt;h4 id=&#34;ai-powered-analysis&#34;&gt;AI-Powered Analysis&lt;/h4&gt;&#xA;&lt;p&gt;Leverage AI models to gain deep insights and predictions from your data.&lt;br&gt;&#xA;&lt;img src=&#34;https://your-image-path/images/icons/ai-analysis.svg&#34; alt=&#34;AI-Powered Analysis&#34;&gt;&lt;/p&gt;&#xA;&lt;h4 id=&#34;scalability&#34;&gt;Scalability&lt;/h4&gt;&#xA;&lt;p&gt;Scale effortlessly to accommodate growing datasets with zero downtime.&lt;br&gt;&#xA;&lt;img src=&#34;https://your-image-path/images/icons/scalability.svg&#34; alt=&#34;Scalability&#34;&gt;&lt;/p&gt;&#xA;&lt;h4 id=&#34;continuous-monitoring&#34;&gt;Continuous Monitoring&lt;/h4&gt;&#xA;&lt;p&gt;Ensure smooth operations with real-time monitoring and automated troubleshooting.&lt;br&gt;&#xA;&lt;img src=&#34;https://your-image-path/images/icons/monitoring.svg&#34; alt=&#34;Monitoring&#34;&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>AI-Enhanced Decision Intelligence</title>
-      <link>http://localhost:1313/solutions/decision-intelligence/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/solutions/decision-intelligence/</guid>
-      <description>&lt;div class=&#34;hero-section&#34; style=&#34;background-image: url(&#39;{{ .Params.image }}&#39;); background-size: cover; padding: 100px 0; text-align: center; color: #fff;&#34;&gt;&#xA;    &lt;div class=&#34;overlay&#34; style=&#34;background: rgba(0, 0, 0, 0.5); padding: 50px 0;&#34;&gt;&#xA;        &lt;h1 style=&#34;font-size: 3rem; font-weight: bold;&#34;&gt;AI-Enhanced Decision Intelligence&lt;/h1&gt;&#xA;        &lt;p style=&#34;font-size: 1.25rem; max-width: 800px; margin: 0 auto;&#34;&gt;Unlock intelligent insights and optimize business decisions with the power of AI-driven analytics and predictive models.&lt;/p&gt;&#xA;        &lt;a href=&#34;#solution-details&#34; class=&#34;cta-button&#34; style=&#34;background-color: #28a745; color: white; padding: 15px 30px; text-decoration: none; font-weight: bold; margin-top: 20px; display: inline-block; border-radius: 5px;&#34;&gt;Learn More&lt;/a&gt;&#xA;    &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;solution-overview&#34;&gt;&lt;strong&gt;Solution Overview&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;AI-Enhanced Decision Intelligence&lt;/strong&gt; transforms how organizations make decisions. By integrating advanced AI models with decision-making frameworks, our solutions offer real-time, data-driven insights to help businesses optimize operations, increase profitability, and reduce risks.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Custom AI Solutions for Business Intelligence</title>
-      <link>http://localhost:1313/solutions/ai-business-intelligence/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/solutions/ai-business-intelligence/</guid>
-      <description>&lt;div class=&#34;hero-section&#34; style=&#34;background-image: url(&#39;{{ .Params.image }}&#39;); background-size: cover; padding: 100px 0; text-align: center; color: #fff;&#34;&gt;&#xA;    &lt;div class=&#34;overlay&#34; style=&#34;background: rgba(0, 0, 0, 0.5); padding: 50px 0;&#34;&gt;&#xA;        &lt;h1 style=&#34;font-size: 3rem; font-weight: bold;&#34;&gt;Custom AI Solutions for Business Intelligence&lt;/h1&gt;&#xA;        &lt;p style=&#34;font-size: 1.25rem; max-width: 800px; margin: 0 auto;&#34;&gt;Harness the power of artificial intelligence to drive insightful decisions and gain a competitive edge in your business.&lt;/p&gt;&#xA;        &lt;a href=&#34;#solution-details&#34; class=&#34;cta-button&#34; style=&#34;background-color: #1D72B8; color: white; padding: 15px 30px; text-decoration: none; font-weight: bold; margin-top: 20px; display: inline-block; border-radius: 5px;&#34;&gt;Learn More&lt;/a&gt;&#xA;    &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;solution-overview&#34;&gt;&lt;strong&gt;Solution Overview&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;In today’s fast-paced business environment, data-driven decision-making is a critical factor in staying ahead of the competition. Our &lt;strong&gt;Custom AI Solutions for Business Intelligence&lt;/strong&gt; empower organizations to unlock the full potential of their data by leveraging AI-powered algorithms that provide actionable insights. Whether it’s predicting trends, identifying key business drivers, or automating decision processes, our solutions are designed to integrate seamlessly with your existing business intelligence tools.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>XinBridge 心桥</title>
-      <link>http://localhost:1313/solutions/xinbridge/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/solutions/xinbridge/</guid>
-      <description>&lt;div class=&#34;hero-section&#34; style=&#34;background-image: url(&#39;https://images.pexels.com/photos/7659573/pexels-photo-7659573.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1920&#39;); background-size: cover; padding: 100px 0; text-align: center; color: #fff;&#34;&gt;&#xA;    &lt;div class=&#34;overlay&#34; style=&#34;background: rgba(0, 0, 0, 0.5); padding: 50px 0;&#34;&gt;&#xA;        &lt;h1 style=&#34;font-size: 3rem; font-weight: bold;&#34;&gt;XinBridge 心桥&lt;/h1&gt;&#xA;        &lt;p style=&#34;font-size: 1.25rem; max-width: 800px; margin: 0 auto;&#34;&gt;No cancer patient should feel alone at night. AI emotional companionship with local LLM, mood tracking, Night Sanctuary, and family connection.&lt;/p&gt;&#xA;        &lt;a href=&#34;http://localhost:1313/xinbridge/&#34; class=&#34;cta-button&#34; style=&#34;background-color: #6B4E9E; color: white; padding: 15px 30px; text-decoration: none; font-weight: bold; margin-top: 20px; display: inline-block; border-radius: 5px;&#34;&gt;Learn More&lt;/a&gt;&#xA;    &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;solution-overview&#34;&gt;&lt;strong&gt;Solution Overview&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;XinBridge 心桥&lt;/strong&gt; is an AI-powered emotional support app designed for cancer patients and their families. It provides companionship during challenging times through locally-run LLM conversations, mood tracking, a Night Sanctuary feature for moments of need, and tools to strengthen family connections.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Solutions on AuroZeon</title><link>https://www.aurozeon.com/solutions/</link><description>Recent content in Solutions on AuroZeon</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://www.aurozeon.com/solutions/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://www.aurozeon.com/solutions/data-pipeline/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.aurozeon.com/solutions/data-pipeline/</guid><description>&lt;h1 id="solution-overview">Solution Overview&lt;/h1>
+&lt;p>&lt;img src="your-image-url" alt="Hero Background">&lt;/p>
+&lt;h2 id="learn-more-at-here">Learn More At Here&lt;/h2>
+&lt;h3 id="solution-overview-1">Solution Overview&lt;/h3>
+&lt;h3 id="key-features">Key Features&lt;/h3>
+&lt;h4 id="data-collection">Data Collection&lt;/h4>
+&lt;p>Seamlessly ingest data from multiple sources in real-time.&lt;br>
+&lt;img src="https://your-image-path/images/icons/data-collection.svg" alt="Data Collection">&lt;/p>
+&lt;h4 id="data-cleaning">Data Cleaning&lt;/h4>
+&lt;p>Transform raw data into actionable insights with automated cleaning.&lt;br>
+&lt;img src="https://your-image-path/images/icons/data-cleaning.svg" alt="Data Cleaning">&lt;/p>
+&lt;h4 id="ai-powered-analysis">AI-Powered Analysis&lt;/h4>
+&lt;p>Leverage AI models to gain deep insights and predictions from your data.&lt;br>
+&lt;img src="https://your-image-path/images/icons/ai-analysis.svg" alt="AI-Powered Analysis">&lt;/p>
+&lt;h4 id="scalability">Scalability&lt;/h4>
+&lt;p>Scale effortlessly to accommodate growing datasets with zero downtime.&lt;br>
+&lt;img src="https://your-image-path/images/icons/scalability.svg" alt="Scalability">&lt;/p>
+&lt;h4 id="continuous-monitoring">Continuous Monitoring&lt;/h4>
+&lt;p>Ensure smooth operations with real-time monitoring and automated troubleshooting.&lt;br>
+&lt;img src="https://your-image-path/images/icons/monitoring.svg" alt="Monitoring">&lt;/p></description></item><item><title>AI-Enhanced Decision Intelligence</title><link>https://www.aurozeon.com/solutions/decision-intelligence/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.aurozeon.com/solutions/decision-intelligence/</guid><description>&lt;div class="hero-section" style="background-image: url('{{ .Params.image }}'); background-size: cover; padding: 100px 0; text-align: center; color: #fff;">
+ &lt;div class="overlay" style="background: rgba(0, 0, 0, 0.5); padding: 50px 0;">
+ &lt;h1 style="font-size: 3rem; font-weight: bold;">AI-Enhanced Decision Intelligence&lt;/h1>
+ &lt;p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto;">Unlock intelligent insights and optimize business decisions with the power of AI-driven analytics and predictive models.&lt;/p>
+ &lt;a href="#solution-details" class="cta-button" style="background-color: #28a745; color: white; padding: 15px 30px; text-decoration: none; font-weight: bold; margin-top: 20px; display: inline-block; border-radius: 5px;">Learn More&lt;/a>
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="solution-overview">&lt;strong>Solution Overview&lt;/strong>&lt;/h2>
+&lt;p>&lt;strong>AI-Enhanced Decision Intelligence&lt;/strong> transforms how organizations make decisions. By integrating advanced AI models with decision-making frameworks, our solutions offer real-time, data-driven insights to help businesses optimize operations, increase profitability, and reduce risks.&lt;/p></description></item><item><title>Custom AI Solutions for Business Intelligence</title><link>https://www.aurozeon.com/solutions/ai-business-intelligence/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.aurozeon.com/solutions/ai-business-intelligence/</guid><description>&lt;div class="hero-section" style="background-image: url('{{ .Params.image }}'); background-size: cover; padding: 100px 0; text-align: center; color: #fff;">
+ &lt;div class="overlay" style="background: rgba(0, 0, 0, 0.5); padding: 50px 0;">
+ &lt;h1 style="font-size: 3rem; font-weight: bold;">Custom AI Solutions for Business Intelligence&lt;/h1>
+ &lt;p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto;">Harness the power of artificial intelligence to drive insightful decisions and gain a competitive edge in your business.&lt;/p>
+ &lt;a href="#solution-details" class="cta-button" style="background-color: #1D72B8; color: white; padding: 15px 30px; text-decoration: none; font-weight: bold; margin-top: 20px; display: inline-block; border-radius: 5px;">Learn More&lt;/a>
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="solution-overview">&lt;strong>Solution Overview&lt;/strong>&lt;/h2>
+&lt;p>In today’s fast-paced business environment, data-driven decision-making is a critical factor in staying ahead of the competition. Our &lt;strong>Custom AI Solutions for Business Intelligence&lt;/strong> empower organizations to unlock the full potential of their data by leveraging AI-powered algorithms that provide actionable insights. Whether it’s predicting trends, identifying key business drivers, or automating decision processes, our solutions are designed to integrate seamlessly with your existing business intelligence tools.&lt;/p></description></item><item><title>Wildfire Assistant</title><link>https://www.aurozeon.com/solutions/wildfire-assistant/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.aurozeon.com/solutions/wildfire-assistant/</guid><description>&lt;div class="hero-section" style="background-image: url('https://images.pexels.com/photos/2323799/pexels-photo-2323799.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1920'); background-size: cover; padding: 100px 0; text-align: center; color: #fff;">
+ &lt;div class="overlay" style="background: rgba(0, 0, 0, 0.5); padding: 50px 0;">
+ &lt;h1 style="font-size: 3rem; font-weight: bold;">Wildfire Assistant&lt;/h1>
+ &lt;p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto;">Know your risk. Plan ahead. NIFC maps, AI chat, and image analysis.&lt;/p>
+ &lt;a href="https://www.aurozeon.com/wildfire-assistant/" class="cta-button" style="background-color: #c45c26; color: white; padding: 15px 30px; text-decoration: none; font-weight: bold; margin-top: 20px; display: inline-block; border-radius: 5px;">Learn More&lt;/a>
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="overview">&lt;strong>Overview&lt;/strong>&lt;/h2>
+&lt;p>&lt;strong>Wildfire Assistant&lt;/strong> helps residents in wildfire-prone areas assess screening-level risk, view current federal perimeter data on a map, and get AI-powered preparedness guidance. Built with Vite, React, and Capacitor.&lt;/p></description></item><item><title>XinBridge 心桥</title><link>https://www.aurozeon.com/solutions/xinbridge/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.aurozeon.com/solutions/xinbridge/</guid><description>&lt;div class="hero-section" style="background-image: url('https://images.pexels.com/photos/3783510/pexels-photo-3783510.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1920'); background-size: cover; padding: 100px 0; text-align: center; color: #fff;">
+ &lt;div class="overlay" style="background: rgba(0, 0, 0, 0.5); padding: 50px 0;">
+ &lt;h1 style="font-size: 3rem; font-weight: bold;">XinBridge 心桥&lt;/h1>
+ &lt;p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto;">No cancer patient should feel alone at night. AI emotional companionship with Gentle Companion chat, mood tracking, Night Sanctuary, and family connection.&lt;/p>
+ &lt;a href="https://www.aurozeon.com/xinbridge/" class="cta-button" style="background-color: #6B4E9E; color: white; padding: 15px 30px; text-decoration: none; font-weight: bold; margin-top: 20px; display: inline-block; border-radius: 5px;">Learn More&lt;/a>
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="solution-overview">&lt;strong>Solution Overview&lt;/strong>&lt;/h2>
+&lt;p>&lt;strong>XinBridge 心桥&lt;/strong> is an AI-powered emotional support app designed for cancer patients and their families. It provides companionship during challenging times through cloud-based Gentle Companion conversations, mood tracking, a Night Sanctuary feature for moments of need, and tools to strengthen family connections.&lt;/p></description></item></channel></rss>

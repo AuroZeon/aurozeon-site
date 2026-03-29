@@ -1,3 +1,8 @@
+{{/*
+  Site chrome: assets/css/site-header-nav.css only.
+  Theme colors: use .main-nav .nav-list > li > a and .dropdown-menu a — never bare "nav a" / ".main-nav a" (breaks dropdown).
+*/}}
+<header class="site-header">
 <div class="logo">
     <a href="{{ .Site.BaseURL }}">
         <img src="{{ .Site.BaseURL }}images/aurozeon.logo.png" alt="" class="logo-img">
@@ -5,16 +10,4 @@
     </a>
 </div>
 {{ partial "nav-main.html" . }}
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const header = document.querySelector('header');
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-    });
-</script>
-
+</header>

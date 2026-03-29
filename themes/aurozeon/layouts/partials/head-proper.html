@@ -54,8 +54,19 @@
   {{- end }}
 {{- end }}
 
-<!-- Product scroll CSS - for SHOULEMA, AuroWeaver, ByeBites, XinBridge -->
-{{- if or (eq .Section "shoulema") (eq .Section "auroweaver") (eq .Section "byebites") (eq .Section "xinbridge") }}
+<!-- Site header + nav — single source of truth (see partials/header.html, assets/css/site-header-nav.css) -->
+{{- with resources.Get "css/site-header-nav.css" }}
+  {{- if eq hugo.Environment "development" }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{- else }}
+    {{- with . | minify | fingerprint }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+<!-- Product scroll CSS - for SHOULEMA, AuroWeaver, ByeBites, XinBridge, Wildfire Assistant -->
+{{- if or (eq .Section "shoulema") (eq .Section "auroweaver") (eq .Section "byebites") (eq .Section "xinbridge") (eq .Section "wildfire-assistant") }}
   {{- with resources.Get "css/product-scroll.css" }}
     {{- if eq hugo.Environment "development" }}
       <link rel="stylesheet" href="{{ .RelPermalink }}">
@@ -70,6 +81,19 @@
 <!-- XinBridge CSS -->
 {{- if eq .Section "xinbridge" }}
   {{- with resources.Get "css/xinbridge.css" }}
+    {{- if eq hugo.Environment "development" }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{- else }}
+      {{- with . | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+<!-- Wildfire Assistant CSS -->
+{{- if eq .Section "wildfire-assistant" }}
+  {{- with resources.Get "css/wildfire-assistant.css" }}
     {{- if eq hugo.Environment "development" }}
       <link rel="stylesheet" href="{{ .RelPermalink }}">
     {{- else }}

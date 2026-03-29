@@ -12,9 +12,7 @@ dir="{{ or site.Language.LanguageDirection `ltr` }}"
   <div class="glow-effect glow-1"></div>
   <div class="glow-effect glow-2"></div>
 
-  <header>
-    {{ partial "header.html" . }}
-  </header>
+  {{ partial "header.html" . }}
 
   <main>
     {{ block "main" . }}{{ end }}

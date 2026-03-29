@@ -1,0 +1,268 @@
+/*
+ * Single source of truth for site chrome: partials/header.html → <header class="site-header">.
+ * Top-level nav links use .nav-list > li > a only — never bare "nav a" (that matched dropdown items and broke hover/padding).
+ * Dropdown panel behavior lives only here so it cannot fight home/main.css.
+ */
+
+header.site-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    overflow: visible;
+}
+
+header.site-header > script {
+    display: none !important;
+}
+
+header.site-header.scrolled {
+    padding: 15px 50px;
+    background: rgba(255, 255, 255, 0.98);
+}
+
+header.site-header .logo {
+    flex-shrink: 0;
+    min-width: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+header.site-header .logo::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: var(--primary-color);
+    margin-right: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
+    animation: site-header-logo-pulse 2s infinite;
+}
+
+header.site-header .logo:has(img)::before {
+    display: none;
+}
+
+header.site-header .logo a,
+header.site-header .logo a:hover,
+header.site-header .logo a:focus,
+header.site-header .logo a:visited {
+    text-decoration: none;
+}
+
+header.site-header .logo a::after {
+    display: none !important;
+    content: none !important;
+}
+
+header.site-header .logo a {
+    transition: transform 0.3s ease;
+}
+
+header.site-header .logo a:hover {
+    transform: scale(1.02);
+}
+
+header.site-header .logo img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    filter: none;
+    margin-right: 10px;
+}
+
+header.site-header .logo .logo-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    transition: text-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+header.site-header .logo a:hover .logo-text {
+    text-shadow: 0 0 12px rgba(241, 157, 56, 0.6);
+}
+
+@keyframes site-header-logo-pulse {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+header.site-header .main-nav {
+    position: relative;
+    z-index: 1001;
+    flex: 1;
+    min-width: 0;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 30px;
+}
+
+header.site-header .main-nav .nav-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Top-level bar links only (not .dropdown-menu a) */
+header.site-header .main-nav .nav-list > li > a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s, text-shadow 0.3s;
+    position: relative;
+    padding: 5px 0;
+}
+
+header.site-header .main-nav .nav-list > li > a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color), transparent);
+    transition: width 0.3s;
+}
+
+header.site-header .main-nav .nav-list > li > a:hover {
+    color: var(--primary-color);
+}
+
+header.site-header .main-nav .nav-list > li > a:hover::after {
+    width: 100%;
+}
+
+/* --- Solutions dropdown: full behavior scoped to site header (do not rely on unscoped .dropdown in main.css) --- */
+header.site-header .main-nav .dropdown {
+    position: relative;
+    z-index: 1002;
+}
+
+header.site-header .main-nav .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    min-width: 240px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08);
+    z-index: 10050;
+    border-radius: 10px;
+    padding: 0.75rem 0;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    list-style: none;
+    margin: 4px 0 0;
+    padding-left: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+header.site-header .main-nav .dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 0;
+    right: 0;
+    height: 12px;
+}
+
+header.site-header .main-nav .dropdown:hover .dropdown-menu,
+header.site-header .main-nav .dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+header.site-header .main-nav .dropdown-menu li {
+    margin: 0 !important;
+    width: 100%;
+    list-style: none;
+}
+
+header.site-header .main-nav .dropdown-menu li:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+header.site-header .main-nav .dropdown-menu a {
+    padding: 1rem 1.5rem;
+    display: block;
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+header.site-header .main-nav .dropdown-menu a:hover {
+    background-color: rgba(232, 123, 0, 0.08);
+    color: var(--primary-color);
+}
+
+/* No underline pseudo on submenu links */
+header.site-header .main-nav .dropdown-menu a::after {
+    display: none !important;
+    content: none !important;
+}
+
+@media (max-width: 900px) {
+    header.site-header {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    header.site-header .main-nav .nav-list {
+        gap: 0.65rem;
+        justify-content: flex-end;
+    }
+
+    header.site-header .main-nav .nav-list > li > a {
+        font-size: 0.82rem;
+        padding: 0.35rem 0.1rem;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 768px) {
+    header.site-header {
+        padding: 15px 20px;
+    }
+
+    header.site-header.scrolled {
+        padding: 10px 20px;
+    }
+
+    header.site-header .main-nav {
+        gap: 15px;
+    }
+}

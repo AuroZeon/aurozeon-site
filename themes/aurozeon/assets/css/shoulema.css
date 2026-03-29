@@ -9,26 +9,31 @@ body.shoulema-page {
     color: #1a1a2e;
 }
 
-body.shoulema-page header {
+/* Header colors — layout lives in site-header-nav.css */
+body.shoulema-page header.site-header {
     background: rgba(255, 255, 255, 0.98);
     box-shadow: 0 1px 12px rgba(0, 0, 0, 0.08);
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-body.shoulema-page header .logo .logo-text {
+body.shoulema-page header.site-header .logo .logo-text {
     color: #e87b00;
 }
 
-body.shoulema-page header .logo-img {
+body.shoulema-page header.site-header .logo-img {
     filter: none;
 }
 
-body.shoulema-page header nav a {
+body.shoulema-page header.site-header .main-nav .nav-list > li > a {
     color: #1a1a2e;
 }
 
-body.shoulema-page header nav a:hover,
-body.shoulema-page header nav a.active {
+body.shoulema-page header.site-header .main-nav .nav-list > li > a:hover,
+body.shoulema-page header.site-header .main-nav .nav-list > li > a.active {
+    color: #e87b00;
+}
+
+body.shoulema-page header.site-header .dropdown-menu a:hover {
     color: #e87b00;
 }
 

@@ -1,0 +1,66 @@
+{{/*
+  Shared legal sections for app Privacy Policies (AuroZeon LLC).
+  Call: partial "privacy-standard-addenda.html" (dict "appName" "ByeBites" "category" "health")
+  category: health | nutrition | workflow | emotional | safety | general
+*/}}
+{{- $app := .appName -}}
+{{- $cat := .category | default "general" -}}
+
+<h2>Who We Are</h2>
+<p>This Privacy Policy is issued by <strong>AuroZeon LLC</strong> (“AuroZeon,” “we,” “us,” or “our”) with respect to <strong>{{ $app }}</strong>. We describe our practices honestly and in good faith. Nothing in this Privacy Policy is intended to create obligations beyond what we reasonably undertake here and what applicable law requires.</p>
+
+<h2>Legal Bases and Good-Faith Processing</h2>
+<p>Where required (for example, in the European Economic Area or United Kingdom), we process personal data only on lawful bases such as performance of a contract, legitimate interests that are not overridden by your rights, compliance with legal obligations, or consent where we ask for it. We do not use your information in ways that are incompatible with the purposes described in this Privacy Policy without notice as required by law.</p>
+
+<h2>Third-Party Services and Processors</h2>
+<p>{{ $app }} may rely on third parties (for example, Apple, Google, hosting providers, analytics, payment processors, AI or mapping APIs, or data providers). Those parties process information under their own terms and privacy policies. We select and configure services with reasonable care but are not responsible for their independent practices beyond our due diligence and contractual commitments, to the extent permitted by law.</p>
+
+<h2>Analytics, Advertising, and Sale of Personal Information</h2>
+<p>We do <strong>not</strong> sell your personal information for monetary consideration as commonly understood under U.S. state privacy laws. We do not use your data for cross-context behavioral advertising unless we clearly disclose it and, where required, obtain consent. Analytics, if used, are used to operate and improve the app.</p>
+
+<h2>Data Retention</h2>
+<p>We retain personal information only as long as necessary for the purposes described in this Privacy Policy, unless a longer period is required or permitted by law (for example, tax or accounting records). Local data stored only on your device is controlled by you and may be removed by uninstalling the app or clearing app data, subject to device behavior.</p>
+
+<h2>International Users and Transfers</h2>
+<p>AuroZeon is based in the United States. If you use {{ $app }} from outside the United States, your information may be processed in the United States or other countries where we or our processors operate. Those countries may have different data-protection laws than your country of residence. Where required, we use appropriate safeguards for cross-border transfers.</p>
+
+<h2>Your Privacy Rights</h2>
+<p>Depending on where you live, you may have the right to access, correct, delete, or export certain personal information; to object to or restrict certain processing; to withdraw consent where processing is based on consent; and to lodge a complaint with a supervisory authority. Residents of California, Colorado, Virginia, and other U.S. states with comprehensive privacy laws may have additional rights (including opt-out of certain sharing, where applicable). To exercise rights, contact us at the email below. We will respond in accordance with applicable law.</p>
+
+<h2>Children’s Privacy</h2>
+<p>{{ $app }} is not directed at children under 13 (or the age required by your jurisdiction). We do not knowingly collect personal information from children under that age. If you believe we have collected such information, contact us and we will take appropriate steps to delete it.</p>
+
+{{- if eq $cat "health" }}
+<h2>Not Medical or Professional Health Advice</h2>
+<p>{{ $app }} may provide wellness, dietary, or lifestyle-related features. <strong>It is not a medical device and does not provide medical advice, diagnosis, or treatment.</strong> Always seek the advice of a qualified health professional regarding any medical condition, diet, or exercise program. You use health-related features at your own risk.</p>
+{{- else if eq $cat "nutrition" }}
+<h2>Not Medical or Dietary Advice</h2>
+<p>Calorie estimates, food recognition, and related features are for general informational purposes only. <strong>They are not medical, nutritional, or therapeutic advice.</strong> Accuracy depends on many factors; we do not guarantee results. Consult a qualified professional for dietary or health decisions.</p>
+{{- else if eq $cat "workflow" }}
+<h2>Your Content and Integrations</h2>
+<p>You are responsible for the lawfulness of workflows, prompts, credentials, and data you connect to the service. We process such content only to provide the platform and as described in this Privacy Policy. You should review the privacy practices of any third-party services you integrate.</p>
+{{- else if eq $cat "emotional" }}
+<h2>Not Therapy, Crisis, or Medical Care</h2>
+<p>{{ $app }} offers supportive tools and is <strong>not</strong> a substitute for professional medical, mental health, or crisis services. If you are in crisis, contact local emergency services or a qualified crisis hotline. We provide features in good faith but cannot guarantee therapeutic outcomes.</p>
+{{- else if eq $cat "safety" }}
+<h2>Not Official Emergency or Government Information</h2>
+<p>Risk scores, maps, and third-party data feeds are for <strong>awareness and educational purposes only</strong>. They are not official evacuation orders, fire warnings, or government instructions. Always follow authorities and emergency services. We do not guarantee completeness, timeliness, or accuracy of third-party or AI-generated information.</p>
+{{- end }}
+
+<h2>Security</h2>
+<p>We implement reasonable administrative, technical, and organizational measures to protect personal information. <strong>No method of transmission or storage is 100% secure.</strong> We cannot guarantee absolute security or that unauthorized access will never occur.</p>
+
+<h2>Disclaimer of Warranties</h2>
+<p><strong>{{ $app }} is provided on an “AS IS” and “AS AVAILABLE” basis, without warranties of any kind,</strong> whether express, implied, or statutory, including implied warranties of merchantability, fitness for a particular purpose, title, and non-infringement, to the fullest extent permitted by law.</p>
+
+<h2>Limitation of Liability</h2>
+<p><strong>To the maximum extent permitted by applicable law,</strong> AuroZeon LLC and its officers, directors, employees, contractors, and affiliates shall not be liable for any indirect, incidental, special, consequential, exemplary, or punitive damages, or any loss of profits, revenues, goodwill, data, or other intangible losses, arising out of or related to your use of {{ $app }} or this Privacy Policy, even if we have been advised of the possibility of such damages. To the extent permitted by law, our aggregate liability for any claim arising out of or relating to {{ $app }} or this Privacy Policy shall not exceed the greater of (a) the amount you paid us for {{ $app }} in the twelve (12) months before the claim or (b) one hundred U.S. dollars (USD $100). Some jurisdictions do not allow certain limitations; in those jurisdictions, our liability is limited to the fullest extent permitted.</p>
+
+<h2>No Guarantee of Outcomes</h2>
+<p>We strive to operate {{ $app }} responsibly and in good faith. <strong>We do not guarantee any particular result, outcome, accuracy, or fitness for your situation,</strong> except as expressly required by applicable law.</p>
+
+<h2>Changes to This Privacy Policy</h2>
+<p>We may update this Privacy Policy from time to time. We will post the updated version with a revised “Last Updated” date. Continued use of {{ $app }} after changes constitutes acceptance of the updated policy where permitted by law. If we make material changes, we will take additional steps as required by law.</p>
+
+<h2>Severability</h2>
+<p>If any provision of this Privacy Policy is held invalid or unenforceable, the remaining provisions remain in full force and effect.</p>

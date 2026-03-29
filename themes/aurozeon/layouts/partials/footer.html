@@ -15,6 +15,7 @@
             <li><a href="{{ .Site.BaseURL }}auroweaver/">AuroWeaver</a></li>
             <li><a href="{{ .Site.BaseURL }}shoulema/">SHOULEMA</a></li>
             <li><a href="{{ .Site.BaseURL }}xinbridge/">XinBridge</a></li>
+            <li><a href="{{ .Site.BaseURL }}wildfire-assistant/">Wildfire Assistant</a></li>
         </ul>
     </div>
     <div class="footer-column">
@@ -36,9 +37,23 @@
             <li><a href="{{ .Site.BaseURL }}shoulema/user-agreement/">SHOULEMA User Agreement</a></li>
             <li><a href="{{ .Site.BaseURL }}xinbridge/privacy-policy/">XinBridge Privacy</a></li>
             <li><a href="{{ .Site.BaseURL }}xinbridge/user-agreement/">XinBridge User Agreement</a></li>
+            <li><a href="{{ .Site.BaseURL }}wildfire-assistant/privacy-policy/">Wildfire Assistant Privacy</a></li>
+            <li><a href="{{ .Site.BaseURL }}wildfire-assistant/user-agreement/">Wildfire Assistant User Agreement</a></li>
         </ul>
     </div>
 </div>
 <div class="copyright">
     <p>&copy; 2025 AuroZeon, LLC. All rights reserved. Designed with passion.</p>
 </div>
+<script>
+(function() {
+    var header = document.querySelector('header');
+    if (!header) return;
+    function onScroll() {
+        if (window.scrollY > 50) header.classList.add('scrolled');
+        else header.classList.remove('scrolled');
+    }
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+})();
+</script>

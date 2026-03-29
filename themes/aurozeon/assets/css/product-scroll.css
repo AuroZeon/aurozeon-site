@@ -31,9 +31,8 @@
     }
 }
 
-.product-scroll-page main {
-    padding-top: 0 !important;
-}
+/* Note: main padding for fixed header comes from main.css / per-page CSS (e.g. body.shoulema-page main).
+   Do not use ".product-scroll-page main" — the scroll wrapper is inside main, not wrapping it. */
 
 /* Hero: full-viewport with Pexels background */
 .product-hero {

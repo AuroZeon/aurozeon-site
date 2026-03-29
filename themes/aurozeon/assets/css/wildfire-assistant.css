@@ -1,0 +1,238 @@
+/* Wildfire Assistant — fire / safety theme (orange–amber) */
+
+body.wildfire-assistant-page main {
+    padding-top: 80px;
+}
+
+/* Header layout: site-header-nav.css — theme colors only */
+body.wildfire-assistant-page header.site-header {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.08);
+}
+
+body.wildfire-assistant-page header.site-header .logo .logo-text {
+    color: #c45c26;
+}
+
+body.wildfire-assistant-page header.site-header .main-nav .nav-list > li > a {
+    color: #1a1a2e;
+}
+
+body.wildfire-assistant-page header.site-header .main-nav .nav-list > li > a:hover,
+body.wildfire-assistant-page header.site-header .main-nav .nav-list > li > a.active {
+    color: #c45c26;
+}
+
+body.wildfire-assistant-page header.site-header .dropdown-menu a:hover {
+    color: #c45c26;
+    background-color: rgba(196, 92, 38, 0.1);
+}
+
+body.wildfire-assistant-page .product-hero .product-badge {
+    background: rgba(196, 92, 38, 0.92);
+}
+
+body.wildfire-assistant-page .product-section h2 {
+    color: #3d2914;
+}
+
+.wf-icon {
+    background: linear-gradient(135deg, #c45c26, #e67e22) !important;
+    color: #fff !important;
+}
+
+/* App store preview — full styles (section-specific) */
+.wildfire-assistant-play-section .play-embed-wrapper {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.wildfire-assistant-play-section .play-embed-boundary,
+.wildfire-assistant-play-section .wf-preview-boundary {
+    clip-path: polygon(
+        0% 5%, 5% 0%, 15% 3%, 25% 0%, 35% 4%, 45% 1%, 55% 5%, 65% 2%, 75% 4%, 85% 1%, 95% 3%, 100% 5%,
+        100% 95%, 95% 100%, 85% 97%, 75% 100%, 65% 96%, 55% 99%, 45% 95%, 35% 98%, 25% 96%, 15% 99%, 5% 97%, 0% 95%
+    );
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 12px 48px rgba(196, 92, 38, 0.18), 0 0 0 1px rgba(196, 92, 38, 0.12);
+    background: #fff;
+}
+
+.wildfire-assistant-play-section .play-embed-scroll {
+    overflow: auto;
+    max-height: 70vh;
+    min-height: 400px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.wildfire-assistant-play-section .play-embed-scroll::-webkit-scrollbar-thumb {
+    background: rgba(196, 92, 38, 0.4);
+    border-radius: 5px;
+}
+
+.wildfire-assistant-play-section .play-preview-card {
+    padding: 28px 24px 32px;
+}
+
+.wildfire-assistant-play-section .play-preview-header {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
+
+.wildfire-assistant-play-section .play-preview-icon,
+.wildfire-assistant-play-section .wf-preview-icon {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    background: linear-gradient(135deg, #c45c26, #e67e22);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2.2rem;
+}
+
+.wildfire-assistant-play-section .play-preview-info h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #3d2914;
+    margin: 0 0 4px;
+}
+
+.wildfire-assistant-play-section .play-preview-developer {
+    font-size: 0.9rem;
+    color: #4a5568;
+    margin: 0 0 12px;
+}
+
+.wildfire-assistant-play-section .play-preview-desc {
+    font-size: 0.95rem;
+    color: #4a5568;
+    line-height: 1.55;
+    margin: 0;
+}
+
+.wildfire-assistant-play-section .play-preview-screenshots {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+.wildfire-assistant-play-section .play-screenshot {
+    flex: 0 0 180px;
+    height: 320px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 16px rgba(196, 92, 38, 0.15);
+}
+
+.wildfire-assistant-play-section .play-preview-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    color: #4a5568;
+    font-size: 0.9rem;
+}
+
+.wildfire-assistant-play-section .play-preview-features span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.wildfire-assistant-play-section .play-preview-features i {
+    color: #c45c26;
+}
+
+.wildfire-assistant-play-section .play-embed-open-btn,
+.wildfire-assistant-play-section .wf-open-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #c45c26, #e67e22);
+    color: #fff !important;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.wildfire-assistant-play-section .play-embed-open-btn:hover,
+.wildfire-assistant-play-section .wf-open-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(196, 92, 38, 0.4);
+}
+
+body.wildfire-assistant-page .product-section-dark .product-legal-links a:hover {
+    color: #e67e22;
+}
+
+/* Legal pages */
+body.wildfire-assistant-page .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 64px;
+}
+
+body.wildfire-assistant-page .content.byebites-content {
+    background: #fff;
+    border-radius: 12px;
+    padding: 36px 40px;
+    box-shadow: 0 4px 20px rgba(196, 92, 38, 0.08);
+    border: 1px solid rgba(196, 92, 38, 0.1);
+}
+
+body.wildfire-assistant-page .content h1 {
+    color: #3d2914;
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+}
+
+body.wildfire-assistant-page .content h2 {
+    color: #c45c26;
+    font-size: 1.2rem;
+    margin: 24px 0 12px;
+}
+
+body.wildfire-assistant-page .content p,
+body.wildfire-assistant-page .content li {
+    color: #4a4568;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+body.wildfire-assistant-page .content .back-link {
+    display: inline-block;
+    margin-top: 24px;
+    color: #c45c26;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+body.wildfire-assistant-page .content .back-link:hover {
+    color: #a34a1f;
+}
+
+@media (max-width: 768px) {
+    .wildfire-assistant-play-section .play-preview-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .wildfire-assistant-play-section .play-screenshot {
+        flex: 0 0 140px;
+        height: 250px;
+    }
+}
