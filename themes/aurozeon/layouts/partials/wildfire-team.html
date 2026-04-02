@@ -1,0 +1,44 @@
+{{ with site.Data.wildfire_team }}
+<section id="fireline-team" class="wildfire-team-section product-section product-section-alt" data-animate="fade-up" aria-labelledby="wildfire-team-heading">
+    <div class="product-section-inner wildfire-team-inner">
+        <h2 id="wildfire-team-heading">Fireline Team</h2>
+        {{ with .intro }}<p class="product-section-lead wildfire-team-intro">{{ . }}</p>{{ end }}
+
+        {{ with .authors }}
+        <h3 class="wildfire-team-subheading">Authors</h3>
+        <ul class="wildfire-team-grid">
+            {{ range . }}
+            <li class="wildfire-team-card">
+                <div class="wildfire-team-photo-wrap">
+                    <img class="wildfire-team-photo" src="{{ .photo }}" alt="{{ .name }}, {{ .title }}" width="320" height="320" loading="lazy" decoding="async">
+                </div>
+                <div class="wildfire-team-body">
+                    <p class="wildfire-team-name">{{ .name }}</p>
+                    <p class="wildfire-team-title">{{ .title }}</p>
+                    <p class="wildfire-team-contribution">{{ .contribution }}</p>
+                </div>
+            </li>
+            {{ end }}
+        </ul>
+        {{ end }}
+
+        {{ with .mentors }}
+        <h3 class="wildfire-team-subheading">Mentors</h3>
+        <ul class="wildfire-team-grid wildfire-team-grid-faculty">
+            {{ range . }}
+            <li class="wildfire-team-card">
+                <div class="wildfire-team-photo-wrap">
+                    <img class="wildfire-team-photo" src="{{ .photo }}" alt="{{ .name }}, {{ .affiliation }}" width="320" height="320" loading="lazy" decoding="async">
+                </div>
+                <div class="wildfire-team-body">
+                    <p class="wildfire-team-name">{{ .name }}</p>
+                    <p class="wildfire-team-title">{{ .title }} · {{ .affiliation }}</p>
+                    <p class="wildfire-team-contribution">{{ .contribution }}</p>
+                </div>
+            </li>
+            {{ end }}
+        </ul>
+        {{ end }}
+    </div>
+</section>
+{{ end }}

@@ -5,10 +5,11 @@
     <section class="product-hero" style="background-image: url('https://images.pexels.com/photos/2323799/pexels-photo-2323799.jpeg?auto=compress&cs=tinysrgb&w=1920');">
         <div class="product-hero-overlay"></div>
         <div class="product-hero-content">
+            
             <span class="product-badge">Safety · Preparedness · AI</span>
             <h1>Wildfire Assistant</h1>
             <p class="product-hero-tagline">Know your risk. Plan ahead. Stay informed.</p>
-            <p class="product-hero-desc">AI-powered wildfire risk assessment and preparedness. NIFC perimeter maps, address-based risk scoring (0–100%), GPT-4 chat for emergency guidance, and AI vision analysis of your surroundings—built with Vite, React, and Capacitor.</p>
+            <p class="product-hero-desc">AI-powered wildfire risk assessment and preparedness. NIFC perimeter maps, address-based risk scoring (0–100%), GPT chat for emergency guidance, and AI vision analysis of your surroundings.</p>
             <div class="product-hero-cta">
                 <a href="{{ $appStore }}" target="_blank" rel="noopener noreferrer" class="btn-store">
                     <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
@@ -20,10 +21,12 @@
         </div>
     </section>
 
+    {{ partial "wildfire-team.html" . }}
+
     <section class="product-section product-section-light" data-animate="fade-up">
         <div class="product-section-inner">
             <h2>Built for Life Safety</h2>
-            <p class="product-section-lead">Screening-level awareness and education—not a replacement for official NFPA, USFS, FEMA, or local authority assessments.</p>
+            <p class="product-section-lead">Practical awareness and education grounded in federal perimeter data and wildfire preparedness guidance.</p>
             <div class="product-features" data-stagger>
                 <div class="product-feature">
                     <span class="product-feature-icon wf-icon"><i class="fas fa-map-marked-alt"></i></span>
@@ -33,7 +36,7 @@
                 <div class="product-feature">
                     <span class="product-feature-icon wf-icon"><i class="fas fa-chart-line"></i></span>
                     <h3>Address Risk Score</h3>
-                    <p>0.0–1.0 score (shown as %): regional hazard prior, proximity to active incidents, containment stress—transparent methodology.</p>
+                    <p>0.0–1.0 score (shown as %): regional hazard prior, proximity to active incidents, containment stress. Transparent methodology.</p>
                 </div>
                 <div class="product-feature">
                     <span class="product-feature-icon wf-icon"><i class="fas fa-robot"></i></span>
@@ -57,22 +60,22 @@
                 <div class="product-feature">
                     <span class="product-feature-icon wf-icon"><i class="fas fa-map-pin"></i></span>
                     <h3>Geocoding &amp; Search</h3>
-                    <p>Google Maps address search and tap-to-place—your coordinates power the risk model.</p>
+                    <p>Google Maps address search and tap-to-place. Your coordinates power the risk model.</p>
                 </div>
                 <div class="product-feature">
                     <span class="product-feature-icon wf-icon"><i class="fas fa-history"></i></span>
                     <h3>Chat History</h3>
-                    <p>Multiple sessions and saved conversations locally—pick up where you left off.</p>
+                    <p>Multiple sessions and saved conversations locally. Pick up where you left off.</p>
                 </div>
                 <div class="product-feature">
                     <span class="product-feature-icon wf-icon"><i class="fas fa-leaf"></i></span>
                     <h3>Vegetation Index</h3>
-                    <p>Relative proxy for fuels—useful for comparison within the app, not a forestry inventory.</p>
+                    <p>Relative proxy for fuels, tuned for comparison and trend context in the app.</p>
                 </div>
                 <div class="product-feature">
                     <span class="product-feature-icon wf-icon"><i class="fas fa-mobile-alt"></i></span>
                     <h3>Native &amp; Web</h3>
-                    <p>Vite + React + Capacitor for iOS and Android. Optional FastAPI backend for advanced deployments.</p>
+                    <p>Native apps for iOS and Android. Optional FastAPI backend for advanced deployments.</p>
                 </div>
             </div>
         </div>
@@ -91,8 +94,8 @@
                             </div>
                             <div class="play-preview-info">
                                 <h3>Wildfire Assistant</h3>
-                                <p class="play-preview-developer">AuroZeon · NYU Capstone</p>
-                                <p class="play-preview-desc">Wildfire risk assessment, NIFC maps, AI chat, and image analysis. Life safety first—always follow official evacuation orders.</p>
+                                <p class="play-preview-developer">Fireline team · NYU Capstone · NYU &amp; GMU</p>
+                                <p class="play-preview-desc">Wildfire risk assessment, NIFC maps, AI chat, and image analysis. Clear, actionable preparedness in one place.</p>
                             </div>
                         </div>
                         <div class="play-preview-screenshots">

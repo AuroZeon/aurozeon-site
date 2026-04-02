@@ -1,0 +1,34 @@
+# Wildfire Assistant / Fireline team. Add photos under static/images/wildfire-assistant/team/
+# Expected filenames: youjia-li.jpg, miaorou-tan.jpg, yutong-wu.jpg, hanxue-wei.jpg, ziheng-sun.jpg
+# Edit contribution lines to match each person’s real role.
+
+intro: "Meet the authors of Wildfire Assistant. This NYU Capstone project was developed by the Fireline team."
+
+authors:
+  - name: "Youjia Li"
+    title: "Graduate Student, NYU"
+    photo: "/images/wildfire-assistant/team/youjia-li.jpg"
+    contribution: "Frontend dev, AI-assisted chat, image analysis flows, and preparedness content."
+
+  - name: "Miaorou Tan"
+    title: "Graduate Student, NYU"
+    photo: "/images/wildfire-assistant/team/miaorou-tan.jpg"
+    contribution: "Product management, mobile UX, and map-based risk visualization."
+
+  - name: "Yutong Wu"
+    title: "Graduate Student, NYU"
+    photo: "/images/wildfire-assistant/team/yutong-wu.jpg"
+    contribution: "Backend dev, Risk scoring logic, data integration, and database design."
+
+mentors:
+  - name: "Dr. Hanxue Wei"
+    title: "Faculty Supervisor"
+    affiliation: "NYU"
+    photo: "/images/wildfire-assistant/team/hanxue-wei.jpg"
+    contribution: "NYU capstone supervision, academic review, and project guidance."
+
+  - name: "Dr. Ziheng Sun"
+    title: "Supervisor & Sponsor"
+    affiliation: "GMU"
+    photo: "/images/wildfire-assistant/team/ziheng-sun.jpg"
+    contribution: "Supervision, tech design & support, research alignment, and app production and distribution."

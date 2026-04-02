@@ -1,7 +1,7 @@
 ---
 title: "Wildfire Assistant"
 image: "https://images.pexels.com/photos/2323799/pexels-photo-2323799.jpeg?auto=compress&cs=tinysrgb&w=1920"
-description: "AI wildfire risk maps, NIFC perimeters, address-based scoring, GPT-4 chat, and image analysis for preparedness."
+description: "NYU Capstone app by the Fireline team (NYU grad students, NYU & GMU faculty): wildfire risk maps, NIFC perimeters, address scoring, GPT chat, and image analysis."
 ---
 
 <div class="hero-section" style="background-image: url('https://images.pexels.com/photos/2323799/pexels-photo-2323799.jpeg?auto=compress&cs=tinysrgb&w=1920'); background-size: cover; padding: 100px 0; text-align: center; color: #fff;">
@@ -14,7 +14,7 @@ description: "AI wildfire risk maps, NIFC perimeters, address-based scoring, GPT
 
 ## **Overview**
 
-**Wildfire Assistant** helps residents in wildfire-prone areas assess screening-level risk, view current federal perimeter data on a map, and get AI-powered preparedness guidance. Built with Vite, React, and Capacitor.
+**Wildfire Assistant** is an **NYU Capstone** project from the **Fireline** team: NYU graduate students collaborating with professors at New York University and George Mason University (GMU). It helps residents in wildfire-prone areas assess local risk context, view current federal perimeter data on a map, and get AI-powered preparedness guidance.
 
 ### **Get the app**
 

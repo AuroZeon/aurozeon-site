@@ -301,6 +301,16 @@ body {
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
+.solution-story-hero-content p.solution-story-origin {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 14px;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .solution-story-hero-content p {
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.95);
