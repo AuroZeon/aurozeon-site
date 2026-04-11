@@ -6,6 +6,12 @@ on:
   push:
     branches: ["main"]
 
+# Only one Pages deployment at a time; cancel superseded runs so the latest push wins.
+# (If Settings → Pages also deploys from a branch, fix that in the repo settings—see DEVELOPMENT.md.)
+concurrency:
+  group: pages-deploy-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -77,6 +83,9 @@ jobs:
 
   # Deployment job
   deploy:
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

@@ -218,6 +218,19 @@ npm run build
    - 构建命令：`npm run build`
    - 输出目录：`public`
 
+### GitHub Pages（本仓库 `.github/workflows/main.yml`）
+
+推送 `main` 后会运行 **Deploy Hugo site to Pages**。若你在 Actions 里还看到 **pages build and deployment** / **pages-build-deployment**，通常是 GitHub 在发布 Pages 时的系统工作流；**真正导致整站变成简陋页面、且必须手动重跑 Hugo 工作流的，几乎都是 Pages 源配置冲突。请按下面检查一次：
+
+1. 打开仓库 **Settings → Pages → Build and deployment**。
+2. **Source（构建来源）必须只选一种**：
+   - **推荐**：**GitHub Actions**（与当前工作流一致）。
+   - 若仍同时启用了 **Deploy from a branch**（例如从 `main` 根目录或 `/docs` 发布），会再跑一套静态站点（常为 README/Jekyll 风格），与 Hugo 产物**竞态**，后完成的会覆盖先完成的，看起来像「被奇怪页面顶掉」。
+3. 若已改用 **GitHub Actions**，请把 **Deploy from a branch** 关掉；如存在仅用于旧流程的 **`gh-pages` 分支**，可删除或不再作为 Pages 源。
+4. 保存后重新推送一次，或手动 **Re-run** 工作流 **Deploy Hugo site to Pages**。
+
+工作流内已加 `concurrency`，同一分支上多次推送会取消未跑完的旧部署，避免排队互相覆盖。
+
 ## 性能优化
 
 ### 图片优化
