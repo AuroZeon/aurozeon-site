@@ -11,7 +11,7 @@ ios_store_url = "https://apps.apple.com/us/app/shoulema-calorie-scanner/id676022
 
 # XinBridge 心桥 - AI emotional companionship for cancer patients (cloud-based Gentle Companion; see site privacy policy)
 [xinbridge]
-app_store_url = "https://play.google.com/store/apps/details?id=com.aurozeon.xinbridge"  # Update when published
+app_store_url = "https://play.google.com/store/apps/details?id=com.xinbridge.app"
 ios_store_url = "https://apps.apple.com/app/xinbridge"  # Update when published
 
 # Wildfire Assistant: NYU Capstone wildfire risk & preparedness app
