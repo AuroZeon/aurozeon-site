@@ -17,7 +17,7 @@ ios_store_url = "https://apps.apple.com/app/xinbridge"  # Update when published
 # Wildfire Assistant: NYU Capstone wildfire risk & preparedness app
 [wildfire_assistant]
 app_store_url = "https://play.google.com/store/apps/details?id=com.nyu.wildfire.assistant"
-ios_store_url = "https://apps.apple.com/app/wildfire-assistant"
+ios_store_url = "https://apps.apple.com/us/app/wildfire-assistant/id6761288843"
 
 #################### default parameters ################################
 # Site logo (served from static/images/) - used in header

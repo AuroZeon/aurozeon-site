@@ -137,12 +137,26 @@
 .product-hero-cta {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 20px;
     flex-wrap: wrap;
 }
 
+.btn-store {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    line-height: 0;
+}
+
 .btn-store img {
-    height: 52px;
+    display: block;
+    width: auto;
+    height: 60px;
+    max-width: min(220px, 52vw);
+    object-fit: contain;
+    object-position: center;
     border-radius: 8px;
     transition: transform 0.2s;
 }
