@@ -205,6 +205,18 @@ body.wildfire-assistant-page .product-section h2 {
     align-items: flex-start;
 }
 
+.wildfire-assistant-play-section .wf-store-link-row {
+    flex: 1 1 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.wildfire-assistant-play-section .wf-store-link-row .wf-open-btn {
+    margin-top: 0;
+}
+
 .wildfire-assistant-play-section .play-embed-boundary,
 .wildfire-assistant-play-section .wf-preview-boundary {
     clip-path: polygon(

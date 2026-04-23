@@ -11,11 +11,9 @@
             <p class="product-hero-tagline">Know your risk. Plan ahead. Stay informed.</p>
             <p class="product-hero-desc">AI-powered wildfire risk assessment and preparedness. NIFC perimeter maps, address-based risk scoring (0–100%), GPT chat for emergency guidance, and AI vision analysis of your surroundings.</p>
             <div class="product-hero-cta">
-                {{/* Google Play badge — hidden until app is published on Play Store
                 <a href="{{ $appStore }}" target="_blank" rel="noopener noreferrer" class="btn-store">
                     <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
                 </a>
-                */}}
                 <a href="{{ $iosStore }}" target="_blank" rel="noopener noreferrer" class="btn-store">
                     <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store">
                 </a>
@@ -86,7 +84,7 @@
     <section class="product-section product-section-light wildfire-assistant-play-section" data-animate="fade-up">
         <div class="product-section-inner">
             <h2>Get Wildfire Assistant</h2>
-            <p class="product-section-lead">Download on the App Store. Screenshots, reviews, and updates.</p>
+            <p class="product-section-lead">Free on the App Store and Google Play—screenshots, reviews, and updates on each store.</p>
             <div class="play-embed-wrapper">
                 <div class="play-embed-boundary wf-preview-boundary">
                     <div class="play-embed-scroll play-preview-card">
@@ -114,14 +112,14 @@
                         </div>
                     </div>
                 </div>
-                {{/* Open in Google Play — hidden until published
-                <a href="{{ $appStore }}" target="_blank" rel="noopener noreferrer" class="play-embed-open-btn wf-open-btn">
-                    <i class="fas fa-external-link-alt"></i> Open in Google Play
-                </a>
-                */}}
-                <a href="{{ $iosStore }}" target="_blank" rel="noopener noreferrer" class="play-embed-open-btn wf-open-btn">
-                    <i class="fas fa-apple-alt"></i> Open in App Store
-                </a>
+                <div class="wf-store-link-row">
+                    <a href="{{ $appStore }}" target="_blank" rel="noopener noreferrer" class="play-embed-open-btn wf-open-btn">
+                        <i class="fab fa-google-play"></i> Open in Google Play
+                    </a>
+                    <a href="{{ $iosStore }}" target="_blank" rel="noopener noreferrer" class="play-embed-open-btn wf-open-btn">
+                        <i class="fas fa-apple-alt"></i> Open in App Store
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -131,11 +129,9 @@
         <div class="product-parallax-content" data-animate="zoom">
             <p>Prepare today. Stay safer tomorrow.</p>
             <div class="product-hero-cta">
-                {{/* Google Play badge — hidden until app is published on Play Store
                 <a href="{{ $appStore }}" target="_blank" rel="noopener noreferrer" class="btn-store">
                     <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
                 </a>
-                */}}
                 <a href="{{ $iosStore }}" target="_blank" rel="noopener noreferrer" class="btn-store">
                     <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store">
                 </a>

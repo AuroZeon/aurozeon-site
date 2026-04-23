@@ -15,6 +15,7 @@ app_store_url = "https://play.google.com/store/apps/details?id=com.xinbridge.app
 ios_store_url = "https://apps.apple.com/app/xinbridge"  # Update when published
 
 # Wildfire Assistant: NYU Capstone wildfire risk & preparedness app
+# app_store_url = Google Play (same key naming as [shoulema])
 [wildfire_assistant]
 app_store_url = "https://play.google.com/store/apps/details?id=com.nyu.wildfire.assistant"
 ios_store_url = "https://apps.apple.com/us/app/wildfire-assistant/id6761288843"
