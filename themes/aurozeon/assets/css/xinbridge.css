@@ -153,6 +153,18 @@ body.xinbridge-page .product-parallax {
     align-items: flex-start;
 }
 
+.xinbridge-play-embed-section .xinbridge-store-link-row {
+    flex: 1 1 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.xinbridge-play-embed-section .xinbridge-store-link-row .xinbridge-open-btn {
+    margin-top: 0;
+}
+
 .xinbridge-play-embed-section .play-embed-boundary,
 .xinbridge-play-embed-section .xinbridge-preview-boundary {
     clip-path: polygon(

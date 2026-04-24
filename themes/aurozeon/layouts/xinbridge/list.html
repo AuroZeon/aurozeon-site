@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{ $appStore := .Site.Params.xinbridge.app_store_url | default "https://play.google.com/store/apps/details?id=com.xinbridge.app" }}
-{{/* App Store — add {{ $iosStore := ... }} and badges when iOS ships */}}
+{{ $iosStore := .Site.Params.xinbridge.ios_store_url | default "https://apps.apple.com/us/app/xinbridge-cancer-care-calm/id6760957468" }}
 <div class="product-scroll-page xinbridge-scroll">
     <!-- Hero: care/wellness (XinBridge assets) -->
     <section class="product-hero" style="background-image: url('/images/xinbridge/hero.jpg');">
@@ -14,11 +14,9 @@
                 <a href="{{ $appStore }}" target="_blank" rel="noopener noreferrer" class="btn-store">
                     <img src="/images/badges/google-play.png" width="646" height="250" alt="Get it on Google Play" loading="lazy" decoding="async">
                 </a>
-                {{/* App Store badge — hidden until released on App Store
                 <a href="{{ $iosStore }}" target="_blank" rel="noopener noreferrer" class="btn-store">
                     <img src="/images/badges/app-store.svg" width="180" height="54" alt="Download on the App Store" loading="lazy" decoding="async">
                 </a>
-                */}}
             </div>
         </div>
     </section>
@@ -106,8 +104,8 @@
     <!-- App Preview Cards (like SHOULEMA) -->
     <section class="product-section product-section-light xinbridge-play-embed-section" data-animate="fade-up">
         <div class="product-section-inner">
-            <h2>See XinBridge on Google Play</h2>
-            <p class="product-section-lead">Download on Android. Screenshots, reviews, and more.</p>
+            <h2>Get XinBridge</h2>
+            <p class="product-section-lead">Free on Google Play and the App Store—screenshots, reviews, and updates on each store.</p>
             <div class="play-embed-wrapper">
                 <div class="play-embed-boundary xinbridge-preview-boundary">
                     <div class="play-embed-scroll play-preview-card">
@@ -142,14 +140,14 @@
                         </div>
                     </div>
                 </div>
-                <a href="{{ $appStore }}" target="_blank" rel="noopener noreferrer" class="play-embed-open-btn xinbridge-open-btn">
-                    <i class="fas fa-external-link-alt"></i> Open in Google Play
-                </a>
-                {{/* Open in App Store — hidden until iOS release
-                <a href="{{ $iosStore }}" target="_blank" rel="noopener noreferrer" class="play-embed-open-btn xinbridge-open-btn" style="margin-left:12px;">
-                    <i class="fas fa-apple-alt"></i> Open in App Store
-                </a>
-                */}}
+                <div class="xinbridge-store-link-row">
+                    <a href="{{ $appStore }}" target="_blank" rel="noopener noreferrer" class="play-embed-open-btn xinbridge-open-btn">
+                        <i class="fab fa-google-play"></i> Open in Google Play
+                    </a>
+                    <a href="{{ $iosStore }}" target="_blank" rel="noopener noreferrer" class="play-embed-open-btn xinbridge-open-btn">
+                        <i class="fas fa-apple-alt"></i> Open in App Store
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -205,11 +203,9 @@
                 <a href="{{ $appStore }}" target="_blank" rel="noopener noreferrer" class="btn-store">
                     <img src="/images/badges/google-play.png" width="646" height="250" alt="Get it on Google Play" loading="lazy" decoding="async">
                 </a>
-                {{/* App Store badge — hidden until released on App Store
                 <a href="{{ $iosStore }}" target="_blank" rel="noopener noreferrer" class="btn-store">
                     <img src="/images/badges/app-store.svg" width="180" height="54" alt="Download on the App Store" loading="lazy" decoding="async">
                 </a>
-                */}}
             </div>
         </div>
     </section>
