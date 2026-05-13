@@ -1,6 +1,6 @@
-# AuroWeaver app URL - local default, update for production deployment
+# AuroWeaver app URL (production deployment)
 [auroweaver]
-app_url = "http://ec2-52-91-79-13.compute-1.amazonaws.com:8806/AuroWeaver/web/auroweaver"
+app_url = "https://auroweaver.aurozeon.com/AuroWeaver/"
 # Hero uses Font Awesome; no separate image file required
 auroweaver_logo = ""
 
