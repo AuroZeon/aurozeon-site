@@ -18,7 +18,7 @@ app.post('/submit-contact', (req, res) => {
 
     const mailOptions = {
         from: email,
-        to: 'support@aurozeon.com',
+        to: 'support@aurozeon.org',
         subject: `Contact Form Submission from ${name}`,
         text: message
     };
