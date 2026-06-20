@@ -1,0 +1,60 @@
+{{ define "main" }}
+    <div class="container">
+        <h1>Plant GDP Privacy Policy</h1>
+
+        <div class="content byebites-content">
+            <p><em>Last Updated: June 2026</em></p>
+
+            <h2>Introduction</h2>
+            <p>Welcome to Plant GDP. We respect your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application for camera-based scene scans, local shopping tips, and related features.</p>
+            <p>Please read this Privacy Policy carefully. If you do not agree with its terms, please do not use the application.</p>
+
+            <h2>Information We Collect</h2>
+            <p>Depending on how you use the app, information may be processed on your device, sent from your device to third-party services, or collected by app stores. <strong>How we collect:</strong> data is collected when you tap Scan, pick a photo, allow camera or location permissions, change Settings, open external links, or when the app loads public APIs as described below.</p>
+            <ul>
+                <li><strong>Photos and camera:</strong> When you tap Scan or choose a photo from your gallery, the app uses your camera or selected image to analyze the scene and generate tips. Images used for scan history are stored locally on your device (see “Local storage on your device”).</li>
+                <li><strong>Plant identification (optional):</strong> When configured, photos may be sent <strong>directly from your device</strong> to the Pl@ntNet identification API (PlantNet) to suggest a species label. Do not submit images containing sensitive personal information you do not wish to share with third parties.</li>
+                <li><strong>Location (optional):</strong> If you allow location access, approximate coordinates may be used to show weather context (Open-Meteo), derive a postal code for weekly retail ads, and label your area in tips. You can deny location and still scan; some deal and weather features may be limited.</li>
+                <li><strong>Settings and preferences:</strong> Your chosen occupation (for example, Developer / Office, Creator / Blogger, Homemaker, Medical Personnel) and shopping-list selections may be stored on your device using Capacitor Preferences or similar local storage.</li>
+                <li><strong>Local storage on your device:</strong> Scan history (including compressed photo thumbnails and report snapshots), session preferences, and related app state may be stored in browser or app storage (for example, <code>localStorage</code> and Capacitor Preferences). This data stays on your device unless you delete it or uninstall the app.</li>
+                <li><strong>External links you choose to open:</strong> When you confirm opening a link (maps, store sites, deal searches), you leave the app and those sites’ privacy policies apply. We do not track what you do on third-party websites.</li>
+                <li><strong>Public and third-party data:</strong> The app may fetch weather (Open-Meteo), weekly ad and product data (Flipp and related retail APIs), and decorative background images (Pexels). These requests may include postal codes or coarse location derived from your device when you allow location—not necessarily personal identifiers about you.</li>
+                <li><strong>Device and usage:</strong> Standard mobile identifiers, IP address, crash data, and app usage may be collected by Apple, Google, or their analytics tools as described in their policies.</li>
+            </ul>
+
+            <h2>How We Use Your Information</h2>
+            <p>We use information to:</p>
+            <ul>
+                <li>Provide scan results, shopping tips, store suggestions, weather context, and optional plant identification.</li>
+                <li>Personalize tip tone based on your occupation setting.</li>
+                <li>Save History on your device so you can review past scans.</li>
+                <li>Export or share reports when you initiate share or PDF actions on your device.</li>
+                <li>Operate, maintain, and improve reliability and security of the app.</li>
+                <li>Comply with legal obligations.</li>
+            </ul>
+
+            <h2>No AuroZeon backend for core scans</h2>
+            <p>For the current Plant GDP mobile app, core scan analysis and History are handled <strong>on your device</strong>. Requests to third parties such as PlantNet, Open-Meteo, or Flipp are sent <strong>directly from your device</strong> when those features are used. AuroZeon does not operate a separate Plant GDP server that receives your scan photos or full report content for ordinary use of the app as described here.</p>
+
+            <h2>Third-Party Services</h2>
+            <p>The app may rely on third parties including Pl@ntNet (plant identification, when enabled), Open-Meteo (weather and reverse geocoding), Flipp and retail data providers (weekly ads and deals), Google Maps (when you open map links), Pexels (background imagery), and Apple or Google (app distribution). Their collection and use of data are governed by their respective policies.</p>
+
+            <h2>Disclosure</h2>
+            <p>We may disclose information where required by law, to protect rights and safety, or as part of a business transfer. We do not sell your personal information.</p>
+
+            <h2>Data Security</h2>
+            <p>We implement reasonable measures to protect information processed in connection with the app. Local History on your device is subject to your device’s security settings. No method of transmission over the Internet is 100% secure.</p>
+
+            <h2>Your Rights</h2>
+            <p>Depending on your jurisdiction, you may have rights to access, correct, or delete personal information. Much of your scan data is stored locally—you can remove History entries in the app or clear app data / uninstall to delete local storage. To exercise other rights, contact us using the information below.</p>
+
+            {{ partial "privacy-standard-addenda.html" (dict "appName" "Plant GDP" "category" "general") }}
+
+            <h2>Contact Us</h2>
+            <p>Questions about this Privacy Policy: support@aurozeon.org</p>
+            <p>Plant GDP · c/o AuroZeon</p>
+
+            <a href="/plantgdp/" class="back-link">Back to Plant GDP</a>
+        </div>
+    </div>
+{{ end }}

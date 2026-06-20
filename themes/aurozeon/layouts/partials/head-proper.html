@@ -66,7 +66,7 @@
 {{- end }}
 
 <!-- Product scroll CSS - for SHOULEMA, AuroWeaver, ByeBites, XinBridge, Wildfire Assistant -->
-{{- if or (eq .Section "shoulema") (eq .Section "auroweaver") (eq .Section "byebites") (eq .Section "xinbridge") (eq .Section "wildfire-assistant") }}
+{{- if or (eq .Section "shoulema") (eq .Section "auroweaver") (eq .Section "byebites") (eq .Section "xinbridge") (eq .Section "wildfire-assistant") (eq .Section "plantgdp") }}
   {{- with resources.Get "css/product-scroll.css" }}
     {{- if eq hugo.Environment "development" }}
       <link rel="stylesheet" href="{{ .RelPermalink }}">
@@ -94,6 +94,19 @@
 <!-- Wildfire Assistant CSS -->
 {{- if eq .Section "wildfire-assistant" }}
   {{- with resources.Get "css/wildfire-assistant.css" }}
+    {{- if eq hugo.Environment "development" }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{- else }}
+      {{- with . | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+<!-- Plant GDP CSS -->
+{{- if eq .Section "plantgdp" }}
+  {{- with resources.Get "css/plantgdp.css" }}
     {{- if eq hugo.Environment "development" }}
       <link rel="stylesheet" href="{{ .RelPermalink }}">
     {{- else }}

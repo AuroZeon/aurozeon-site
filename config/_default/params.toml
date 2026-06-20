@@ -21,6 +21,13 @@ ios_store_url = "https://apps.apple.com/us/app/xinbridge-cancer-care-calm/id6760
 app_store_url = "https://play.google.com/store/apps/details?id=com.nyu.wildfire.assistant"
 ios_store_url = "https://apps.apple.com/us/app/wildfire-assistant/id6761288843"
 
+# Plant GDP — camera scan → local shopping tips (Capacitor iOS/Android)
+# Set released = true when live on Google Play and the App Store
+[plantgdp]
+released = false
+app_store_url = "https://play.google.com/store/apps/details?id=com.plantgdp.app"
+ios_store_url = "https://apps.apple.com/us/app/plant-gdp/id0000000000"
+
 #################### default parameters ################################
 # Site logo (served from static/images/) - used in header
 site_logo = "images/aurozeon.logo.svg"

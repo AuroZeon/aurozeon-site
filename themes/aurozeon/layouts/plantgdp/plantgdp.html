@@ -1,0 +1,100 @@
+{{ define "main" }}
+<div class="product-scroll-page plantgdp-scroll">
+    <section class="product-hero" style="background-image: url('https://images.pexels.com/photos/1084199/pexels-photo-1084199.jpeg?auto=compress&cs=tinysrgb&w=1920');">
+        <div class="product-hero-overlay"></div>
+        <div class="product-hero-content">
+            <div class="plantgdp-origin-card">
+                <p class="plantgdp-origin-label">Student project</p>
+                <p class="plantgdp-origin-text">Built by <strong>Ms. Shoto Yang</strong> (high school) and <strong>Ms. Summer Sun</strong> (elementary school) under faculty supervision.</p>
+            </div>
+            <span class="product-badge">Scan · Shop · Save</span>
+            <h1>Plant GDP</h1>
+            <p class="product-hero-tagline">Your space, your week—plain local shopping tips.</p>
+            <p class="product-hero-desc">Point your camera at a room, desk, or garden. Plant GDP turns the scene into practical grocery tips, nearby store activity, and suggested next steps for your area. The plant in the frame is context—the value is what it means for how you shop and spend.</p>
+            {{ partial "plantgdp-store-badges.html" . }}
+        </div>
+    </section>
+
+    {{ partial "plantgdp-team.html" . }}
+
+    <section class="product-section product-section-light" data-animate="fade-up">
+        <div class="product-section-inner">
+            <h2>How It Works</h2>
+            <p class="product-section-lead">Camera-first, on-device history, optional location for weather and weekly ads near you.</p>
+            <div class="product-features" data-stagger>
+                <div class="product-feature">
+                    <span class="product-feature-icon plantgdp-icon"><i class="fas fa-camera"></i></span>
+                    <h3>Scan or Gallery</h3>
+                    <p>Allow camera access or pick a photo. Tap Scan and wait a few seconds for price tips, store activity, and next steps.</p>
+                </div>
+                <div class="product-feature">
+                    <span class="product-feature-icon plantgdp-icon"><i class="fas fa-leaf"></i></span>
+                    <h3>Scene Context</h3>
+                    <p>On-device analysis reads your space and adapts tips to your chosen occupation—office, creator, homemaker, or medical.</p>
+                </div>
+                <div class="product-feature">
+                    <span class="product-feature-icon plantgdp-icon"><i class="fas fa-store"></i></span>
+                    <h3>Local Stores &amp; Deals</h3>
+                    <p>Optional location powers weather lines and weekly-ad data from public retail APIs. Open maps or store sites only after you confirm.</p>
+                </div>
+                <div class="product-feature">
+                    <span class="product-feature-icon plantgdp-icon"><i class="fas fa-history"></i></span>
+                    <h3>History on Device</h3>
+                    <p>Past scans stay in History unless you delete them. Export or share reports from your device when you choose.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-section product-section-alt" data-animate="fade-up">
+        <div class="product-section-inner">
+            <h2>Built for Everyday Shopping</h2>
+            <p class="product-section-lead">Groceries, local stores, and small ways to save time and money—without pretending to be financial advice.</p>
+            <div class="product-features" data-stagger>
+                <div class="product-feature">
+                    <span class="product-feature-icon plantgdp-icon"><i class="fas fa-cloud-sun"></i></span>
+                    <h3>Weather Context</h3>
+                    <p>Open-Meteo supplies garden and area weather when you allow location—or you can scan without it.</p>
+                </div>
+                <div class="product-feature">
+                    <span class="product-feature-icon plantgdp-icon"><i class="fas fa-tags"></i></span>
+                    <h3>Weekly Ads</h3>
+                    <p>Flipp-powered flyer data helps surface verified product deals when postal code and store context are available.</p>
+                </div>
+                <div class="product-feature">
+                    <span class="product-feature-icon plantgdp-icon"><i class="fas fa-external-link-alt"></i></span>
+                    <h3>Safe External Links</h3>
+                    <p>Maps, store websites, and deal searches open only after an in-app confirmation—we never silently leave the app.</p>
+                </div>
+                <div class="product-feature">
+                    <span class="product-feature-icon plantgdp-icon"><i class="fas fa-mobile-alt"></i></span>
+                    <h3>Native iOS &amp; Android</h3>
+                    <p>Built with Capacitor. Live camera preview on device; polished fallback backgrounds when the camera is unavailable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-parallax" style="background-image: url('https://images.pexels.com/photos/1884640/pexels-photo-1884640.jpeg?auto=compress&cs=tinysrgb&w=1920');">
+        <div class="product-parallax-overlay"></div>
+        <div class="product-parallax-content" data-animate="zoom">
+            <p>Scan once. Shop smarter for your week.</p>
+            {{ partial "plantgdp-store-badges.html" . }}
+        </div>
+    </section>
+
+    <section class="product-section product-section-dark" data-animate="slide-up">
+        <div class="product-section-inner">
+            <h2>Legal</h2>
+            <p class="product-section-lead">Tips are informational only—not financial, legal, or professional advice.</p>
+            <div class="product-legal-links">
+                <a href="/plantgdp/privacy-policy/">Privacy Policy</a>
+                <a href="/plantgdp/user-agreement/">User Agreement</a>
+                <a href="/plantgdp/disclaimer/">Disclaimer</a>
+                <a href="/contact/">Contact Us</a>
+            </div>
+            <p class="product-pexels-credit">Photos: <a href="https://www.pexels.com/photo/1084199/" target="_blank" rel="noopener">Lisa Fotios</a>, <a href="https://www.pexels.com/photo/1884640/" target="_blank" rel="noopener">Karolina Grabowska</a> · <a href="https://www.pexels.com/" target="_blank" rel="noopener">Pexels</a></p>
+        </div>
+    </section>
+</div>
+{{ end }}

@@ -1,0 +1,23 @@
+{{ $p := .Site.Params.plantgdp }}
+{{ $released := $p.released | default false }}
+{{ $appStore := $p.app_store_url | default "https://play.google.com/store/apps/details?id=com.plantgdp.app" }}
+{{ $iosStore := $p.ios_store_url | default "https://apps.apple.com/us/app/plant-gdp/id0000000000" }}
+<div class="product-hero-cta plantgdp-store-cta">
+    {{ if $released }}
+    <a href="{{ $appStore }}" target="_blank" rel="noopener noreferrer" class="btn-store">
+        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+    </a>
+    <a href="{{ $iosStore }}" target="_blank" rel="noopener noreferrer" class="btn-store">
+        <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store">
+    </a>
+    {{ else }}
+    <span class="btn-store btn-store-upcoming" aria-disabled="true" title="Google Play — coming soon">
+        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play — coming soon">
+        <span class="btn-store-soon-label">Coming Soon</span>
+    </span>
+    <span class="btn-store btn-store-upcoming" aria-disabled="true" title="App Store — coming soon">
+        <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store — coming soon">
+        <span class="btn-store-soon-label">Coming Soon</span>
+    </span>
+    {{ end }}
+</div>

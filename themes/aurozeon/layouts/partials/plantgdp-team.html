@@ -1,0 +1,44 @@
+{{ with site.Data.plantgdp_team }}
+<section id="plantgdp-team" class="plantgdp-team-section product-section product-section-alt" data-animate="fade-up" aria-labelledby="plantgdp-team-heading">
+    <div class="product-section-inner plantgdp-team-inner">
+        <h2 id="plantgdp-team-heading">Plant GDP Team</h2>
+        {{ with .intro }}<p class="product-section-lead plantgdp-team-intro">{{ . }}</p>{{ end }}
+
+        {{ with .authors }}
+        <h3 class="plantgdp-team-subheading">Authors</h3>
+        <ul class="plantgdp-team-grid">
+            {{ range . }}
+            <li class="plantgdp-team-card">
+                <div class="plantgdp-team-photo-wrap">
+                    <img class="plantgdp-team-photo" src="{{ .photo }}" alt="{{ with .photo_alt }}{{ . }}{{ else }}{{ .name }}, {{ .title }}{{ end }}" width="72" height="72" loading="lazy" decoding="async">
+                </div>
+                <div class="plantgdp-team-body">
+                    <p class="plantgdp-team-name">{{ .name }}</p>
+                    <p class="plantgdp-team-title">{{ .title }}</p>
+                    <p class="plantgdp-team-contribution">{{ .contribution }}</p>
+                </div>
+            </li>
+            {{ end }}
+        </ul>
+        {{ end }}
+
+        {{ with .mentors }}
+        <h3 class="plantgdp-team-subheading">Sponsor and Faculty</h3>
+        <ul class="plantgdp-team-grid plantgdp-team-grid-faculty">
+            {{ range . }}
+            <li class="plantgdp-team-card">
+                <div class="plantgdp-team-photo-wrap">
+                    <img class="plantgdp-team-photo" src="{{ .photo }}" alt="{{ .name }}, {{ .title }}" width="72" height="72" loading="lazy" decoding="async">
+                </div>
+                <div class="plantgdp-team-body">
+                    <p class="plantgdp-team-name">{{ .name }}</p>
+                    <p class="plantgdp-team-title">{{ .title }}</p>
+                    <p class="plantgdp-team-contribution">{{ .contribution }}</p>
+                </div>
+            </li>
+            {{ end }}
+        </ul>
+        {{ end }}
+    </div>
+</section>
+{{ end }}

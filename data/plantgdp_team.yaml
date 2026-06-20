@@ -1,0 +1,23 @@
+# Plant GDP team. Author headshots use Pokémon avatars (juniors — no real photos online).
+# Mentor photo: static/images/wildfire-assistant/team/ziheng-sun.jpg
+
+intro: "Meet the authors of Plant GDP. This app was built by an elementary school student and a high school student under faculty supervision."
+
+authors:
+  - name: "Ms. Shoto Yang"
+    title: "High School Student"
+    photo: "/images/plantgdp/avatars/scorbunny.png"
+    photo_alt: "Representative avatar — Scorbunny (Pokémon)"
+    contribution: "App logic, shopping tips content, feature integration, and in-app experience design."
+
+  - name: "Ms. Summer Sun"
+    title: "Elementary School Student"
+    photo: "/images/plantgdp/avatars/solrock.png"
+    photo_alt: "Representative avatar — Solrock (Pokémon)"
+    contribution: "Camera scan flows and capture experience."
+
+mentors:
+  - name: "Dr. Ziheng Sun"
+    title: "Sponsor and Faculty"
+    photo: "/images/wildfire-assistant/team/ziheng-sun.jpg"
+    contribution: "Supervision, technical design and support, and app production and distribution."
