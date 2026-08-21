@@ -3,7 +3,7 @@
         <h1>ByeBites Privacy Policy</h1>
         
         <div class="content">
-            <p><em>Last Updated: April 2025</em></p>
+            <p><em>Last Updated: August 2026</em></p>
 
             <h2>Introduction</h2>
             <p>Welcome to ByeBites. We respect your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.</p>
@@ -17,6 +17,7 @@
                 <li>Usage data such as the features you use, the time spent on the application, and other statistics.</li>
                 <li>Transaction data related to in-app purchases.</li>
             </ul>
+            <p>For ordinary use of ByeBites, weight, height, last-meal time, fullness, fasting sessions, meal preferences, and related health or lifestyle entries you enter are stored <strong>locally on your device</strong>. AuroZeon does not operate a separate ByeBites cloud account backend that stores those logs for us.</p>
 
             <h2>How We Use Your Information</h2>
             <p>We use the information we collect to:</p>
@@ -45,8 +46,7 @@
             <h2>Your Rights</h2>
             <p>Depending on your location, you may have certain rights regarding your personal information, including the right to access, correct, or delete the personal information we have collected about you. To exercise these rights, please contact us using the information provided at the end of this Privacy Policy.</p>
 
-            <h2>Changes to This Privacy Policy</h2>
-            <p>We may update this Privacy Policy from time to time. The updated version will be indicated by an updated "Last Updated" date. We encourage you to review this Privacy Policy periodically.</p>
+            {{ partial "privacy-standard-addenda.html" (dict "appName" "ByeBites" "category" "health") }}
 
             <h2>Contact Us</h2>
             <p>If you have questions or concerns about this Privacy Policy or our data practices, please contact us at:</p>

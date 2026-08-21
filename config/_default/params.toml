@@ -90,9 +90,9 @@ show_categories = true
 # seo meta data for OpenGraph / Twitter Card
 # seo module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/basic-seo
 [metadata]
-keywords = ["Geoweaver", "Pygeoweaver"]
-description = "A web system to allow users to automatically record history and manage complicated scientific workflows in web browsers involving the online spatial data facilities, high-performance computation platforms, and open-source libraries."
-author = "zsun@gmu.edu"
+keywords = ["trustworthy AI", "multi-step pipelines", "silent success", "HPC workflows", "AuroZeon"]
+description = "AuroZeon LLC researches trustworthy, traceable multi-step AI pipelines—detecting silent success (false accepts) on shared infrastructure for research IT teams."
+author = "jensen@aurozeon.com"
 image = "images/og-image.png"
 
 

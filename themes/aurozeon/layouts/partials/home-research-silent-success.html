@@ -1,0 +1,42 @@
+{{/* NSF SBIR pitch alignment: trustworthy multi-step pipeline R&D (Idea 08) */}}
+<section id="research" class="home-section home-section-research">
+    <div class="home-section-overlay home-section-overlay-light"></div>
+    <div class="research-content" data-stagger>
+        <div class="section-header research-header" data-animate="fade-up">
+            <span class="solution-story-badge research-badge">Trustworthy AI · R&amp;D</span>
+            <h2>Detecting silent success on shared infrastructure</h2>
+            <p class="research-lead">When every step exits cleanly but workflow goals fail, that is a <strong>false accept, not a crash</strong>. Schedulers say Done and bad outputs propagate. We are building methods to catch that pattern before downstream science or operations break.</p>
+        </div>
+
+        <div class="research-grid">
+            <article class="research-card" data-animate="fade-up">
+                <h3><i class="fas fa-filter" aria-hidden="true"></i> The problem</h3>
+                <p>On shared clusters we run multi-step Python pipelines every day. A filter step can pass every unit test, log success, and hand the wrong records to a ranking step two nodes downstream. Exit code zero; intent broken.</p>
+            </article>
+            <article class="research-card" data-animate="fade-up">
+                <h3><i class="fas fa-chart-line" aria-hidden="true"></i> The gap</h3>
+                <p>Infra observability records latency and errors, not goal rubrics for each step. Agent benchmarks score final text, not false accepts in middle steps. Research IT needs detection that respects workflow goals, not another latency dashboard.</p>
+            </article>
+            <article class="research-card" data-animate="fade-up">
+                <h3><i class="fas fa-users" aria-hidden="true"></i> Who it helps</h3>
+                <p>Research IT and workflow maintainers on HPC and shared hosts: teams running ingest, validation, and analysis graphs who lose days to silent failures before anyone notices.</p>
+            </article>
+        </div>
+
+        <div class="research-deliverables" data-animate="fade-up">
+            <h3>Phase I research focus</h3>
+            <p class="research-deliverables-note">Feasibility research and open artifacts. This is not a workflow product launch.</p>
+            <ul class="research-objectives">
+                <li><strong>Taxonomy:</strong> classify silent success failure patterns in multi-step pipelines</li>
+                <li><strong>Trace model:</strong> step inputs, outputs, timestamps, and goal rubrics on shared hosts</li>
+                <li><strong>Reference detector:</strong> flag runs where exit status succeeds but goal checks fail</li>
+                <li><strong>Open benchmark:</strong> validation chain tasks with gold rubrics (Apache-2.0)</li>
+            </ul>
+        </div>
+
+        <div class="research-team" data-animate="fade-up">
+            <p><strong>AuroZeon LLC</strong> is a U.S. small business. Our examples come from years operating pipelines on George Mason University infrastructure. Dr. Ziheng Sun leads taxonomy and benchmarks; Hui Fang, Chief Product Officer, leads detector engineering.</p>
+            <a href="/contact/" class="btn btn-primary">Research partnerships</a>
+        </div>
+    </div>
+</section>
