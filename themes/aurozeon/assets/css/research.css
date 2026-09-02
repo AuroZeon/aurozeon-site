@@ -1,0 +1,311 @@
+/* Research & Services hub + sector pages */
+
+body.research-page main {
+    padding-top: 80px;
+}
+
+body.research-page header.site-header {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.08);
+}
+
+.research-hub-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.research-kicker {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #e87b00;
+    margin-bottom: 0.75rem;
+}
+
+.research-hub-hero,
+.research-sector-hero {
+    position: relative;
+    min-height: 52vh;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.research-hub-hero-overlay,
+.research-sector-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10, 14, 28, 0.35) 0%, rgba(10, 14, 28, 0.88) 100%);
+}
+
+.research-hub-hero-content,
+.research-sector-hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 4rem 24px 3.5rem;
+}
+
+.research-hub-hero h1,
+.research-sector-hero h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+    margin: 0 0 1rem;
+    max-width: 18ch;
+}
+
+.research-hub-hero p,
+.research-sector-hero p {
+    font-size: 1.1rem;
+    line-height: 1.65;
+    max-width: 42rem;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.research-back {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.research-back:hover {
+    color: #fff;
+}
+
+.research-hub-intro {
+    padding: 4rem 0 3rem;
+    background: #f8f9fb;
+}
+
+.research-hub-lead {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #4a4568;
+    max-width: 46rem;
+    margin: 0 0 2.5rem;
+}
+
+.research-sector-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.research-sector-grid-compact {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.research-sector-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid rgba(26, 26, 46, 0.08);
+    border-radius: 14px;
+    padding: 1.75rem 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.research-sector-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 36px rgba(232, 123, 0, 0.12);
+}
+
+.research-sector-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(232, 123, 0, 0.12);
+    color: #e87b00;
+    margin-bottom: 1rem;
+}
+
+.research-sector-card h2,
+.research-sector-card h3 {
+    margin: 0 0 0.65rem;
+    font-size: 1.25rem;
+    color: #1a1a2e;
+}
+
+.research-sector-card p {
+    margin: 0 0 1.25rem;
+    color: #4a4568;
+    line-height: 1.6;
+    flex: 1;
+}
+
+.research-sector-link,
+.research-sector-card span {
+    color: #e87b00;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.research-hub-cta,
+.research-sector-related {
+    padding: 3.5rem 0;
+    text-align: center;
+}
+
+.research-hub-cta {
+    background: #1a1a2e;
+    color: #fff;
+}
+
+.research-hub-cta h2 {
+    margin: 0 0 0.75rem;
+}
+
+.research-hub-cta p {
+    max-width: 36rem;
+    margin: 0 auto 1.5rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.65;
+}
+
+.research-sector-body {
+    padding: 3.5rem 0 2rem;
+    background: #fff;
+}
+
+.research-positioning,
+.research-proof,
+.research-audience,
+.research-engage {
+    margin-bottom: 2.75rem;
+}
+
+.research-positioning h2,
+.research-proof h2,
+.research-audience h2,
+.research-engage h2 {
+    font-size: 1.45rem;
+    color: #1a1a2e;
+    margin: 0 0 0.85rem;
+}
+
+.research-positioning p,
+.research-proof li,
+.research-audience p,
+.research-engage p {
+    color: #4a4568;
+    line-height: 1.7;
+    font-size: 1.02rem;
+}
+
+.research-note {
+    margin-top: 1rem;
+    padding: 1rem 1.15rem;
+    background: rgba(232, 123, 0, 0.08);
+    border-left: 4px solid #e87b00;
+    border-radius: 0 8px 8px 0;
+}
+
+.research-value-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 2.75rem;
+}
+
+.research-value-grid article {
+    background: #f8f9fb;
+    border-radius: 12px;
+    padding: 1.35rem 1.4rem;
+    border: 1px solid rgba(26, 26, 46, 0.06);
+}
+
+.research-value-grid h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.05rem;
+    color: #1a1a2e;
+}
+
+.research-value-grid p {
+    margin: 0;
+    color: #4a4568;
+    line-height: 1.6;
+    font-size: 0.98rem;
+}
+
+.research-proof ul,
+.research-steps {
+    margin: 0;
+    padding-left: 1.2rem;
+    color: #4a4568;
+}
+
+.research-proof li,
+.research-steps li {
+    margin-bottom: 0.65rem;
+    line-height: 1.65;
+}
+
+.research-engage-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-top: 1rem;
+}
+
+.research-sector-related {
+    background: #f8f9fb;
+    text-align: left;
+}
+
+.research-sector-related h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Home research sector cards */
+.research-card-linkable {
+    display: flex;
+    flex-direction: column;
+}
+
+.research-card-cta {
+    margin-top: auto;
+    padding-top: 1rem;
+    color: var(--primary-color, #e87b00);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.research-card-cta:hover {
+    text-decoration: underline;
+}
+
+.research-home-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+}
+
+@media (max-width: 900px) {
+    .research-sector-grid,
+    .research-value-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .research-hub-hero h1,
+    .research-sector-hero h1 {
+        max-width: none;
+    }
+}
