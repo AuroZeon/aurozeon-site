@@ -1,6 +1,6 @@
 +++
-title = "Research & Services"
+title = "Research"
 type = "research"
 layout = "list"
-description = "AuroZeon’s three practice areas: geospatial services, mobile product development, and Keep Science Honest claim verification."
+description = "AuroZeon research and applied projects under Advancing AI for a Better Tomorrow."
 +++

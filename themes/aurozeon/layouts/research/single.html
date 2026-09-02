@@ -1,220 +1,220 @@
 {{ define "main" }}
 {{ $slug := .File.ContentBaseName }}
 <div class="research-sector-page">
-  {{ if eq $slug "geospatial" }}
-  <section class="research-sector-hero research-sector-hero-geo" style="background-image: url('https://images.pexels.com/photos/335393/pexels-photo-335393.jpeg?auto=compress&cs=tinysrgb&w=1920');">
-    <div class="research-sector-hero-overlay"></div>
-    <div class="research-sector-hero-content">
-      <a class="research-back" href="/research/">← Research &amp; Services</a>
-      <span class="research-kicker">Service sector</span>
-      <h1>Geospatial Services</h1>
-      <p>Spatial data that moves from ingest to decision. workflows, maps, and operational tools for environmental and earth-science problems.</p>
-    </div>
-  </section>
-
-  <section class="research-sector-body">
-    <div class="research-hub-inner">
-      <div class="research-positioning">
-        <h2>Positioning</h2>
-        <p><strong>For teams that need geospatial systems they can run. not slideware.</strong> We design and build pipelines, map experiences, and applied AI that respect data sources, latency, and operational constraints.</p>
-      </div>
-
-      <div class="research-value-grid">
-        <article>
-          <h3>Workflow automation</h3>
-          <p>Python and shell-based geospatial pipelines, step logging, and reusable process graphs for ingest, transform, and analysis.</p>
-        </article>
-        <article>
-          <h3>Map-backed products</h3>
-          <p>Interactive maps, geocoding, and location context wired into web and mobile apps. risk views, distance, and place search.</p>
-        </article>
-        <article>
-          <h3>Earth &amp; hazard data</h3>
-          <p>Integration with public geospatial feeds (for example federal wildfire perimeter data) and weather or EO-adjacent APIs where the use case requires it.</p>
-        </article>
-        <article>
-          <h3>Applied research to product</h3>
-          <p>Experience operating research pipelines on shared infrastructure, then packaging usable tools for residents, operators, and partners.</p>
-        </article>
-      </div>
-
-      <div class="research-proof">
-        <h2>Proof points</h2>
-        <ul>
-          <li><a href="/wildfire-assistant/">Wildfire Assistant</a> . NIFC perimeter maps, address risk context, and preparedness guidance in a shipped mobile app.</li>
-          <li><a href="/auroweaver/">AuroWeaver</a> . visual workflow tooling for Python, Shell, and agent steps used in scientific and environmental scenarios.</li>
-          <li>Community lineage with open geospatial workflow practice (Geoweaver ecosystem and ESIP-adjacent automation patterns).</li>
-        </ul>
-      </div>
-
-      <div class="research-audience">
-        <h2>Who we serve</h2>
-        <p>Research labs, public-interest projects, and organizations that need reliable geospatial software. not a generic IT shop that “also does maps.”</p>
-      </div>
-
-      <div class="research-engage">
-        <h2>How to engage</h2>
-        <p>Start with a scoped discovery: data sources, update cadence, map UX, and who must act on the output. Then we propose a build or integration plan.</p>
-        <a href="/contact/" class="btn btn-primary">Discuss a geospatial project</a>
-      </div>
-    </div>
-  </section>
-
-  {{ else if eq $slug "mobile" }}
-  <section class="research-sector-hero research-sector-hero-mobile" style="background-image: url('https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=1920');">
-    <div class="research-sector-hero-overlay"></div>
-    <div class="research-sector-hero-content">
-      <a class="research-back" href="/research/">← Research &amp; Services</a>
-      <span class="research-kicker">Service sector</span>
-      <h1>Mobile Development</h1>
-      <p>iOS and Android products that ship. camera-first experiences, clear privacy posture, and store-ready engineering.</p>
-    </div>
-  </section>
-
-  <section class="research-sector-body">
-    <div class="research-hub-inner">
-      <div class="research-positioning">
-        <h2>Positioning</h2>
-        <p><strong>For founders and program leads who need a real app, not a prototype that dies in TestFlight.</strong> We build native-capable mobile products with Capacitor and modern web stacks, then take them through App Store and Google Play requirements.</p>
-      </div>
-
-      <div class="research-value-grid">
-        <article>
-          <h3>Camera &amp; on-device flows</h3>
-          <p>Live camera, gallery import, local history, and scan-to-result UX. built for reliability on consumer devices.</p>
-        </article>
-        <article>
-          <h3>Privacy-aware AI features</h3>
-          <p>Consent-gated third-party AI, on-device storage where appropriate, and plain-language disclosures that match what the app actually does.</p>
-        </article>
-        <article>
-          <h3>Store delivery</h3>
-          <p>Policy pages, disclaimers, and listing-ready builds for Apple and Google. including health, safety, and student projects when relevant.</p>
-        </article>
-        <article>
-          <h3>Product craft</h3>
-          <p>Occupation-aware tips, confirmation before external links, and UX that respects one job per screen. not a kitchen-sink dashboard.</p>
-        </article>
-      </div>
-
-      <div class="research-proof">
-        <h2>Shipped &amp; shipping products</h2>
-        <ul>
-          <li><a href="/byebites/">ByeBites</a> . mindful eating and craving control.</li>
-          <li><a href="/shoulema/">SHOULEMA</a> . camera food recognition and calorie overlay.</li>
-          <li><a href="/xinbridge/">XinBridge</a> . emotional support companion for cancer care contexts.</li>
-          <li><a href="/wildfire-assistant/">Wildfire Assistant</a> . risk maps and preparedness on mobile.</li>
-          <li><a href="/plantgdp/">Plant GDP</a> . camera scan → local shopping tips (upcoming store release).</li>
-        </ul>
-      </div>
-
-      <div class="research-audience">
-        <h2>Who we serve</h2>
-        <p>Teams that need end-to-end mobile product ownership. from UX and engineering to legal pages and store submission. especially AI-assisted consumer and civic apps.</p>
-      </div>
-
-      <div class="research-engage">
-        <h2>How to engage</h2>
-        <p>Bring a problem statement, audience, and platform target (iOS, Android, or both). We return a scope, milestone plan, and privacy/compliance checklist before implementation.</p>
-        <a href="/contact/" class="btn btn-primary">Start a mobile project</a>
-      </div>
-    </div>
-  </section>
-
-  {{ else if eq $slug "keepsciencehonest" }}
-  <section class="research-sector-hero research-sector-hero-ksh" style="background-image: url('https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1920');">
-    <div class="research-sector-hero-overlay"></div>
-    <div class="research-sector-hero-content">
-      <a class="research-back" href="/research/">← Research &amp; Services</a>
-      <span class="research-kicker">Service sector</span>
-      <h1>Keep Science Honest</h1>
-      <p>Independent claim records for people who are not domain experts. before capital, a grant, or a public results story.</p>
-    </div>
-  </section>
-
-  <section class="research-sector-body">
-    <div class="research-hub-inner">
-      <div class="research-positioning">
-        <h2>Positioning</h2>
-        <p><strong>A scientific claim should not become “true” just because it made it into a paper, proposal, or pitch deck.</strong> Keep Science Honest starts with the written claim, tests what would prove or challenge it, and seals a record investors, funders, boards, and PIs can show and recheck.</p>
-        <p class="research-note"><strong>Not peer review.</strong> Journals still decide publication. KSH asks whether written claims hold before you invest or communicate results.</p>
-      </div>
-
-      <div class="research-value-grid">
-        <article>
-          <h3>Claim-first evaluation</h3>
-          <p>Register exact claims, define evidence that would support or challenge them, and document limitations in plain language.</p>
-        </article>
-        <article>
-          <h3>Sealed deliverables</h3>
-          <p>Confidential sealed packs under SOW: registered claims, evaluation outcomes, and an audit bundle for diligence partners.</p>
-        </article>
-        <article>
-          <h3>Independence</h3>
-          <p>Built for stakeholders outside the research team. investors, sponsors, boards, and auditors who need claim strength without being domain experts.</p>
-        </article>
-        <article>
-          <h3>Recheckable integrity</h3>
-          <p>Recipients can verify a shared audit bundle was not quietly rewritten (<code>ksh verify-report</code> and related checks).</p>
-        </article>
-      </div>
-
-      <div class="research-proof">
-        <h2>Who this work serves</h2>
-        <ul>
-          <li><strong>Investors and stakeholders</strong> . see which claims behind a project hold before capital or reputation is on the story.</li>
-          <li><strong>Sponsors and funders</strong> . capability and limits on the same page, with artifacts you can recheck.</li>
-          <li><strong>Principal investigators</strong> . confidential checkpoint while the paper or grant can still change.</li>
-          <li><strong>Auditors</strong> . confirm a shared bundle was not rewritten.</li>
-        </ul>
-      </div>
-
-      <div class="research-audience">
-        <h2>How an engagement works</h2>
-        <ol class="research-steps">
-          <li><strong>You send</strong> claims, scope, and model access or files.</li>
-          <li><strong>We evaluate</strong> strengths, gaps, and examination passes.</li>
-          <li><strong>You receive</strong> a sealed record and audit bundle.</li>
-        </ol>
-        <p>Paid work does not require installing our tools. Sample scientific audit reports and verification procedures are available on the Keep Science Honest site.</p>
-      </div>
-
-      <div class="research-engage">
-        <h2>Open Keep Science Honest</h2>
-        <p>Public product and intake live on the dedicated site. For AuroZeon partnerships, use contact below.</p>
-        <div class="research-engage-actions">
-          <a href="https://keepsciencehonest.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Visit Keep Science Honest</a>
-          <a href="/contact/" class="btn btn-secondary">Contact AuroZeon</a>
+    {{ if eq $slug "geospatial" }}
+    <section class="research-sector-hero research-sector-hero-geo" style="background-image: url('https://images.pexels.com/photos/335393/pexels-photo-335393.jpeg?auto=compress&cs=tinysrgb&w=1920');">
+        <div class="research-sector-hero-overlay"></div>
+        <div class="research-sector-hero-content">
+            <a class="research-back" href="/research/">← Research</a>
+            <span class="research-kicker">Research</span>
+            <h1>Geospatial Services</h1>
+            <p>Workflows, maps, and tools that turn spatial data into something teams can use for environmental and earth science problems.</p>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  {{ else }}
-  <section class="research-sector-body">
-    <div class="research-hub-inner">
-      <h1>{{ .Title }}</h1>
-      {{ .Content }}
-      <p><a href="/research/">← Back to Research &amp; Services</a></p>
-    </div>
-  </section>
-  {{ end }}
+    <section class="research-sector-body">
+        <div class="research-hub-inner">
+            <div class="research-positioning">
+                <h2>What we do</h2>
+                <p>We design and build geospatial pipelines, map experiences, and related AI features with clear data sources, update needs, and operational limits in mind.</p>
+            </div>
 
-  <section class="research-sector-related">
-    <div class="research-hub-inner">
-      <h2>Other sectors</h2>
-      <div class="research-sector-grid research-sector-grid-compact">
-        {{ if ne $slug "geospatial" }}
-        <a class="research-sector-card" href="/research/geospatial/"><h3>Geospatial Services</h3><span>Explore →</span></a>
-        {{ end }}
-        {{ if ne $slug "mobile" }}
-        <a class="research-sector-card" href="/research/mobile/"><h3>Mobile Development</h3><span>Explore →</span></a>
-        {{ end }}
-        {{ if ne $slug "keepsciencehonest" }}
-        <a class="research-sector-card" href="/research/keepsciencehonest/"><h3>Keep Science Honest</h3><span>Explore →</span></a>
-        {{ end }}
-      </div>
-    </div>
-  </section>
+            <div class="research-value-grid">
+                <article>
+                    <h3>Workflow automation</h3>
+                    <p>Python and shell based geospatial pipelines, step logging, and reusable process graphs for ingest, transform, and analysis.</p>
+                </article>
+                <article>
+                    <h3>Map backed products</h3>
+                    <p>Interactive maps, geocoding, and location context in web and mobile apps, including risk views, distance, and place search.</p>
+                </article>
+                <article>
+                    <h3>Earth and hazard data</h3>
+                    <p>Integration with public geospatial feeds such as federal wildfire perimeter data, plus weather or related APIs when the use case needs them.</p>
+                </article>
+                <article>
+                    <h3>From research to product</h3>
+                    <p>We take pipeline and map work from research settings into usable tools for residents, operators, and partner organizations.</p>
+                </article>
+            </div>
+
+            <div class="research-proof">
+                <h2>Examples</h2>
+                <ul>
+                    <li><a href="/wildfire-assistant/">Wildfire Assistant</a>: NIFC perimeter maps, address risk context, and preparedness guidance in a mobile app.</li>
+                    <li><a href="/auroweaver/">AuroWeaver</a>: visual workflow tooling for Python, Shell, and agent steps in scientific and environmental work.</li>
+                    <li>Open geospatial workflow practice connected to the Geoweaver community and ESIP related automation patterns.</li>
+                </ul>
+            </div>
+
+            <div class="research-audience">
+                <h2>Who this is for</h2>
+                <p>Research labs, public interest projects, and organizations that need reliable geospatial software for a defined operational need.</p>
+            </div>
+
+            <div class="research-engage">
+                <h2>Next step</h2>
+                <p>Share your data sources, update cadence, map needs, and who must act on the output. We will propose a scoped build or integration plan.</p>
+                <a href="/contact/" class="btn btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    {{ else if eq $slug "mobile" }}
+    <section class="research-sector-hero research-sector-hero-mobile" style="background-image: url('https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=1920');">
+        <div class="research-sector-hero-overlay"></div>
+        <div class="research-sector-hero-content">
+            <a class="research-back" href="/research/">← Research</a>
+            <span class="research-kicker">Research</span>
+            <h1>Mobile Development</h1>
+            <p>iOS and Android apps with camera features, careful privacy handling for AI features, and App Store / Google Play delivery.</p>
+        </div>
+    </section>
+
+    <section class="research-sector-body">
+        <div class="research-hub-inner">
+            <div class="research-positioning">
+                <h2>What we do</h2>
+                <p>We build native capable mobile products with Capacitor and modern web stacks, then prepare them for Apple App Store and Google Play requirements.</p>
+            </div>
+
+            <div class="research-value-grid">
+                <article>
+                    <h3>Camera and device flows</h3>
+                    <p>Live camera, gallery import, local history, and scan to result UX designed for everyday consumer devices.</p>
+                </article>
+                <article>
+                    <h3>Privacy aware AI features</h3>
+                    <p>Consent for third party AI when needed, on device storage where it fits, and disclosures that match what the app actually does.</p>
+                </article>
+                <article>
+                    <h3>Store delivery</h3>
+                    <p>Policy pages, disclaimers, and listing ready builds for Apple and Google, including health, safety, and student projects when relevant.</p>
+                </article>
+                <article>
+                    <h3>Product craft</h3>
+                    <p>Clear screens, confirmation before leaving the app for external links, and features tied to a defined user job.</p>
+                </article>
+            </div>
+
+            <div class="research-proof">
+                <h2>Apps</h2>
+                <ul>
+                    <li><a href="/byebites/">ByeBites</a>: mindful eating and craving control.</li>
+                    <li><a href="/shoulema/">SHOULEMA</a>: camera food recognition and calorie overlay.</li>
+                    <li><a href="/xinbridge/">XinBridge</a>: emotional support companion for cancer care contexts.</li>
+                    <li><a href="/wildfire-assistant/">Wildfire Assistant</a>: risk maps and preparedness on mobile.</li>
+                    <li><a href="/plantgdp/">Plant GDP</a>: camera scan to local shopping tips (upcoming store release).</li>
+                </ul>
+            </div>
+
+            <div class="research-audience">
+                <h2>Who this is for</h2>
+                <p>Teams that need mobile product work from UX and engineering through legal pages and store submission, including AI assisted consumer and civic apps.</p>
+            </div>
+
+            <div class="research-engage">
+                <h2>Next step</h2>
+                <p>Share the problem, audience, and platform target (iOS, Android, or both). We will return a scope, milestones, and a privacy checklist before build work starts.</p>
+                <a href="/contact/" class="btn btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    {{ else if eq $slug "keepsciencehonest" }}
+    <section class="research-sector-hero research-sector-hero-ksh" style="background-image: url('https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1920');">
+        <div class="research-sector-hero-overlay"></div>
+        <div class="research-sector-hero-content">
+            <a class="research-back" href="/research/">← Research</a>
+            <span class="research-kicker">Research</span>
+            <h1>Keep Science Honest</h1>
+            <p>Independent review of written scientific claims for investors, funders, boards, and research teams, before capital or public announcements.</p>
+        </div>
+    </section>
+
+    <section class="research-sector-body">
+        <div class="research-hub-inner">
+            <div class="research-positioning">
+                <h2>What it is</h2>
+                <p>Keep Science Honest starts with the written claim, tests what would support or challenge it, and produces a sealed record that stakeholders can show and recheck.</p>
+                <p class="research-note"><strong>This is not journal peer review.</strong> Journals decide publication. Keep Science Honest asks whether written claims hold for a funding, investment, or communication decision.</p>
+            </div>
+
+            <div class="research-value-grid">
+                <article>
+                    <h3>Claim review</h3>
+                    <p>Register exact claims, define evidence that would support or challenge them, and document limitations in plain language.</p>
+                </article>
+                <article>
+                    <h3>Sealed deliverables</h3>
+                    <p>Under SOW: registered claims, evaluation outcomes, and an audit bundle for diligence partners.</p>
+                </article>
+                <article>
+                    <h3>Independent audience</h3>
+                    <p>Built for people outside the research team: investors, sponsors, boards, and auditors who need claim strength without being domain experts.</p>
+                </article>
+                <article>
+                    <h3>Bundle checks</h3>
+                    <p>Recipients can confirm a shared audit bundle was not quietly rewritten (<code>ksh verify-report</code> and related checks).</p>
+                </article>
+            </div>
+
+            <div class="research-proof">
+                <h2>Who uses it</h2>
+                <ul>
+                    <li><strong>Investors and stakeholders</strong>: check which claims behind a project hold before capital or reputation is on the line.</li>
+                    <li><strong>Sponsors and funders</strong>: see capability and limits together, with artifacts you can recheck.</li>
+                    <li><strong>Principal investigators</strong>: a confidential checkpoint while a paper or grant can still change.</li>
+                    <li><strong>Auditors</strong>: confirm a shared bundle was not rewritten.</li>
+                </ul>
+            </div>
+
+            <div class="research-audience">
+                <h2>How an engagement works</h2>
+                <ol class="research-steps">
+                    <li><strong>You send</strong> claims, scope, and model access or files.</li>
+                    <li><strong>We evaluate</strong> strengths, gaps, and examination passes.</li>
+                    <li><strong>You receive</strong> a sealed record and audit bundle.</li>
+                </ol>
+                <p>Paid work does not require installing our tools. Sample reports and verification steps are on the Keep Science Honest site.</p>
+            </div>
+
+            <div class="research-engage">
+                <h2>Next step</h2>
+                <p>Use the Keep Science Honest site for product details, or contact AuroZeon for a partnership discussion.</p>
+                <div class="research-engage-actions">
+                    <a href="https://keepsciencehonest.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Visit Keep Science Honest</a>
+                    <a href="/contact/" class="btn btn-secondary">Contact AuroZeon</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{ else }}
+    <section class="research-sector-body">
+        <div class="research-hub-inner">
+            <h1>{{ .Title }}</h1>
+            {{ .Content }}
+            <p><a href="/research/">← Back to Research</a></p>
+        </div>
+    </section>
+    {{ end }}
+
+    <section class="research-sector-related">
+        <div class="research-hub-inner">
+            <h2>Related pages</h2>
+            <div class="research-sector-grid research-sector-grid-compact">
+                {{ if ne $slug "geospatial" }}
+                <a class="research-sector-card" href="/research/geospatial/"><h3>Geospatial Services</h3><span>Learn more →</span></a>
+                {{ end }}
+                {{ if ne $slug "mobile" }}
+                <a class="research-sector-card" href="/research/mobile/"><h3>Mobile Development</h3><span>Learn more →</span></a>
+                {{ end }}
+                {{ if ne $slug "keepsciencehonest" }}
+                <a class="research-sector-card" href="/research/keepsciencehonest/"><h3>Keep Science Honest</h3><span>Learn more →</span></a>
+                {{ end }}
+            </div>
+        </div>
+    </section>
 </div>
 {{ end }}

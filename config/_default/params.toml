@@ -90,8 +90,8 @@ show_categories = true
 # seo meta data for OpenGraph / Twitter Card
 # seo module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/basic-seo
 [metadata]
-keywords = ["AuroZeon", "AI", "mobile apps", "geospatial", "Keep Science Honest"]
-description = "AuroZeon builds intelligent software tools—mobile apps, geospatial systems, and Keep Science Honest claim verification—to help people and organizations make better decisions."
+keywords = ["AuroZeon", "AI", "intelligent software", "better tomorrow"]
+description = "Advancing AI for a Better Tomorrow. AuroZeon builds intelligent, effective software tools that help people and organizations make better decisions."
 author = "support@aurozeon.org"
 image = "images/og-image.png"
 
